@@ -135,4 +135,109 @@
             exp: "block 當名詞時，小孩子玩的「積木」就是 wooden blocks；在街區也常當作「街區 / 街角」。", vocab: ["block (n.) 積木/街區", "colorful (adj.) 五顏六色的", "floor (n.) 地板"]
         },
         { 
-            q: "20. The boxer landed a heavy _____ on his opponent's head.", options: ["body",
+            q: "20. The boxer landed a heavy _____ on his opponent's head.", options: ["body", "boat", "bomb", "blow"], ans: 3, hint: "那名拳擊手重重地給了對手頭部一記【重擊】。",
+            exp: "blow 除了當動詞「吹」，當名詞時可表示「重擊、打擊」(a heavy blow)。", vocab: ["blow (n.) 重擊 (v.) 吹", "heavy (adj.) 重的", "head (n.) 頭部"]
+        }
+    ];
+
+    var currentQ = 0;
+    var score = 0;
+    var hintsUsed = 0;
+
+    function loadQuestion() {
+        document.getElementById("feedback-text").style.display = "none";
+        document.getElementById("explanation-box").style.display = "none";
+        document.getElementById("next-btn").style.display = "none";
+        document.getElementById("hint-text").style.display = "none";
+        
+        if (currentQ >= quizData.length) {
+            document.getElementById("quiz-container").style.display = "none";
+            var resultDiv = document.getElementById("result");
+            resultDiv.style.display = "block";
+            resultDiv.innerHTML = "🎉 測驗結束！<br>你的總分是：" + score + " / 20<br>使用了 " + hintsUsed + " 次提示！<br><br>" + (score >= 16 ? "太厲害了！不僅單字背得熟，連一字多義都難不倒你！🌟" : "繼續加油！把書本和訂票、板子和登車的區分多複習幾次喔！💪");
+            return;
+        }
+
+        document.getElementById("q-counter").innerText = "第 " + (currentQ + 1) + " / 20 題";
+        document.getElementById("question-text").innerText = quizData[currentQ].q;
+        document.getElementById("hint-text").innerText = quizData[currentQ].hint;
+
+        var optionsDiv = document.getElementById("options-container");
+        optionsDiv.innerHTML = "";
+        
+        for (var i = 0; i < quizData[currentQ].options.length; i++) {
+            (function(index){
+                var btn = document.createElement("button");
+                btn.className = "option";
+                btn.innerText = quizData[currentQ].options[index];
+                btn.onclick = function() { checkAnswer(index, btn); };
+                optionsDiv.appendChild(btn);
+            })(i);
+        }
+    }
+
+    function showHint() {
+        if (hintsUsed < 5) {
+            document.getElementById("hint-text").style.display = "block";
+            hintsUsed++;
+            alert("你已經用了 " + hintsUsed + " 次提示，剩下 " + (5 - hintsUsed) + " 次喔！");
+        } else {
+            alert("❌ 你的 5 次提示額度已經用完囉！請試著自己挑戰看看！");
+        }
+    }
+
+    function checkAnswer(selectedIndex, btn) {
+        var currentData = quizData[currentQ];
+        var correctIndex = currentData.ans;
+        var feedback = document.getElementById("feedback-text");
+        var options = document.getElementsByClassName("option");
+        
+        for (var i = 0; i < options.length; i++) {
+            options[i].disabled = true;
+        }
+
+        if (selectedIndex === correctIndex) {
+            btn.style.background = "#38b000";
+            btn.style.color = "white";
+            feedback.innerHTML = "✅ 答對了！太讚了！";
+            feedback.className = "feedback correct";
+            score++;
+        } else {
+            btn.style.background = "#e63946";
+            btn.style.color = "white";
+            if (options[correctIndex]) {
+                options[correctIndex].style.background = "#38b000";
+                options[correctIndex].style.color = "white";
+            }
+            feedback.innerHTML = "❌ 答錯囉！正確答案是 " + currentData.options[correctIndex] + "。";
+            feedback.className = "feedback wrong";
+        }
+        
+        document.getElementById("exp-content").innerText = currentData.exp;
+        
+        var vocabList = document.getElementById("vocab-content");
+        vocabList.innerHTML = "";
+        for (var j = 0; j < currentData.vocab.length; j++) {
+            var li = document.createElement("li");
+            li.innerText = currentData.vocab[j];
+            vocabList.appendChild(li);
+        }
+
+        document.getElementById("explanation-box").style.display = "block";
+        feedback.style.display = "block";
+        document.getElementById("next-btn").style.display = "block";
+    }
+
+    function nextQuestion() {
+        currentQ++;
+        loadQuestion();
+    }
+
+    // 雙重保險：網頁載入完畢後自動執行
+    window.onload = function() {
+        loadQuestion();
+    };
+</script>
+
+</body>
+</html>
