@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>小學生英文單字挑戰 (blank ~ bored 100%相容版)</title>
+    <title>小學生英文單字挑戰 (boring ~ break 100%相容版)</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4fbf7; color: #333; line-height: 1.6; padding: 20px; }
         .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
@@ -29,7 +29,7 @@
 <body>
 
 <div class="container">
-    <h1>🌱 英文單字挑戰 (blank ~ bored) 🌱</h1>
+    <h1>🌱 英文單字挑戰 (boring ~ break) 🌱</h1>
     <div id="quiz-container">
         <div style="overflow: hidden; margin-bottom: 10px;">
             <button class="reload-btn" onclick="loadQuestion()">🔄 重新載入題目</button>
@@ -59,84 +59,84 @@
 <script>
     var quizData = [
         { 
-            q: "1. It is cold tonight. Pull the warm _____ up to your chin and go to sleep.", options: ["blouse", "blanket", "board", "body"], ans: 1, hint: "今晚很冷。把溫暖的【毯子】拉到下巴然後睡覺。",
-            exp: "晚上睡覺蓋在身上禦寒的「毛毯 / 毯子」是 blanket。", vocab: ["blanket (n.) 毯子", "cold (adj.) 寒冷的", "sleep (v.) 睡覺"]
+            q: "1. The speech was so _____ that several students fell asleep in the classroom.", options: ["brave", "boring", "born", "both"], ans: 1, hint: "那場演講太【無聊的 / 枯燥的】了，以至於好幾位學生在教室裡睡著了。",
+            exp: "形容事情或演講「令人感到無聊、枯燥的」要用 -ing 結尾的 boring；bored 則是形容人「感到無聊的」。", vocab: ["boring (adj.) 令人無聊的", "speech (n.) 演講", "fall asleep (v.) 睡著"]
         },
         { 
-            q: "2. The sky is very clear and _____ today. Let's go to the beach!", options: ["blue", "blind", "bored", "blank"], ans: 0, hint: "今天的天空非常晴朗且呈現【藍色】。我們去海灘吧！",
-            exp: "天空與海洋常見的顏色「藍色的」是 blue。這裡也是標準的 be + very + 形容詞原級喔！", vocab: ["blue (adj.) 藍色的", "sky (n.) 天空", "beach (n.) 海灘"]
+            q: "2. My cousin was _____ in Taiwan, but he grew up in Japan.", options: ["born", "both", "bothered", "bowed"], ans: 0, hint: "我的表弟是在台灣【出生的】，但他是在日本長大的。",
+            exp: "be born in + 地點/年份，表示「在...出生」。born 是 bear (生育) 的過去分詞，常作形容詞用。", vocab: ["born (adj.) 出生的", "grow up (v.) 長大", "Taiwan (n.) 台灣"]
         },
         { 
-            q: "3. A guide dog can help a _____ person walk safely on the street.", options: ["bored", "blank", "blind", "blue"], ans: 2, hint: "導盲犬可以幫助【失明的 / 看不見的】人在街上安全地行走。",
-            exp: "眼睛看不見、失明的人稱為 blind person；導盲犬則是 guide dog。", vocab: ["blind (adj.) 失明的", "safely (adv.) 安全地", "street (n.) 街道"]
+            q: "3. If you _____ money from the bank, you have to pay it back with interest.", options: ["bother", "break", "borrow", "bow"], ans: 2, hint: "如果你向銀行【借入 / 借款】金錢，你就必須連同利息一起還清。",
+            exp: "向別人或銀行「借入」是 borrow (borrow ... from ...)；如果是「借出給別人」則是 lend。", vocab: ["borrow (v.) 借入", "bank (n.) 銀行", "pay back (v.) 償還"]
         },
         { 
-            q: "4. He cut his finger on broken glass and lost a lot of red _____.", options: ["body", "bone", "bomb", "blood"], ans: 3, hint: "他被碎玻璃割傷手指，流了很多紅色的【血】。",
-            exp: "受傷流出來的「血液」是 blood (不可數名詞)；lose blood 表示「失血」。", vocab: ["blood (n.) 血", "cut (v.) 割傷", "finger (n.) 手指"]
+            q: "4. Mr. Sam quit his job last month and started a new business to be his own _____.", options: ["boy", "boss", "box", "brain"], ans: 1, hint: "山姆先生上個月辭了工作並開始創業，做自己的【老闆】。",
+            exp: "公司的主管或「老闆」是 boss；be one's own boss 意思是「自己創業當老闆」。", vocab: ["boss (n.) 老闆", "quit (v.) 辭職", "business (n.) 生意/事業"]
         },
         { 
-            q: "5. Mom bought a pretty white _____ with small buttons to wear to work.", options: ["blouse", "blanket", "bookcase", "boat"], ans: 0, hint: "媽媽買了一件有小鈕扣的漂亮白色【女用襯衫】穿去上班。",
-            exp: "專指女性穿的「女裝襯衫 / 上衣」稱為 blouse。", vocab: ["blouse (n.) 女用襯衫", "button (n.) 鈕扣", "pretty (adj.) 漂亮的"]
+            q: "5. You will hurt your health if you burn the candle at _____ ends.", options: ["born", "brave", "both", "boring"], ans: 2, hint: "如果你蠟燭【兩者都】燒（兩頭燒），你的健康會出問題的。",
+            exp: "both 表示「兩者、雙方」。burn the candle at both ends 是英文成語，指「日夜操勞、過度消耗精力」。", vocab: ["both (adj./pron.) 兩者(都)", "health (n.) 健康", "candle (n.) 蠟燭"]
         },
         { 
-            q: "6. Please move your car! It is _____ing the road and we can't pass.", options: ["boil", "block", "blow", "board"], ans: 1, hint: "請把你的車移開！它【擋住 / 阻塞】了道路，我們無法通過。",
-            exp: "block 當動詞時，意思是「阻塞、擋住 (道路或視線)」。", vocab: ["block (v.) 擋住/阻塞", "road (n.) 道路", "move (v.) 移動"]
+            q: "6. Please do not _____ your sister while she is busy doing her English homework.", options: ["bother", "borrow", "break", "bow"], ans: 0, hint: "當你妹妹正在忙著寫英文功課時，請不要【打擾 / 煩擾】她。",
+            exp: "bother 當動詞時可以指「打擾、使人煩惱」(Don't bother me!)，也可當「費心、麻煩去作某事」。", vocab: ["bother (v.) 打擾/煩擾", "busy (adj.) 忙碌的", "homework (n.) 功課"]
         },
         { 
-            q: "7. Be careful! The soup is very hot, so _____ on it before you eat.", options: ["boil", "block", "blow", "book"], ans: 2, hint: "小心！湯很熱，吃之前先在上面【吹氣】使它涼一點。",
-            exp: "用嘴巴「吹氣 (讓他降溫或吹熄蠟燭)」的動詞是 blow (過去式是 blew)。", vocab: ["blow (v.) 吹", "soup (n.) 湯", "careful (adj.) 小心的"]
+            q: "7. Mike picked up the glass _____ and drank directly from it.", options: ["bottom", "bottle", "bowl", "box"], ans: 1, hint: "麥可拿起那只玻璃【瓶子】，直接對著瓶口喝。",
+            exp: "裝水或飲料的「瓶子 / 壺」是 bottle；a bottle of wine/water 指「一瓶酒/水」。", vocab: ["bottle (n.) 瓶子", "drank (v.) drink的過去式", "directly (adv.) 直接地"]
         },
         { 
-            q: "8. I was so nervous during the test that my mind went completely _____.", options: ["blue", "blind", "bored", "blank"], ans: 3, hint: "我在考試時太緊張了，腦袋一片【空白】。",
-            exp: "one's mind went blank 是固定說法，形容緊張到「腦袋一片空白、什麼都想不起來」。", vocab: ["blank (adj.) 空白的", "mind (n.) 心智/腦海", "nervous (adj.) 緊張的"]
+            q: "8. I found an old photo of my grandmother at the _____ of the drawer.", options: ["bottom", "bottle", "branch", "brain"], ans: 0, hint: "我在抽屜的【最底部 / 下端】找到一張我祖母的舊照片。",
+            exp: "物體的「底部、下端」是 bottom (at the bottom of...)；相對的「頂部」則是 top。", vocab: ["bottom (n.) 底部", "drawer (n.) 抽屜", "photo (n.) 照片"]
         },
         { 
-            q: "9. Jimmy exercises every day, so he has a very strong and healthy _____.", options: ["body", "bone", "boat", "block"], ans: 0, hint: "吉米每天運動，所以他有一個很強壯健康的【身體】。",
-            exp: "經由運動鍛鍊得強壯健康的「身體」是 body。", vocab: ["body (n.) 身體", "exercise (v.) 運動", "strong (adj.) 強壯的"]
+            q: "9. The singer _____ed to the audience when they clapped loudly after the song.", options: ["bother", "borrow", "bow", "break"], ans: 2, hint: "歌曲結束後觀眾熱烈鼓掌時，歌手向他們【鞠躬 / 致意】。",
+            exp: "bow 當動詞讀作 /baʊ/，意思是「鞠躬、低頭致意」；如果是弓或蝴蝶結則讀作 /bo/。", vocab: ["bow (v.) 鞠躬", "audience (n.) 觀眾", "clap (v.) 鼓掌"]
         },
         { 
-            q: "10. We took a small wooden _____ to cross the wide river.", options: ["bomb", "boat", "body", "book"], ans: 1, hint: "我們搭乘一艘木製小【船】渡過寬闊的河流。",
-            exp: "在河面上航行的小船是 boat；大客船或貨輪則是 ship。", vocab: ["boat (n.) 小船", "river (n.) 河流", "wooden (adj.) 木頭製的"]
+            q: "10. In Japan, people often greet each other with a _____ rather than shaking hands.", options: ["box", "bow", "bowl", "boss"], ans: 1, hint: "在日本，人們相遇時常常以【鞠躬】互相致意，而不是握手。",
+            exp: "bow 也可以當名詞用，make a bow / give a bow 就是「行一鞠躬」。", vocab: ["bow (n.) 鞠躬", "greet (v.) 問候/打招呼", "shake hands (v.) 握手"]
         },
         { 
-            q: "11. Please keep the water _____ing for three more minutes to make tea.", options: ["blowing", "blocking", "boiling", "boarding"], ans: 2, hint: "請讓水繼續【沸騰 / 煮滾】三分多鐘來泡茶。",
-            exp: "讓水「煮滾、沸騰」的動詞是 boil；boiling water 就是滾燙的熱水。", vocab: ["boil (v.) 沸騰/煮", "water (n.) 水", "minute (n.) 分鐘"]
+            q: "11. Remember to lift your _____ towards your mouth while eating rice.", options: ["bottle", "box", "bowl", "bottom"], ans: 2, hint: "吃米飯時，記得把你的【碗】端向嘴邊。",
+            exp: "吃飯喝湯用的「碗」是 bowl；一大碗麵可以是 a big bowl of noodles。", vocab: ["bowl (n.) 碗", "lift (v.) 舉起/端起", "mouth (n.) 嘴巴"]
         },
         { 
-            q: "12. Our dog loves to chew on a big beef _____ after dinner.", options: ["boat", "bomb", "body", "bone"], ans: 3, hint: "我們的狗喜歡在晚餐後啃一支大大的牛肉【骨頭】。",
-            exp: "動物或人體內的「骨頭」是 bone；破了骨頭 (骨折) 是 break a bone。", vocab: ["bone (n.) 骨頭", "chew (v.) 咀嚼/啃", "dinner (n.) 晚餐"]
+            q: "12. They go _____ every Saturday afternoon at the sports center.", options: ["boring", "bowling", "boiling", "blowing"], ans: 1, hint: "他們每個星期六下午都會去運動中心打【保齡球】。",
+            exp: "一項用球擊倒球瓶的休閒運動「保齡球」是 bowling；go bowling 就是「去打保齡球」。", vocab: ["bowling (n.) 保齡球運動", "Saturday (n.) 星期六", "sports center (n.) 運動中心"]
         },
         { 
-            q: "13. Chin-chin felt _____ because it rained all day and she had nothing to do.", options: ["bored", "blind", "blank", "blue"], ans: 0, hint: "芩芩感到很【無聊 / 厭煩】，因為下了一整天的雨，她沒事可做。",
-            exp: "形容人的感受「感到無聊、無趣的」要用字尾 -ed 的 bored (主詞通常是人)。", vocab: ["bored (adj.) 感到無聊的", "rain (v.) 下雨", "nothing (pron.) 沒什麼事"]
+            q: "13. I opened the gift _____ and saw a beautiful new watch inside.", options: ["boss", "boy", "box", "bowl"], ans: 2, hint: "我打開禮物【盒子 / 箱子】，看到裡面有一支漂亮的新手錶。",
+            exp: "專指方形的「盒子、箱子」是 box (複數形要加上 -es 變成 boxes)。", vocab: ["box (n.) 盒子/箱子", "gift (n.) 禮物", "watch (n.) 手錶"]
         },
         { 
-            q: "14. We need to buy a new wooden _____ to put all these comic books.", options: ["blanket", "bookcase", "blouse", "body"], ans: 1, hint: "我們需要買一個新的木頭【書架 / 書櫃】來放這些漫畫書。",
-            exp: "專門用來擺放書本的「書櫃 / 書架」是 bookcase (也叫做 bookshelf)。", vocab: ["bookcase (n.) 書櫃", "comic book (n.) 漫畫書", "wooden (adj.) 木製的"]
+            q: "14. He is just a young _____ who loves playing basketball after school.", options: ["boss", "boy", "brain", "branch"], ans: 1, hint: "他只不過是個放學後喜歡打籃球的年輕【男孩】。",
+            exp: "年輕的男性、小學生或中學生「男孩」是 boy；相對的「女孩」是 girl。", vocab: ["boy (n.) 男孩", "young (adj.) 年輕的", "basketball (n.) 籃球"]
         },
         { 
-            q: "15. All passengers must hold their tickets and wait to _____ the train to Kaohsiung.", options: ["boil", "blow", "board", "block"], ans: 2, hint: "所有乘客必須拿著車票，等候【登上】往高雄的火車。",
-            exp: "board 當動詞時，意思是「登上 (火車、公車、飛機或船隻)」。", vocab: ["board (v.) 登上(車船)", "passenger (n.) 乘客", "ticket (n.) 車票"]
+            q: "15. It is wrong to think that people with good looks have no _____s.", options: ["bottle", "bottom", "brain", "branch"], ans: 2, hint: "認為長得好看的人沒有【頭腦 / 腦袋】是錯誤的想法。",
+            exp: "人體內負責思考的「腦、頭腦、智力」是 brain；have a good brain 表示「很聰明、頭腦很好」。", vocab: ["brain (n.) 腦/智力", "wrong (adj.) 錯誤的", "good looks (n.) 好看的容貌"]
         },
         { 
-            q: "16. We are planning a trip to Hualien, so Dad called to _____ two train tickets.", options: ["boil", "block", "blow", "book"], ans: 3, hint: "我們正在計畫去花蓮旅行，所以爸爸打電話【預訂】了兩張火車票。",
-            exp: "book 除了當「書本」，當動詞時是非常重要的單字，意思是「預訂 (車票、餐廳、房間)」。", vocab: ["book (v.) 預訂 (n.) 書", "trip (n.) 旅行", "train ticket (n.) 火車票"]
+            q: "16. Look! Several monkeys are hanging from the tree _____es in the forest.", options: ["branch", "brain", "bottle", "boss"], ans: 0, hint: "看！森林裡有好幾隻猴子吊掛在樹【枝】上。",
+            exp: "大樹分杈出去的「樹枝、枝條」是 branch (複數形為 branches)。", vocab: ["branch (n.) 樹枝", "monkey (n.) 猴子", "hang (v.) 懸掛/吊"]
         },
         { 
-            q: "17. The police found a dangerous _____ in the building and asked everyone to leave.", options: ["bomb", "bone", "boat", "body"], ans: 0, hint: "警察在大樓裡發現了一枚危險的【炸彈】，並請所有人離開。",
-            exp: "會爆炸的「炸彈」是 bomb (注意最後面的字母 b 不發音喔！讀作 /bɑm/)。", vocab: ["bomb (n.) 炸彈", "dangerous (adj.) 危險的", "police (n.) 警察"]
+            q: "17. The bank has just opened a new overseas _____ office in New York.", options: ["brain", "bottom", "branch", "bowl"], ans: 2, hint: "這家銀行剛在紐約開設了一家新的海外【分行 / 分處】。",
+            exp: "branch 除了當「樹枝」，在商業與政府機關中也指「分行、分公司、分支機構」(branch office)。", vocab: ["branch (n.) 分公司/分行", "overseas (adj.) 海外的", "office (n.) 辦公室"]
         },
         { 
-            q: "18. Mom cut some fresh apples and oranges on the wooden cutting _____.", options: ["boat", "board", "bone", "bookcase"], ans: 1, hint: "媽媽在木製的切菜【砧板】上切了一些新鮮蘋果和柳丁。",
-            exp: "cutting board 就是廚房裡用來切菜的「砧板」；board 本身有「木板、板子」的意思。", vocab: ["board (n.) 板子", "cutting board (n.) 砧板", "fresh (adj.) 新鮮的"]
+            q: "18. The _____ firefighter ran into the burning house to save the little puppy.", options: ["boring", "brave", "born", "both"], ans: 1, hint: "那位【勇敢的】消防員衝進火場救出了小狗。",
+            exp: "面對危險或困難毫不畏懼的「勇敢的」是 brave；a brave man 就是個勇敢的人。", vocab: ["brave (adj.) 勇敢的", "firefighter (n.) 消防員", "save (v.) 拯救"]
         },
         { 
-            q: "19. The little boy sat on the floor playing with colorful wooden _____s.", options: ["body", "blouse", "block", "blanket"], ans: 2, hint: "小男孩坐在地板上玩著五顏六色的木頭【積木】。",
-            exp: "block 當名詞時，小孩子玩的「積木」就是 wooden blocks；在街區也常當作「街區 / 街角」。", vocab: ["block (n.) 積木/街區", "colorful (adj.) 五顏六色的", "floor (n.) 地板"]
+            q: "19. We bought some fresh _____ and milk from the bakery for breakfast.", options: ["brain", "branch", "bread", "break"], ans: 2, hint: "我們從麵包店買了一些新鮮的【麵包】和牛奶當早餐。",
+            exp: "日常飲食主食之一的「麵包」是 bread (不可數名詞)；一片麵包是 a piece/slice of bread。", vocab: ["bread (n.) 麵包", "bakery (n.) 麵包店", "breakfast (n.) 早餐"]
         },
         { 
-            q: "20. The boxer landed a heavy _____ on his opponent's head.", options: ["body", "boat", "bomb", "blow"], ans: 3, hint: "那名拳擊手重重地給了對手頭部一記【重擊】。",
-            exp: "blow 除了當動詞「吹」，當名詞時可表示「重擊、打擊」(a heavy blow)。", vocab: ["blow (n.) 重擊 (v.) 吹", "heavy (adj.) 重的", "head (n.) 頭部"]
+            q: "20. Please be careful with my camera! Don't drop it and _____ it.", options: ["borrow", "bother", "bow", "break"], ans: 3, hint: "請小心拿我的相機！不要把它摔下去並【弄壞 / 摔爛】它。",
+            exp: "把物品「弄壞、打破、折斷」的動詞是 break (過去式是 broke，過去分詞是 broken)。", vocab: ["break (v.) 弄壞/打破", "careful (adj.) 小心的", "camera (n.) 照相機"]
         }
     ];
 
@@ -154,7 +154,7 @@
             document.getElementById("quiz-container").style.display = "none";
             var resultDiv = document.getElementById("result");
             resultDiv.style.display = "block";
-            resultDiv.innerHTML = "🎉 測驗結束！<br>你的總分是：" + score + " / 20<br>使用了 " + hintsUsed + " 次提示！<br><br>" + (score >= 16 ? "太厲害了！不僅單字背得熟，連一字多義都難不倒你！🌟" : "繼續加油！把書本和訂票、板子和登車的區分多複習幾次喔！💪");
+            resultDiv.innerHTML = "🎉 測驗結束！<br>你的總分是：" + score + " / 20<br>使用了 " + hintsUsed + " 次提示！<br><br>" + (score >= 16 ? "太強大啦！從 boring 到 break，還有 branch 的分行和樹枝、bow 的鞠躬都完全搞懂了！🌟" : "很讚的挑戰！再把 branch (樹枝/分行) 和 bow (鞠躬) 的一字多義複習一下就會無敵喔！💪");
             return;
         }
 
