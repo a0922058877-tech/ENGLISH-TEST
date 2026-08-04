@@ -2,43 +2,186 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>小學生英文單字挑戰 (boring ~ break 100%相容版)</title>
+    <!-- 確保手機瀏覽器不自動縮放，以 100% 原始解析度載入 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>小學生英文單字挑戰 (手機APP專屬寬度)</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4fbf7; color: #333; line-height: 1.6; padding: 20px; }
-        .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
-        h1 { text-align: center; color: #38b000; border-bottom: 2px dashed #b7e4c7; padding-bottom: 10px; }
-        .question { font-size: 1.2em; font-weight: bold; margin-bottom: 15px; min-height: 50px; color: #111; }
-        .options { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
-        .option { padding: 12px 15px; background: #e9f5ed; border: none; border-radius: 8px; cursor: pointer; font-size: 1em; text-align: left; transition: 0.2s; }
-        .option:hover { background: #c7f9cc; }
-        .hint-btn { background: #ffb703; color: #333; padding: 8px 12px; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9em; margin-bottom: 15px; font-weight: bold; }
-        .hint-text { display: none; color: #555; font-size: 0.9em; background: #fefae0; padding: 10px; border-radius: 6px; margin-bottom: 15px; border-left: 4px solid #fb8500; }
-        .feedback { font-weight: bold; margin-bottom: 15px; display: none; padding: 10px; border-radius: 6px; }
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f3f6;
+            color: #2c3e50;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        /* 手機板標準寬度容器 (max-width: 400px) */
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background: #ffffff;
+            padding: 20px 16px;
+            border-radius: 18px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #2e7d32;
+            font-size: 1.3em;
+            border-bottom: 2px dashed #c8e6c9;
+            padding-bottom: 12px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        /* 手機上方狀態條區塊 */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .reload-btn {
+            background: #78909c;
+            color: white;
+            padding: 6px 10px;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.8em;
+            cursor: pointer;
+        }
+        #q-counter {
+            color: #7f8c8d;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+        /* 題目區域：適度字體與高度 */
+        .question {
+            font-size: 1.15em;
+            font-weight: bold;
+            margin-bottom: 16px;
+            min-height: 54px;
+            color: #1a252f;
+            line-height: 1.5;
+        }
+        /* 提示按鈕與區塊 */
+        .hint-btn {
+            background: #ffb703;
+            color: #2c3e50;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+        }
+        .hint-text {
+            display: none;
+            color: #4f5f6f;
+            font-size: 0.9em;
+            background: #fefae0;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #fb8500;
+            line-height: 1.5;
+        }
+        /* 手機觸控友善選項（較大的按鈕與內距） */
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+        .option {
+            padding: 14px 16px;
+            background: #e8f5e9;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1em;
+            text-align: left;
+            color: #2c3e50;
+            transition: background 0.15s, transform 0.1s;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .option:active {
+            transform: scale(0.98);
+        }
+        .feedback {
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 0.95em;
+        }
         .correct { color: #155724; background-color: #d4edda; border: 1px solid #c3e6cb; }
         .wrong { color: #721c24; background-color: #f8d7da; border: 1px solid #f5c6cb; }
-        .explanation-box { display: none; background-color: #f0fdf4; border-left: 4px solid #38b000; padding: 15px; margin-bottom: 15px; border-radius: 6px; font-size: 0.95em; }
-        .explanation-box h4 { margin: 0 0 10px 0; color: #2b9348; }
-        .vocab-list { margin-top: 10px; padding-left: 20px; color: #555; }
-        .next-btn { display: none; background: #38b000; color: white; padding: 12px 20px; border: none; border-radius: 8px; cursor: pointer; font-size: 1em; width: 100%; font-weight: bold; }
-        .next-btn:hover { background: #2b9348; }
-        #result { text-align: center; font-size: 1.5em; font-weight: bold; color: #38b000; display: none; }
-        .reload-btn { background: #6c757d; color: white; padding: 6px 10px; border: none; border-radius: 4px; font-size: 0.8em; cursor: pointer; float: left; }
+        
+        /* 詳解區域 */
+        .explanation-box {
+            display: none;
+            background-color: #f0fdf4;
+            border-left: 4px solid #2e7d32;
+            padding: 14px;
+            margin-bottom: 18px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        .explanation-box h4 {
+            margin: 0 0 8px 0;
+            color: #2b9348;
+            font-size: 1.05em;
+        }
+        .vocab-list {
+            margin: 8px 0 0 0;
+            padding-left: 18px;
+            color: #34495e;
+        }
+        /* 手機大按鈕：「下一題」 */
+        .next-btn {
+            display: none;
+            background: #2e7d32;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1.05em;
+            width: 100%;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(46, 125, 50, 0.3);
+        }
+        #result {
+            text-align: center;
+            font-size: 1.35em;
+            font-weight: bold;
+            color: #2e7d32;
+            display: none;
+            padding: 20px 0;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>🌱 英文單字挑戰 (boring ~ break) 🌱</h1>
+    <h1>📱 英文單字挑戰 (手機版)</h1>
     <div id="quiz-container">
-        <div style="overflow: hidden; margin-bottom: 10px;">
-            <button class="reload-btn" onclick="loadQuestion()">🔄 重新載入題目</button>
-            <div id="q-counter" style="text-align: right; color: #999; font-size: 0.9em; float: right;">載入中...</div>
+        <div class="top-bar">
+            <button class="reload-btn" onclick="loadQuestion()">🔄 重整題目</button>
+            <div id="q-counter">載入中...</div>
         </div>
         
-        <div class="question" id="question-text">如果沒有看到題目，請點擊上方「重新載入題目」按鈕。</div>
+        <div class="question" id="question-text">如果沒有看到題目，請點擊上方「重整題目」按鈕。</div>
         
-        <button class="hint-btn" onclick="showHint()">👀 點我偷看提示 (整場測驗只能看 5 次喔！)</button>
+        <button class="hint-btn" onclick="showHint()">👀 點我偷看提示 (只能看 5 次喔！)</button>
         <div class="hint-text" id="hint-text"></div>
 
         <div class="options" id="options-container"></div>
@@ -47,7 +190,7 @@
         <div class="explanation-box" id="explanation-box">
             <h4>💡 答案詳解</h4>
             <div id="exp-content"></div>
-            <h4>📖 順便記單字</h4>
+            <h4 style="margin-top: 12px;">📖 順便記單字</h4>
             <ul class="vocab-list" id="vocab-content"></ul>
         </div>
 
@@ -154,7 +297,7 @@
             document.getElementById("quiz-container").style.display = "none";
             var resultDiv = document.getElementById("result");
             resultDiv.style.display = "block";
-            resultDiv.innerHTML = "🎉 測驗結束！<br>你的總分是：" + score + " / 20<br>使用了 " + hintsUsed + " 次提示！<br><br>" + (score >= 16 ? "太強大啦！從 boring 到 break，還有 branch 的分行和樹枝、bow 的鞠躬都完全搞懂了！🌟" : "很讚的挑戰！再把 branch (樹枝/分行) 和 bow (鞠躬) 的一字多義複習一下就會無敵喔！💪");
+            resultDiv.innerHTML = "🎉 測驗結束！<br>你的總分是：" + score + " / 20<br>使用了 " + hintsUsed + " 次提示！<br><br>" + (score >= 16 ? "太強大啦！手機操作也很順手，單字達人認證！🌟" : "很讚的挑戰！多練習幾次，越來越熟練喔！💪");
             return;
         }
 
@@ -197,7 +340,7 @@
         }
 
         if (selectedIndex === correctIndex) {
-            btn.style.background = "#38b000";
+            btn.style.background = "#2e7d32";
             btn.style.color = "white";
             feedback.innerHTML = "✅ 答對了！太讚了！";
             feedback.className = "feedback correct";
@@ -206,7 +349,7 @@
             btn.style.background = "#e63946";
             btn.style.color = "white";
             if (options[correctIndex]) {
-                options[correctIndex].style.background = "#38b000";
+                options[correctIndex].style.background = "#2e7d32";
                 options[correctIndex].style.color = "white";
             }
             feedback.innerHTML = "❌ 答錯囉！正確答案是 " + currentData.options[correctIndex] + "。";
@@ -233,7 +376,6 @@
         loadQuestion();
     }
 
-    // 雙重保險：網頁載入完畢後自動執行
     window.onload = function() {
         loadQuestion();
     };
