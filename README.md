@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>英文單字+文法挑戰 (break~buffet & 比較級than)</title>
+    <title>英文單字+文法挑戰 (bug~by & Which比較級問句)</title>
     <style>
         * { box-sizing: border-box; }
         body {
@@ -27,7 +27,7 @@
         h1 {
             text-align: center;
             color: #2e7d32;
-            font-size: 1.25em;
+            font-size: 1.22em;
             border-bottom: 2px dashed #c8e6c9;
             padding-bottom: 12px;
             margin-top: 5px;
@@ -54,7 +54,7 @@
             font-weight: bold;
         }
         .question {
-            font-size: 1.15em;
+            font-size: 1.12em;
             font-weight: bold;
             margin-bottom: 16px;
             min-height: 54px;
@@ -231,7 +231,7 @@
 <body>
 
 <div class="container">
-    <h1>🌱 單字+比較級文法挑戰</h1>
+    <h1>🌱 單字+Which比較級挑戰</h1>
     <div id="quiz-container">
         <div class="top-bar">
             <button class="reload-btn" onclick="loadQuestion()">🔄 重整</button>
@@ -265,124 +265,124 @@
 <script>
     var quizData = [
         { 
-            q: "1. The _____ sunlight streamed into my room early this morning.", options: ["bright", "brief", "broad", "brown"], ans: 0, hint: "清晨【明亮的】日光照進了我的房間。",
-            exp: "bright 當形容詞是「明亮的、鮮豔的、聰明的」意思；a bright idea 指聰明點子。",
-            grammarTip: "形容詞原級 bright 比較級為 brighter，最高級為 brightest。",
-            vocab: ["bright (adj.) 明亮的/聰明的", "sunlight (n.) 日光", "stream (v.) 流入/照進"]
+            q: "1. [文法] Which animal is _____, the panda or the giraffe?", options: ["cute", "cuter", "more cute", "cuter than"], ans: 1, hint: "哪一種動物【比較可愛】，熊貓還是長頸鹿？",
+            exp: "句型「Which is + 比較級, A or B?」中，詢問二選一誰比較怎樣，形容詞一定要變成比較級！cute 加上 -r 變成 cuter。",
+            grammarTip: "注意課本第6頁 Practice G 第1題陷阱：不能只寫原級 cute，一定要寫比較級 cuter！而且結尾有 or B? 時，切記不可再加 than 喔！",
+            vocab: ["cute (adj.) 可愛", "cuter (adj.) 比較可愛的", "giraffe (n.) 長頸鹿"]
         },
         { 
-            q: "2. [文法] This camera is NT$18,000, and that camera is NT$20,000. This camera is _____ that one.", options: ["cheap than", "cheaper than", "cheaper then", "more cheap than"], ans: 1, hint: "這台相機是18000元，另一台是20000元。這台相機【比】那一台【便宜】。",
-            exp: "單音節形容詞 cheap 的比較級要加 -er 變成 cheaper；而「比...」必須用 than (a)，絕對不能用 then (e)！",
-            grammarTip: "千萬記得比大小的「比」拼法是 than！then 的意思是「然後/那個時候」，兩個音很像但字不同喔！",
-            vocab: ["cheap (adj.) 便宜的", "cheaper (adj.) 更便宜的", "camera (n.) 照相機"]
+            q: "2. The old man sells steamed _____s at a street market every morning.", options: ["bun", "bug", "bus", "button"], ans: 0, hint: "位老先生每天早上在街頭市場賣蒸【饅頭 / 小圓麵包】。",
+            exp: "蒸的包子、饅頭或是漢堡用的小圓麵包，英文都是 bun (steamed buns = 蒸饅頭/包子)。",
+            grammarTip: "bun 也可以指女生綁頭髮的「包包頭」，如: have her hair in a bun。",
+            vocab: ["bun (n.) 小圓麵包/饅頭", "steamed (adj.) 蒸熟的", "market (n.) 市場"]
         },
         { 
-            q: "3. I woke up late on Sunday, so I had a quick _____ at 11:00 AM instead of breakfast and lunch.", options: ["brick", "buffet", "brunch", "bucket"], ans: 2, hint: "我星期天睡很晚，所以在早上十點半迅速吃了一頓【早午餐】。",
-            exp: "結合 breakfast (早餐) + lunch (午餐) 的詞就是 brunch (早午餐)。",
-            grammarTip: "have brunch / breakfast / lunch 前面通常不需要加冠詞 (a/the)，例如: I had brunch at 11.",
-            vocab: ["brunch (n.) 早午餐", "wake up late (phr.) 晚起", "instead of (prep.) 取代/而不是"]
+            q: "3. [文法] Which books _____ easier, the blue ones or the yellow ones?", options: ["is", "are", "do", "does"], ans: 1, hint: "哪一些書【是】比較簡單的，藍色的還是黃色的？",
+            exp: "主詞 Which books 以及選項 the blue ones 都是「複數」，因此 be 動詞一定要選複數的 are！",
+            grammarTip: "如果問 Which book is easier, the blue one or... (單數用 is)；如果是 Which books are... (複數務必用 are)！",
+            vocab: ["easy (adj.) 簡單的", "easier (adj.) 比較簡單的", "one / ones (pron.) 代名詞(單/複數)"]
         },
         { 
-            q: "4. [文法] My father works 10 hours a day, and my mother works 8 hours. My father is _____ my mother.", options: ["busy than", "busier then", "busier than", "more busy than"], ans: 2, hint: "爸爸一天工作10小時，媽媽8小時。爸爸【比】媽媽【忙碌】。",
-            exp: "字尾是「子音 + y」的形容詞 (busy)，比較級一定要「去 y 加 ier」變成 busier；同時搭配 than。",
-            grammarTip: "形容詞變化規則：busy ➔ busier；pretty ➔ prettier；dirty ➔ dirtier。記得搭配 than 喔！",
-            vocab: ["busy (adj.) 忙碌的", "busier (adj.) 更忙碌的", "work (v.) 工作"]
+            q: "4. Our school is a very tall _____ of twelve floors.", options: ["building", "bundle", "business", "butter"], ans: 0, hint: "我們學校是一棟十二層樓高的高大【建築物 / 大樓】。",
+            exp: "由動詞 build (蓋/建造) 加上 -ing 變成的名詞 building，意思就是「建築物、大樓」。",
+            grammarTip: "動詞三態：build (現在) ➔ built (過去式) ➔ built (過去分詞)，字尾 d 變成 t！",
+            vocab: ["building (n.) 建築物", "floor (n.) 樓層", "school (n.) 學校"]
         },
         { 
-            q: "5. The manager paid us a _____ visit and had a short talk with everyone.", options: ["bright", "broad", "British", "brief"], ans: 3, hint: "經理短暫拜訪了我們，並跟每個人簡短交談了一會兒。brief 表示【短暫的/簡短的】。",
-            exp: "brief 作形容詞意思是「短暫的、簡短的」；a brief talk 意思是簡短的談話。",
-            grammarTip: "in brief 是實用片語，意思是「簡而言之 / 總而言之」。",
-            vocab: ["brief (adj.) 短暫的/簡短的", "visit (n./v.) 拜訪", "manager (n.) 經理"]
+            q: "5. He carried a heavy _____ of newspapers in his arms to recycle.", options: ["button", "butterfly", "bundle", "bus"], ans: 2, hint: "他懷裡抱著一重【捆 / 束】報紙去回收。",
+            exp: "捆在一起的一束、一捆物品叫做 bundle (a bundle of newspapers = 一捆報紙)。",
+            grammarTip: "bundle 也常作動詞用，意思是「把...捆紮在一起」(bundle ... up/together)。",
+            vocab: ["bundle (n./v.) 捆 / 綁在一起", "newspaper (n.) 報紙", "carry (v.) 攜帶/抱著"]
         },
         { 
-            q: "6. [文法] The desk is 15 kilos, and the chair is 9 kilos. The desk is _____ the chair.", options: ["heavy than", "heavier then", "heavier than", "more heavy than"], ans: 2, hint: "書桌重 15 公斤，椅子重 9 公斤。書桌【比】椅子【重】。",
-            exp: "heavy (重的) 字尾是 y，比較級要「去 y 加 ier」變成 heavier，後面加上 than (比)。",
-            grammarTip: "複習課本第30頁：The desk is heavier than the chair. (heavier 不要忘記去 y，而且要寫 than 不是 then喔！)",
-            vocab: ["heavy (adj.) 重的", "heavier (adj.) 更重的", "kilo (n.) 公斤"]
+            q: "6. [文法] Which camera is _____, the big one or the small one?", options: ["cheap", "more cheap", "cheaper", "cheaper than"], ans: 2, hint: "哪一相機【比較便宜】，大台的還是小台的？",
+            exp: "單音節 cheap 的比較級是 cheaper。這是「Which is..., A or B?」比較問句，務必使用比較級 cheaper！",
+            grammarTip: "再次提醒：問「哪一個比較便宜」不能寫 Which camera is cheap，一定要加 -er 寫成 cheaper 喔！",
+            vocab: ["cheap (adj.) 便宜的", "cheaper (adj.) 比較便宜的", "camera (n.) 相機"]
         },
         { 
-            q: "7. We walked across a wooden _____ over the stream to get to the other side of the park.", options: ["brick", "bridge", "bucket", "brother"], ans: 1, hint: "我們走過溪流上方的一座木【橋】，來到公園的另一邊。",
-            exp: "橫跨河流或道路的「橋梁」是 bridge；cross a bridge 意思是過了那座橋。",
-            grammarTip: "wooden (木製的) 是由 wood (木頭) 加上 -en 變成的形容詞。",
-            vocab: ["bridge (n.) 橋梁", "wooden (adj.) 木製的", "stream (n.) 溪流"]
+            q: "7. Be careful with the hot stove, or you might _____ your finger!", options: ["burn", "build", "burst", "buy"], ans: 0, hint: "小心燙手爐子，否則你可能會【燙傷 / 燒傷】手指！",
+            exp: "被火或高溫「燒傷、燙傷、燃燒」的動詞是 burn；過去式為 burned 或 burnt。",
+            grammarTip: "burn 除了當動詞，也可當名詞「燙傷傷口」(He has serious burns on his arm.)。",
+            vocab: ["burn (v./n.) 燒傷/燙傷", "stove (n.) 爐子", "finger (n.) 手指"]
         },
         { 
-            q: "8. [文法] The green CD player is very popular, but the red one is not. The green CD player is _____ the red one.", options: ["more popular than", "popularer than", "more popular then", "popular than"], ans: 0, hint: "綠色CD播放機很受歡迎，紅色的不會。綠色的【比】紅色的【更受歡迎】。",
-            exp: "popular 是三個音節的長形容詞，比較級必須在前面加 more (more popular)；比...一樣要配 than。",
-            grammarTip: "長字不加 -er！例如：more popular, more expensive, more beautiful, more interesting。",
-            vocab: ["popular (adj.) 受歡迎的", "more popular (adj.) 更受歡迎的", "CD player (n.) CD播放機"]
+            q: "8. There was a sudden _____ in the gas pipe, so we called for help immediately.", options: ["button", "burst", "bus", "butterfly"], ans: 1, hint: "瓦斯管線突然發生【爆裂 / 破裂】，所以我們立刻打電話求助。",
+            exp: "水管或氣體管線「爆裂、破裂」是 burst；可以作動詞也可作名詞。",
+            grammarTip: "特殊三態不變：burst (現在) ➔ burst (過去) ➔ burst (過去分詞)，三態都長得一模一樣喔！",
+            vocab: ["burst (v./n.) 爆裂", "gas pipe (n.) 瓦斯管", "sudden (adj.) 突然的"]
         },
         { 
-            q: "9. Please remember to _____ your English textbook and workbook to class tomorrow!", options: ["bring", "brush", "break", "broadcast"], ans: 0, hint: "明天請記得把你的英文課本和習作薄【帶來】教室！",
-            exp: "bring 當動詞是「帶來、拿來」，過去式與過去分詞都是 brought (bring, brought, brought)。",
-            grammarTip: "bring (帶來這裡) vs take (帶去別處)：bring 往說話者靠近，take 是遠離說話者。",
-            vocab: ["bring (v.) 帶來", "remember (v.) 記得", "workbook (n.) 習作薄"]
+            q: "9. [文法] Which subject is _____, English or math?", options: ["more easy", "easier", "easy", "easier than"], ans: 1, hint: "哪一門科目【比較簡單】，英文還是數學？",
+            exp: "easy 字尾是 y，比較級規則為「去 y 加 ier」變成 easier。絕對不能說 more easy！",
+            grammarTip: "易錯陷阱：easy / busy / happy / heavy 這類 y 結尾形容詞，比較級一定都是加 -ier (easier/busier)，不要用 more 喔！",
+            vocab: ["subject (n.) 科目", "easier (adj.) 比較簡單的", "math (n.) 數學"]
         },
         { 
-            q: "10. [文法] Tiffany is 12 years old, and Tina is 10 years old. Tiffany is _____ Tina.", options: ["older then the", "older than", "more old than", "older then"], ans: 1, hint: "Tiffany 12 歲，Tina 10 歲。Tiffany 【比】 Tina 【年長 / 大】。",
-            exp: "old 的比較級是 older；連接比較對象直接用 than Tina 即可，名字前面不需要加 the。",
-            grammarTip: "注意課本 Practice E 第2題小圈套：人名 Tina 前面不能加 the！且一定要用 than，不是 then！",
-            vocab: ["old (adj.) 年老的/大歲數的", "older (adj.) 年紀更大的", "year old (phr.) ...歲"]
+            q: "10. Chin-chin got on the _____ at Taipei 101 and went home.", options: ["bus", "bun", "bug", "button"], ans: 0, hint: "芩芩在台北 101 上了【公車 / 巴士】然後回家。",
+            exp: "大眾交通工具「公車」是 bus；上公車是 get on the bus，下公車則是 get off the bus。",
+            grammarTip: "bus 的複數形記得在字尾加上 -es 變成 buses。",
+            vocab: ["bus (n.) 公車", "get on (phr.) 上車", "get off (phr.) 下車"]
         },
         { 
-            q: "11. Remember to _____ your teeth thoroughly after eating breakfast every day.", options: ["bring", "brush", "broad", "break"], ans: 1, hint: "每天吃完早餐後，記得要認真【刷】牙。",
-            exp: "brush 可以當動詞「刷清」(brush my shoes / teeth)，也可以當名詞「刷子、牙刷」(a brush)。",
-            grammarTip: "brush 的第三人稱單數現在式記得要加 -es (brushes)；過去式則是 brushed。",
-            vocab: ["brush (v./n.) 刷 / 刷子", "teeth (n.) 牙齒(複數)", "thoroughly (adv.) 徹底地"]
+            q: "11. My uncle started his own family _____ when he was only 25 years old.", options: ["building", "business", "butter", "button"], ans: 1, hint: "我叔叔在年僅25歲時就創立了自己的家族【事業 / 生意】。",
+            exp: "公司企業或「生意、事業」是 business；start a business 表示「創業」。",
+            grammarTip: "on business 是常用片語，意思是「因公出差」(He went to Japan on business.)。",
+            vocab: ["business (n.) 生意/事業", "start (v.) 創立/開始", "family (n.) 家族/家庭"]
         },
         { 
-            q: "12. [文法-同類比較] 選出文法完全正確的句子：", options: ["Lily's math is better than Mandy.", "Lily's math is better than Mandy's math.", "Lily's math is better then Mandy's.", "Lily's math is gooder than Mandy's math."], ans: 1, hint: "Lily 的數學不能跟 Mandy 「這個人」比，要跟 Mandy 的「數學」比喔！",
-            exp: "根據課本 1-6 重點：同類事物才可以相比！Lily's math 要比的是 Mandy's math (或簡寫 Mandy's)；且 good 的比較級是不規則的 better。",
-            grammarTip: "錯誤分析：(A) 不能把數學跟人比；(C) then 拼錯了；(D) good 的比較級是 better 不是 gooder！",
-            vocab: ["better (adj.) 更好的(good的比較級)", "math (n.) 數學", "correct (adj.) 正確的"]
+            q: "12. A successful _____ often wears a neat suit and carries a briefcase.", options: ["butterfly", "button", "businessman", "bundle"], ans: 2, hint: "位成功的【商人 / 企業家】常穿著整齊西裝並提著公事包。",
+            exp: "從事商業活動的男士或「商人」是 businessman (複數把 man 改為 men ➔ businessmen)。",
+            grammarTip: "business (商業) + man (男人) = businessman (商人)。",
+            vocab: ["businessman (n.) 商人", "successful (adj.) 成功的", "suit (n.) 西裝"]
         },
         { 
-            q: "13. He is a very tall man with _____ shoulders, so he looks strong.", options: ["bright", "brief", "broad", "British"], ans: 2, hint: "他是個個子很高、肩膀【寬闊的】男人，所以看起來很強壯。",
-            exp: "broad 當形容詞是「寬闊的、廣大的」；broad shoulders 意思是寬肩；窄肩則是 narrow shoulders。",
-            grammarTip: "road (道路) 前面加上一個 b，就成了 broad (寬廣的)，可以聯想「寬廣的道路」來記憶喔！",
-            vocab: ["broad (adj.) 寬廣的/寬闊的", "shoulder (n.) 肩膀", "strong (adj.) 強壯的"]
+            q: "13. [文法] _____ has more windows, the yellow house or the pink house?", options: ["What", "Which", "Who", "Where"], ans: 1, hint: "【哪一個】有比較多窗戶，黃色房子還是粉紅房子？",
+            exp: "課本 1-8 單元問句：「Which + has + more + 名詞, A or B?」，詢問二選一「哪一個」必定用疑問詞 Which。",
+            grammarTip: "Which 作為疑問代名詞時，可以單獨使用 (Which is better?)，也可接名詞 (Which house has more windows?)。",
+            vocab: ["Which (pron./adj.) 哪一個", "window (n.) 窗戶", "more (adj.) 更多的"]
         },
         { 
-            q: "14. [文法] Kevin's computer games are _____ Ken's computer games.", options: ["more interesting than", "interestinger than", "more interesting then", "interesting than"], ans: 0, hint: "Kevin 的電腦遊戲【比】 Ken 的電腦遊戲【更有趣】。",
-            exp: "interesting 是長形容詞，比較級為 more interesting than。這題你在 Practice F 第1題寫得完全正確，太厲害啦！",
-            grammarTip: "超級讚！妳已經很熟練「more + 長形容詞 + than」以及「遊戲比遊戲 (同類比)」的精髓囉！",
-            vocab: ["interesting (adj.) 有趣的", "more interesting (adj.) 更有趣的", "computer game (n.) 電腦遊戲"]
+            q: "14. Most parents are very _____ making money to take care of their children.", options: ["busy", "brief", "brave", "boring"], ans: 0, hint: "大多數父母都非常【忙碌於】賺錢來照顧小孩。",
+            exp: "形容事務繁多、沒有空閒的「忙碌的」是 busy；be busy + V-ing 表示「忙著做某事」。",
+            grammarTip: "再次複習 busy 的比較級：去 y 加 ier ➔ busier (My father is busier than my mother.)。",
+            vocab: ["busy (adj.) 忙碌的", "make money (phr.) 賺錢", "take care of (phr.) 照顧"]
         },
         { 
-            q: "15. We used a plastic _____ filled with soapy water to wash the family car.", options: ["buffet", "brunch", "bucket", "brick"], ans: 2, hint: "我們用一個裝滿肥皂水的塑膠【水桶】來洗家裡的車。",
-            exp: "有提把、可以用來裝水或沙子的「水桶 / 桶子」是 bucket (同義字是 pail)。",
-            grammarTip: "kick the bucket 是英文裡很有名的諺語，字面是踢水桶，其實指「翹辮子 / 去世」。",
-            vocab: ["bucket (n.) 水桶", "plastic (adj.) 塑膠的", "soapy water (n.) 肥皂水"]
+            q: "15. I wanted to buy that pretty dress, _____ I didn't have enough money.", options: ["but", "by", "or", "so"], ans: 0, hint: "我想買那件漂亮的洋裝，【但是】我沒有足夠的錢。",
+            exp: "連接前後兩個語氣轉折或相反的句子，要用表示「但是、卻」的連接詞 but。",
+            grammarTip: "英文裡 but (但是) 和 although/though (雖然) 不能同時出現在同一個句子裡喔！",
+            vocab: ["but (conj.) 但是", "enough (adj.) 足夠的", "pretty (adj.) 漂亮的"]
         },
         { 
-            q: "16. [文法] Those slippers are size 6, and these slippers are size 7. Those slippers _____ these slippers.", options: ["is smaller than", "are smaller than", "are small then", "are smaller then"], ans: 1, hint: "那雙拖鞋是 6 號，這雙是 7 號。那雙拖鞋【比】這雙【較小】。",
-            exp: "slippers (拖鞋) 是複數，be 動詞必須用 are；small 的比較級是 smaller；搭配 than。",
-            grammarTip: "注意兩點：1. 複數主詞用 are；2. 寫完 smaller 後一定要檢查寫的是 than，不是 then！",
-            vocab: ["small (adj.) 小的", "smaller (adj.) 更小的", "slipper (n.) 拖鞋"]
+            q: "16. I spread some sweet cream and yellow _____ over my warm toast.", options: ["button", "butterfly", "butter", "bun"], ans: 2, hint: "我在溫熱吐司上塗了一些甜奶油和黃色【奶油 / 牛油】。",
+            exp: "用牛奶製成、塗麵包或做甜點的「奶油 / 牛油」是 butter (不可數名詞)。",
+            grammarTip: "butter 也可以直接當動詞，意思是「塗奶油於...」(butter the toast)。",
+            vocab: ["butter (n.) 奶油/牛油", "spread (v.) 塗抹/鋪開", "toast (n.) 吐司"]
         },
         { 
-            q: "17. The hotel restaurant offers a delicious breakfast _____ where you can eat as much as you want.", options: ["buffet", "brick", "bridge", "brush"], ans: 0, hint: "這家飯店餐廳提供美味的早餐【自助餐 / 吃到飽】，想吃多少就吃多少。",
-            exp: "自己拿取食物的「自助餐」是 buffet，讀作 /bəˈfeɪ/ (字尾 t 不發音喔！)。",
-            grammarTip: "發音小提醒：buffet 作為自助餐時，發音類似「巴費」，字尾的 t 是安靜不發音的喔！",
-            vocab: ["buffet (n.) 自助餐", "restaurant (n.) 餐廳", "offer (v.) 提供"]
+            q: "17. Look! Two beautiful colorful _____ies are flying among the flowers in the garden.", options: ["button", "butterfly", "business", "bundle"], ans: 1, hint: "看！兩隻美麗多彩的【蝴蝶】正在花園的花朵間飛舞。",
+            exp: "有美麗翅膀的昆蟲「蝴蝶」是 butterfly (單數)；複數記得去 y 加 ies ➔ butterflies。",
+            grammarTip: "butter (奶油) + fly (飛) 拼在一起就是 butterfly (蝴蝶)！",
+            vocab: ["butterfly (n.) 蝴蝶", "colorful (adj.) 多彩的", "garden (n.) 花園"]
         },
         { 
-            q: "18. The exciting baseball game will be _____ live on the sports channel tonight.", options: ["brought", "broadcast", "brushed", "broken"], ans: 1, hint: "這場刺激的棒球賽今晚將在運動頻道現場【轉播 / 播送】。",
-            exp: "廣播或電視「轉播、播放」是 broadcast；特別注意動詞三態同行：broadcast, broadcast, broadcast。",
-            grammarTip: "特殊動詞三態：broadcast 的過去式和過去分詞不用加 -ed，維持原形 broadcast 即可！",
-            vocab: ["broadcast (v./n.) 轉播/播送", "baseball game (n.) 棒球比賽", "channel (n.) 頻道"]
+            q: "18. Oh no! A small round _____ came off my school shirt.", options: ["button", "butter", "bus", "bug"], ans: 0, hint: "噢不！一顆圓形小【鈕扣】從我的制服襯衫上掉下來了。",
+            exp: "衣服上的「鈕扣」或是機器上面的「按鈕」，英文都是 button。",
+            grammarTip: "button 也可以作動詞，button up my coat 意思是「把外套的扣子扣起來」。",
+            vocab: ["button (n./v.) 鈕扣 / 扣好", "shirt (n.) 襯衫", "come off (phr.) 脫落/掉下"]
         },
         { 
-            q: "19. The three little pigs built a strong _____ house that the wolf could not blow down.", options: ["brunch", "brief", "brick", "British"], ans: 2, hint: "三隻小豬蓋了一棟大野狼吹不倒的堅固【磚頭】屋。",
-            exp: "建築用的「磚塊、磚頭」是 brick；a brick wall 就是磚牆；lay bricks 指砌磚。",
-            grammarTip: "brick 當名詞是磚塊，也可直接作形容詞，如 a brick wall (磚牆)、a brick house (磚房)。",
-            vocab: ["brick (n.) 磚塊", "wolf (n.) 狼", "blow down (phr.) 吹倒"]
+            q: "19. I _____ a new laptop on the Internet for NT$15,000 yesterday.", options: ["buy", "bought", "build", "built"], ans: 1, hint: "昨天我網路上花了一萬五千元【買了】一台新筆電。",
+            exp: "動詞 buy (購買) 的過去式與過去分詞都是 bought (讀作 /bɔt/)；因為有 yesterday (昨天)，務必選過去式 bought。",
+            grammarTip: "超級必背三態：buy (現在) ➔ bought (過去) ➔ bought (過去分詞)！切勿寫成 buyed 喔！",
+            vocab: ["buy (v.) 購買", "bought (v.) buy的過去式", "Internet (n.) 網際網路"]
         },
         { 
-            q: "20. [文法] The washing machine is very clean, but the refrigerator is dirty. The washing machine is _____ the refrigerator.", options: ["cleaner than", "cleaner then", "clean than", "more clean than"], ans: 0, hint: "洗衣機很乾淨，但冰箱很髒。洗衣機【比】冰箱【乾淨】。",
-            exp: "clean 的比較級是 cleaner，後面一定要接比...的 than。",
-            grammarTip: "複習第30頁第6題：clean 比較級直接加 -er (cleaner)，千萬別忘記把 e 改為 a 寫成 than 喔！",
-            vocab: ["clean (adj.) 乾淨的", "cleaner (adj.) 更乾淨的", "refrigerator (n.) 冰箱"]
+            q: "20. The dress is a good _____ at only NT$500. It's really cheap!", options: ["buy", "by", "but", "bug"], ans: 0, hint: "這件洋裝只要 500 元，真是個劃算的【買賣 / 好貨】！真便宜！",
+            exp: "buy 除了當動詞，也可以當名詞。a good buy 意思是「物超所值的好買賣、劃算好貨」。",
+            grammarTip: "這題考課本第42頁的最上方標題短句：The dress is a good buy at NT$1,200. (買得真劃算)。",
+            vocab: ["a good buy (n.) 劃算的好買賣", "cheap (adj.) 便宜的", "dress (n.) 洋裝"]
         }
     ];
 
@@ -406,11 +406,11 @@
             var html = '<div class="score-title">🎉 測驗完成！<br>你的總分：' + score + ' / ' + quizData.length + '<br><span style="font-size: 0.8em; color: #6c757d;">(使用了 ' + hintsUsed + ' 次提示)</span></div>';
             
             if (wrongQuestions.length === 0) {
-                html += '<div style="text-align: center; background: #e8f5e9; color: #1e4620; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 15px;">🌟 太厲害了！全部答對，沒有任何錯題！連 than 和 then 都分得一清二楚！💯</div>';
+                html += '<div style="text-align: center; background: #e8f5e9; color: #1e4620; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 15px;">🌟 太厲害了！全部答對，沒有任何錯題！Which 比較級問句和 B 開頭單字已經完全制霸！💯</div>';
             } else {
                 html += '<div class="review-section">';
                 html += '<div class="review-title">📕 你的專屬錯題與文法複習 (' + wrongQuestions.length + ' 題)</div>';
-                html += '<div style="font-size:0.85em; color:#666; text-align:center; margin-bottom:12px;">把錯題小卡看一下，下次 than 跟 -er 絕對不會再錯囉！</div>';
+                html += '<div style="font-size:0.85em; color:#666; text-align:center; margin-bottom:12px;">把錯題小卡複習一下，下次「Which is + 比較級」絕不再漏掉 -er 囉！</div>';
                 
                 for (var w = 0; w < wrongQuestions.length; w++) {
                     var item = wrongQuestions[w];
