@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>英文單字+文法挑戰 (cabbage~carpet & 比較級副詞)</title>
+    <title>英文單字+文法挑戰 (carrot~chapter & 雙重比較級陷阱)</title>
     <style>
         * { box-sizing: border-box; }
         body {
@@ -27,7 +27,7 @@
         h1 {
             text-align: center;
             color: #2e7d32;
-            font-size: 1.22em;
+            font-size: 1.2em;
             border-bottom: 2px dashed #c8e6c9;
             padding-bottom: 12px;
             margin-top: 5px;
@@ -231,7 +231,7 @@
 <body>
 
 <div class="container">
-    <h1>🌱 單字+比較級副詞挑戰</h1>
+    <h1>🌱 單字+雙重比較級挑戰</h1>
     <div id="quiz-container">
         <div class="top-bar">
             <button class="reload-btn" onclick="loadQuestion()">🔄 重整</button>
@@ -265,124 +265,124 @@
 <script>
     var quizData = [
         { 
-            q: "1. Chin-chin baked a delicious chocolate _____ for her boyfriend's birthday.", options: ["cabbage", "cake", "candy", "candle"], ans: 1, hint: "芩芩為男朋友的生日烤了一個好吃的巧克力【蛋糕】。",
-            exp: "生日慶祝時吃的甜點是「蛋糕 (cake)」。",
+            q: "1. The little rabbit likes to eat sweet orange _____s.", options: ["cabbages", "carrots", "candies", "candles"], ans: 1, hint: "小兔子喜歡吃甜甜的橘色【紅蘿蔔】。",
+            exp: "橘色、兔子愛吃的蔬菜是「紅蘿蔔 (carrot)」。",
             grammarTip: "",
-            vocab: ["cake (n.) 蛋糕", "bake (v.) 烘烤", "birthday (n.) 生日"]
+            vocab: ["carrot (n.) 紅蘿蔔", "rabbit (n.) 兔子", "sweet (adj.) 甜的"]
         },
         { 
-            q: "2. [文法] The BTS concert tickets are _____ more expensive than normal tickets.", options: ["very", "much", "too", "quite"], ans: 1, hint: "BTS 的演唱會門票【比】一般門票貴【得多】。",
-            exp: "more expensive 是「比較級」，要用 much, a lot, even, far, a little 來修飾，絕對不能用 very 喔！",
-            grammarTip: "複習課本 1-9 單元：very 只能修飾「原級」(very expensive)；比較級前面要用 much (much more expensive)！",
-            vocab: ["expensive (adj.) 昂貴的", "concert ticket (n.) 演唱會門票", "normal (adj.) 一般的"]
+            q: "2. I have to go now so that I can _____ the 2:00 train to Taipei.", options: ["carry", "cause", "catch", "camp"], ans: 2, hint: "我現在必須走了，這樣我才能【趕上】兩點往台北的火車。",
+            exp: "catch 除了「抓住」，也很常當作「趕上 (公車、火車)」。",
+            grammarTip: "catch 的過去式和過去分詞都是 caught，讀作 /kɔt/，要特別記住拼法喔！",
+            vocab: ["catch (v.) 趕上/抓住", "train (n.) 火車", "go now (phr.) 現在離開"]
         },
         { 
-            q: "3. We are going to travel to Japan in 2026. Don't forget to bring your _____ to take beautiful photos!", options: ["cable", "calendar", "camera", "cage"], ans: 2, hint: "我們 2026 年要去日本旅行。別忘了帶你的【相機】去拍漂亮的照片！",
-            exp: "用來拍照的機器是「照相機 (camera)」。",
+            q: "3. We always _____ the Dragon Boat Festival by eating rice dumplings.", options: ["celebrate", "cancel", "call", "change"], ans: 0, hint: "我們總是藉由吃粽子來【慶祝】端午節。",
+            exp: "遇到節日或生日時，「慶祝」的動詞是 celebrate。",
+            grammarTip: "celebrate + 節慶/生日。例如：celebrate my birthday (慶祝我的生日)。",
+            vocab: ["celebrate (v.) 慶祝", "Dragon Boat Festival (n.) 端午節", "rice dumpling (n.) 粽子"]
+        },
+        { 
+            q: "4. [文法] The red dress is more _____ than the blue one.", options: ["beautifuler", "beautiful", "more beautiful", "very beautiful"], ans: 1, hint: "紅色洋裝比藍色洋裝【更美麗】。",
+            exp: "這題是 Unit 1 Review 第 2 題的大陷阱！句子裡【已經有 more 了】，所以後面只需要放長形容詞的「原級」beautiful，不能再寫 more beautiful 變成雙重比較級喔！",
+            grammarTip: "陷阱口訣：看到 more 就別再加 more！(more beautiful ✓ / more more beautiful ❌)",
+            vocab: ["beautiful (adj.) 美麗的", "dress (n.) 洋裝", "than (prep.) 比"]
+        },
+        { 
+            q: "5. We stand a good _____ of winning the basketball game today!", options: ["change", "chapter", "center", "chance"], ans: 3, hint: "我們今天很有【機會 / 勝算】贏得這場籃球賽！",
+            exp: "stand a good chance 是固定片語，意思是「很有機會、勝算很大」。chance 是機會。",
             grammarTip: "",
-            vocab: ["camera (n.) 照相機", "take photos (phr.) 拍照", "beautiful (adj.) 美麗的"]
+            vocab: ["chance (n.) 機會", "win (v.) 贏", "basketball game (n.) 籃球比賽"]
         },
         { 
-            q: "4. Because of the heavy typhoon, we had to _____ our trip to Osaka.", options: ["call", "cancel", "care", "camp"], ans: 1, hint: "因為強烈颱風的關係，我們不得不【取消】去大阪的行程。",
-            exp: "把預定好的計畫或行程「取消」，動詞是 cancel。",
-            grammarTip: "cancel 的過去式是 canceled (美式) 或 cancelled (英式)，字尾要加 ed。",
-            vocab: ["cancel (v.) 取消", "typhoon (n.) 颱風", "trip (n.) 旅行"]
+            q: "6. There was a sudden _____ in the weather, and it started to rain heavily.", options: ["change", "chance", "chalk", "chair"], ans: 0, hint: "天氣突然發生了【改變 / 變化】，然後開始下起大雨。",
+            exp: "change 當動詞是改變，當名詞是「變化」或「零錢」。這裡是指天氣的突然變化。",
+            grammarTip: "change for a $100 bill 意思是「換一百元的零錢」。",
+            vocab: ["change (n./v.) 變化/改變", "sudden (adj.) 突然的", "heavily (adv.) 猛烈地"]
         },
         { 
-            q: "5. [文法] 選出文法與語序【正確】的句子：", options: ["The much camera is more expensive than the cell phone.", "The camera is even more expensive than the cell phone.", "The camera is more expensive much than the cell phone.", "The camera is very more expensive than the cell phone."], ans: 1, hint: "修飾比較級的副詞 (even/much/a lot) 要放在「比較級形容詞」的正前方！",
-            exp: "這題針對 Practice J 第 4 題的陷阱：even 必須緊緊貼在 more expensive 的前面，不能放在名詞 camera 前面喔！",
-            grammarTip: "修飾語要當小跟班：The camera is [even] [more expensive]... (O)；The [even] camera is... (X)。",
-            vocab: ["even (adv.) 甚至更...", "cell phone (n.) 手機", "expensive (adj.) 昂貴的"]
+            q: "7. [文法] Chin-chin's new bicycle is _____ faster than her old one.", options: ["very", "much", "too", "many"], ans: 1, hint: "芩芩的新腳踏車比舊的快【得多】。",
+            exp: "faster 是比較級，比較級前面只能用 much, a lot, even, far, a little 來修飾，絕對不能用 very 喔！",
+            grammarTip: "very 只能配原級 (very fast)；much 才能配比較級 (much faster)！",
+            vocab: ["fast (adj.) 快的", "faster (adj.) 更快的", "bicycle (n.) 腳踏車"]
         },
         { 
-            q: "6. When there is a big earthquake, you need to stay _____ and not run around.", options: ["careful", "careless", "calm", "brief"], ans: 2, hint: "當發生大地震時，你需要保持【冷靜】，不要到處亂跑。",
-            exp: "遇到危險時保持「冷靜的、鎮定的」是 calm；calm down 則是「冷靜下來」。",
-            grammarTip: "calm 的 l 不發音喔！讀作 /kɑm/。",
-            vocab: ["calm (adj./v.) 冷靜的", "earthquake (n.) 地震", "stay (v.) 保持"]
+            q: "8. I usually eat a bowl of _____ with cold milk in the morning.", options: ["cell", "cent", "cereal", "century"], ans: 2, hint: "我早上通常吃一碗加冷牛奶的【麥片 / 穀物】。",
+            exp: "加牛奶吃的早餐「麥片、穀物」是 cereal。",
+            grammarTip: "cereal 發音類似 /ˋsɪrɪəl/，不要跟 serial (連續的) 搞混囉！",
+            vocab: ["cereal (n.) 麥片", "bowl (n.) 碗", "milk (n.) 牛奶"]
         },
         { 
-            q: "7. Smoking is strictly not allowed on the school _____.", options: ["carpet", "campus", "cabinet", "captain"], ans: 1, hint: "學校【校園】內嚴格禁止抽菸。",
-            exp: "學校的「校園、校區」是 campus；on campus 意思是「在校園裡」。",
-            grammarTip: "campus (校園) 的介系詞習慣搭配 on (on campus)。",
-            vocab: ["campus (n.) 校園", "smoke (v.) 抽菸", "allow (v.) 允許"]
+            q: "9. This famous university was built at the turn of the _____.", options: ["center", "cell", "cereal", "century"], ans: 3, hint: "這所著名的大學建於【世紀】之交 (約一百年前)。",
+            exp: "一百年的時間稱為「一世紀 (century)」。",
+            grammarTip: "century 的複數要去 y 加 ies ➔ centuries。",
+            vocab: ["century (n.) 世紀", "famous (adj.) 著名的", "university (n.) 大學"]
         },
         { 
-            q: "8. [文法] _____ meat you eat, _____ you will become.", options: ["The less, the healthy", "The less, the healthier", "Less, healthier", "The less, healthier"], ans: 1, hint: "你吃【越少】的肉，就會變得【越健康】。",
-            exp: "這題針對 Practice K 第 5 題的陷阱：「The + 比較級..., the + 比較級...」。less 是 little 的比較級，healthier 是 healthy 的比較級，兩個前面都要有 The！",
-            grammarTip: "句型公式：The + 比較級(less) + 主詞 + 動詞, the + 比較級(healthier) + 主詞 + 動詞。",
-            vocab: ["less (adj.) 較少的", "healthier (adj.) 較健康的", "meat (n.) 肉類"]
+            q: "10. Children love to watch _____s like Mickey Mouse on TV after school.", options: ["cartoon", "castle", "cash", "case"], ans: 0, hint: "小孩子放學後喜歡在電視上看像米老鼠之類的【卡通】。",
+            exp: "動畫片、卡通影片是 cartoon。",
+            grammarTip: "Mickey Mouse 是他們最愛的 cartoon characters (卡通人物)。",
+            vocab: ["cartoon (n.) 卡通", "watch (v.) 觀看", "after school (phr.) 放學後"]
         },
         { 
-            q: "9. It was very _____ of you to break the glass cup. Please pay more attention next time.", options: ["careful", "careless", "calm", "brief"], ans: 1, hint: "你打破玻璃杯真是太【粗心的 / 不小心的】了。下次請多加注意。",
-            exp: "care (小心) 加上 -less (缺乏...的)，就變成了「粗心的、不小心的 (careless)」。",
-            grammarTip: "形容詞字尾 -less 表示「沒有、缺乏」。例如：careless (不小心的)、homeless (無家可歸的)。",
-            vocab: ["careless (adj.) 粗心的", "break (v.) 打破", "pay attention (phr.) 注意"]
+            q: "11. [文法] Chin-chin's English is better than _____.", options: ["Kevin", "Kevin is", "Kevin's", "the Kevin"], ans: 2, hint: "芩芩的英文比【Kevin的(英文)】更好。",
+            exp: "同類才能做比較！「芩芩的英文」不能跟「Kevin (人)」比，必須跟「Kevin的 (Kevin's)」比。",
+            grammarTip: "Kevin's 後面其實省略了 English (Kevin's English)，這是為了避免重複的漂亮寫法！",
+            vocab: ["English (n.) 英文", "better (adj.) 更好的", "than (prep.) 比"]
         },
         { 
-            q: "10. My family went _____ in the mountains last weekend and slept in a tent.", options: ["calling", "canceling", "camping", "caring"], ans: 2, hint: "我家人上週末去山裡【露營】，並且睡在帳篷裡。",
-            exp: "camp 當名詞是露營地，當動詞是露營；go camping 是「去露營」。",
-            grammarTip: "go + V-ing 表示從事某項戶外活動，例如 go camping (去露營)、go swimming (去游泳)。",
-            vocab: ["camp (v./n.) 露營", "mountain (n.) 山", "tent (n.) 帳篷"]
+            q: "12. I am quite _____ that I will pass the math test tomorrow.", options: ["central", "certain", "careful", "calm"], ans: 1, hint: "我相當【確定 / 肯定】我明天會通過數學考試。",
+            exp: "對某件事情有把握、「確定的、肯定的」是 certain。",
+            grammarTip: "certainly (adv.) 意思是「必定地、當然」，常在對話中用來答應別人 (Certainly!)。",
+            vocab: ["certain (adj.) 確定的", "quite (adv.) 相當地", "pass (v.) 通過"]
         },
         { 
-            q: "11. [文法] The weather in Tokyo is _____ colder than the weather in Taipei.", options: ["very", "a lot", "too", "so"], ans: 1, hint: "東京的天氣比台北的天氣冷【得多】。",
-            exp: "colder 是比較級，只能用 much, even, a lot, far, a little 來修飾；不能用 very 喔！",
-            grammarTip: "a lot colder = much colder (冷得多)。",
-            vocab: ["weather (n.) 天氣", "a lot (adv.) 許多/得多", "colder (adj.) 比較冷的"]
+            q: "13. Look! There is a beautiful lamp hanging from the _____.", options: ["cell", "ceiling", "center", "castle"], ans: 1, hint: "看！【天花板】上懸掛著一盞美麗的燈。",
+            exp: "房間頂部的「天花板」是 ceiling。",
+            grammarTip: "hang from the ceiling 意思是「懸掛在天花板上」。",
+            vocab: ["ceiling (n.) 天花板", "lamp (n.) 燈", "hang (v.) 懸掛"]
         },
         { 
-            q: "12. I struck a match and lit the _____, but it was blown out by the wind.", options: ["candy", "cabbage", "candle", "carpet"], ans: 2, hint: "我劃了一根火柴點燃【蠟燭】，但它被風吹熄了。",
-            exp: "停電或慶生時點燃的「蠟燭」是 candle。",
-            grammarTip: "blow out a candle 意思是「吹熄蠟燭」。",
-            vocab: ["candle (n.) 蠟燭", "match (n.) 火柴", "light (v.) 點燃(過去式lit)"]
+            q: "14. We'll knock 20% off the price if you pay in _____ instead of a credit card.", options: ["cash", "card", "case", "catch"], ans: 0, hint: "如果你用【現金】而不是信用卡付款，我們會打八折。",
+            exp: "紙鈔和硬幣等「現金」是 cash；pay in cash 就是「付現」。",
+            grammarTip: "信用卡是 credit card。knock 20% off 是指打八折 (減掉 20%)。",
+            vocab: ["cash (n.) 現金", "pay (v.) 付款", "credit card (n.) 信用卡"]
         },
         { 
-            q: "13. I want to lay a soft, warm _____ in my bedroom for the winter.", options: ["carpet", "cabinet", "cable", "cage"], ans: 0, hint: "我想在臥室裡鋪一塊柔軟溫暖的【地毯】好過冬。",
-            exp: "鋪在地板上用來裝飾或保暖的「地毯」是 carpet。",
-            grammarTip: "car (車子) + pet (寵物) = carpet (地毯)！這是一個很好記的聯想方法喔！",
-            vocab: ["carpet (n.) 地毯", "soft (adj.) 柔軟的", "lay (v.) 鋪放"]
+            q: "15. The baby was crying, so Amy _____ her one-year-old daughter in her arms.", options: ["caught", "caused", "carried", "cared"], ans: 2, hint: "小嬰兒在哭，所以 Amy 把她一歲的女兒【抱】在懷裡。",
+            exp: "carry 除了「攜帶、搬運」，也常指「抱著 (小孩)」。",
+            grammarTip: "carry 的過去式要去 y 加 ied ➔ carried。",
+            vocab: ["carry (v.) 攜帶/抱著", "daughter (n.) 女兒", "in her arms (phr.) 在懷裡"]
         },
         { 
-            q: "14. [文法] How do you like your coffee? \"_____, _____.\"", options: ["The stronger, the better", "Stronger, better", "The strong, the good", "The stronger, the good"], ans: 0, hint: "你喜歡怎樣的咖啡？「【越濃，越好】。」",
-            exp: "這是課本 Practice K 第 3 題的經典對話：The + 比較級, the + 比較級 (越...越...)。",
-            grammarTip: "The stronger (越濃), the better (越好)。兩個逗號前後都要有 The 跟比較級！",
-            vocab: ["stronger (adj.) 較濃的/較強的", "better (adj.) 較好的", "coffee (n.) 咖啡"]
+            q: "16. Our guide took us to an old _____ where ghosts were reported to appear.", options: ["cartoon", "castle", "camp", "campus"], ans: 1, hint: "我們的導遊帶我們去了一座據說有鬼魂出現的古老【城堡】。",
+            exp: "古代國王或貴族居住的「城堡」是 castle。",
+            grammarTip: "castle 的 t 不發音喔！讀作 /ˈkæsəl/。",
+            vocab: ["castle (n.) 城堡", "guide (n.) 導遊", "ghost (n.) 鬼魂"]
         },
         { 
-            q: "15. The police _____ was driving fast along the mountain road to catch the bad guy.", options: ["car", "cap", "card", "cage"], ans: 0, hint: "警【車】沿著山路快速行駛以抓住壞人。",
-            exp: "警察開的巡邏車就是 police car。",
+            q: "17. I called her on her _____ phone, but it went straight to voice mail.", options: ["cereal", "cent", "center", "cell"], ans: 3, hint: "我打她的【手機】，但直接進入了語音信箱。",
+            exp: "cell 除了指細胞 (cancer cells) 或牢房，最常指「手機 (cell phone)」。",
             grammarTip: "",
-            vocab: ["car (n.) 車子", "police (n.) 警察", "catch (v.) 抓住"]
+            vocab: ["cell phone (n.) 手機", "straight (adv.) 直接地", "voice mail (n.) 語音信箱"]
         },
         { 
-            q: "16. Mom is cooking dinner. She chopped up some pork and _____ to make dumplings.", options: ["candies", "cabbages", "candles", "calendars"], ans: 1, hint: "媽媽正在煮晚餐。她切碎了一些豬肉和【高麗菜】來包水餃。",
-            exp: "一種常見的綠色葉菜類蔬菜「高麗菜 / 甘藍菜」是 cabbage。",
+            q: "18. [文法] This comic book is more _____ than that one.", options: ["interesting", "more interesting", "interestinger", "very interesting"], ans: 0, hint: "這本漫畫書比那一本【更有趣】。",
+            exp: "這跟第 4 題一樣是雙重比較級大陷阱！句子前面【已經有 more】了，所以我們只要選原級的 interesting 就好，絕對不能選 more interesting！",
+            grammarTip: "陷阱口訣再複習：看到 more 就別再加 more！",
+            vocab: ["interesting (adj.) 有趣的", "comic book (n.) 漫畫書", "than (prep.) 比"]
+        },
+        { 
+            q: "19. The doctor said that smoking may _____ lung cancer.", options: ["catch", "carry", "cause", "cancel"], ans: 2, hint: "醫生說抽菸可能【導致 / 引起】肺癌。",
+            exp: "引起某事發生的「導致、造成」是 cause。",
+            grammarTip: "cause 也可以當名詞，意思是「原因 (the cause of...)」。",
+            vocab: ["cause (v.) 導致/引起", "smoking (n.) 抽菸", "cancer (n.) 癌症"]
+        },
+        { 
+            q: "20. The third _____ of this book discusses the history of Taiwan.", options: ["chance", "change", "chair", "chapter"], ans: 3, hint: "這本書的第三【章 / 章節】討論了台灣的歷史。",
+            exp: "書本裡的「章節」是 chapter。",
             grammarTip: "",
-            vocab: ["cabbage (n.) 高麗菜", "chop up (phr.) 切碎", "dumpling (n.) 水餃"]
-        },
-        { 
-            q: "17. [文法] 選出文法與語序【正確】的句子：", options: ["The weather in New York is much colder than in California.", "The much weather in New York is colder than in California.", "The weather in New York is very colder than in California.", "The weather in New York is colder much than in California."], ans: 0, hint: "修飾比較級的副詞 (much) 要放在「比較級形容詞」的正前方！",
-            exp: "這題針對 Practice J 第 5 題的陷阱：much 必須緊緊貼在 colder 的前面，不能放在名詞 weather 前面喔！",
-            grammarTip: "The weather is [much] [colder]... (O)；The [much] weather is... (X)。",
-            vocab: ["much (adv.) 得多/非常", "California (n.) 加州", "colder (adj.) 比較冷的"]
-        },
-        { 
-            q: "18. After finishing college, Amy started her _____ as an English teacher.", options: ["cancer", "career", "calendar", "cable"], ans: 1, hint: "大學畢業後，艾美開始了她身為英文老師的【職業生涯】。",
-            exp: "一個人一生的工作或「職業、事業生涯」是 career。",
-            grammarTip: "start one's career as... 意思是「開始擔任...的職業生涯」。",
-            vocab: ["career (n.) 職業/生涯", "finish (v.) 完成", "college (n.) 大學"]
-        },
-        { 
-            q: "19. We are going to buy a lot of _____ned food like peaches and meat before the typhoon comes.", options: ["called", "canceled", "canned", "cared"], ans: 2, hint: "在颱風來之前，我們打算買很多【罐裝的】食物，例如水蜜桃和肉類。",
-            exp: "can 當名詞是「罐頭」，加了 -ed 變成形容詞 canned，意思是「罐裝的」。",
-            grammarTip: "注意 canned 的拼法，母音 + 子音結尾，要重複字尾 n 再加 ed 喔！",
-            vocab: ["canned (adj.) 罐裝的", "can (n.) 罐頭", "peach (n.) 水蜜桃"]
-        },
-        { 
-            q: "20. The cute little yellow bird is kept in a bird _____ in the living room.", options: ["cap", "cage", "camp", "card"], ans: 1, hint: "那隻可愛的小黃鳥被養在客廳的鳥【籠】裡。",
-            exp: "用來關動物或鳥類的「籠子」是 cage (bird cage = 鳥籠)。",
-            grammarTip: "",
-            vocab: ["cage (n.) 籠子", "keep (v.) 飼養(被動式為is kept)", "living room (n.) 客廳"]
+            vocab: ["chapter (n.) 章節", "discuss (v.) 討論", "history (n.) 歷史"]
         }
     ];
 
@@ -406,11 +406,11 @@
             var html = '<div class="score-title">🎉 測驗完成！<br>你的總分：' + score + ' / ' + quizData.length + '<br><span style="font-size: 0.8em; color: #6c757d;">(使用了 ' + hintsUsed + ' 次提示)</span></div>';
             
             if (wrongQuestions.length === 0) {
-                html += '<div style="text-align: center; background: #e8f5e9; color: #1e4620; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 15px;">🌟 太厲害了！全部答對，沒有任何錯題！連比較級修飾語的位置都擺得超級完美！💯</div>';
+                html += '<div style="text-align: center; background: #e8f5e9; color: #1e4620; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 15px;">🌟 太神啦！全部答對！C 開頭單字跟「雙重比較級陷阱」完全被你破解了！💯</div>';
             } else {
                 html += '<div class="review-section">';
                 html += '<div class="review-title">📕 你的專屬錯題與文法複習 (' + wrongQuestions.length + ' 題)</div>';
-                html += '<div style="font-size:0.85em; color:#666; text-align:center; margin-bottom:12px;">把錯題小卡複習一下，下次「even/much」絕對會當個稱職的比較級小跟班！</div>';
+                html += '<div style="font-size:0.85em; color:#666; text-align:center; margin-bottom:12px;">把錯題小卡複習一下，下次看到 more 後面一定不會再上當囉！</div>';
                 
                 for (var w = 0; w < wrongQuestions.length; w++) {
                     var item = wrongQuestions[w];
