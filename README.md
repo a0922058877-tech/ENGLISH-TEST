@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>英文單字+文法挑戰 (carrot~chapter & 雙重比較級陷阱)</title>
+    <title>英文單字+文法挑戰 (contract~courage & No other句型)</title>
     <style>
         * { box-sizing: border-box; }
         body {
@@ -27,7 +27,7 @@
         h1 {
             text-align: center;
             color: #2e7d32;
-            font-size: 1.2em;
+            font-size: 1.15em;
             border-bottom: 2px dashed #c8e6c9;
             padding-bottom: 12px;
             margin-top: 5px;
@@ -231,7 +231,7 @@
 <body>
 
 <div class="container">
-    <h1>🌱 單字+雙重比較級挑戰</h1>
+    <h1>🌱 單字+No other句型挑戰</h1>
     <div id="quiz-container">
         <div class="top-bar">
             <button class="reload-btn" onclick="loadQuestion()">🔄 重整</button>
@@ -265,124 +265,124 @@
 <script>
     var quizData = [
         { 
-            q: "1. The little rabbit likes to eat sweet orange _____s.", options: ["cabbages", "carrots", "candies", "candles"], ans: 1, hint: "小兔子喜歡吃甜甜的橘色【紅蘿蔔】。",
-            exp: "橘色、兔子愛吃的蔬菜是「紅蘿蔔 (carrot)」。",
+            q: "1. [單字陷阱] James works as a _____ in a famous Chinese restaurant.", options: ["cooker", "cookie", "cook", "count"], ans: 2, hint: "詹姆斯在一家有名的中式餐廳擔任【廚師】。",
+            exp: "這是一個超級大陷阱！英文的「廚師」是 cook，而不是 cooker。cooker 指的是廚房裡的「爐具/鍋具」喔！",
+            grammarTip: "千萬要記住：He is a good cook. (他是一個好廚師)。絕對不能說 He is a good cooker. (他是一個好瓦斯爐)！",
+            vocab: ["cook (n./v.) 廚師 / 煮飯", "restaurant (n.) 餐廳", "cooker (n.) 爐具/廚具"]
+        },
+        { 
+            q: "2. [文法] _____ boys in Class 12 are as handsome as Allen.", options: ["Any other", "All the other", "No other", "Some other"], ans: 2, hint: "12班裡【沒有其他】男孩跟Allen一樣帥。 (表示Allen最帥)",
+            exp: "這是課本 2-8 的經典句型。要表達「沒有其他人比得上他」，開頭要使用 No other (沒有其他的)。",
+            grammarTip: "No other + 名詞 + is/are as + 形容詞原級 + as... = 沒有其他人跟...一樣...",
+            vocab: ["No other (phr.) 沒有其他的", "handsome (adj.) 帥氣的", "class (n.) 班級"]
+        },
+        { 
+            q: "3. It _____ a lot of money to buy an apartment in Taipei.", options: ["costs", "spends", "pays", "takes"], ans: 0, hint: "在台北買一間公寓要【花費】很多錢。",
+            exp: "主詞是 It (買公寓這件事)，且花費的是「金錢」，所以動詞要用 cost。It costs + 金錢 + to V。",
+            grammarTip: "花錢的動詞選法：主詞是人通常用 spend 或 pay；主詞是物品或 It 通常用 cost。",
+            vocab: ["cost (v./n.) 花費(金錢) / 成本", "apartment (n.) 公寓", "buy (v.) 買"]
+        },
+        { 
+            q: "4. He had been _____ing all night because he caught a bad cold.", options: ["counting", "coughing", "cooling", "copying"], ans: 1, hint: "他整晚都在【咳嗽】，因為他得了重感冒。",
+            exp: "感冒時發出的聲音「咳嗽」，動詞是 cough (讀作 /kɔf/)。",
+            grammarTip: "catch a cold 意思是「感冒」；have a bad cough 意思是「咳得很厲害」。",
+            vocab: ["cough (v./n.) 咳嗽", "all night (phr.) 整晚", "catch a cold (phr.) 感冒"]
+        },
+        { 
+            q: "5. [文法] No other cities in Taiwan _____ as convenient as Taipei.", options: ["is", "are", "do", "does"], ans: 1, hint: "台灣沒有其他城市【是】跟台北一樣方便的。",
+            exp: "No other 後面接了複數名詞 cities，所以 be 動詞必須跟著使用複數的 are。",
+            grammarTip: "No other 後面可以接單數或複數名詞。如果是複數 (cities/boys)，be動詞就要用 are 喔！",
+            vocab: ["city (n.) 城市(單數)", "cities (n.) 城市(複數)", "convenient (adj.) 方便的"]
+        },
+        { 
+            q: "6. Tom and Mary are considered to be a well-matched _____.", options: ["courage", "country", "couple", "county"], ans: 2, hint: "湯姆和瑪麗被認為是天作之合的【一對 / 情侶】。",
+            exp: "一對伴侶、夫妻或情侶，英文是 couple。",
+            grammarTip: "a couple of... 也是常見片語，意思是「幾個、兩三個...」。",
+            vocab: ["couple (n.) 一對/情侶", "well-matched (adj.) 相配的", "consider (v.) 認為"]
+        },
+        { 
+            q: "7. Young people move to the city, leaving old people to live alone in the _____.", options: ["corner", "countryside", "cotton", "copy"], ans: 1, hint: "年輕人搬到城市，留下老人獨自住在【鄉下】。",
+            exp: "遠離城市的農村或「鄉下」是 countryside。",
+            grammarTip: "live in the country 和 live in the countryside 都可以表示住在鄉下。",
+            vocab: ["countryside (n.) 鄉下", "leave (v.) 留下/離開", "live alone (phr.) 獨居"]
+        },
+        { 
+            q: "8. [文法] No other student is heavier than Jack. = Jack is heavier than _____ student.", options: ["all other", "no other", "any other", "some other"], ans: 2, hint: "沒有其他學生比傑克重。 = 傑克比【任何其他的】學生都重。",
+            exp: "把 No other (沒有其他) 的句型轉換成一般比較級時，後面要搭配 than any other + 單數名詞。",
+            grammarTip: "這就是 2-8 單元的替換句型！No other is heavier than Jack = Jack is heavier than any other student.",
+            vocab: ["heavy (adj.) 重的", "heavier (adj.) 更重的", "any other (phr.) 任何其他的"]
+        },
+        { 
+            q: "9. There is a large TV set in the _____ of the living room.", options: ["corn", "corner", "copy", "count"], ans: 1, hint: "客廳的【角落】有一台大電視機。",
+            exp: "房間、街道的「角落、轉角」是 corner。",
+            grammarTip: "in the corner (在室內的角落)；on the corner (在街道的轉角)。",
+            vocab: ["corner (n.) 角落", "TV set (n.) 電視機", "living room (n.) 客廳"]
+        },
+        { 
+            q: "10. Mr. Lee showed great _____ in the face of terrible difficulties.", options: ["courage", "couple", "county", "country"], ans: 0, hint: "李先生在面對可怕的困難時展現了極大的【勇氣】。",
+            exp: "面對危險或困難時不害怕的「勇氣」是 courage (名詞)。形容詞是 courageous。",
+            grammarTip: "in the face of... 意思是「在面對...的時候」。",
+            vocab: ["courage (n.) 勇氣", "show (v.) 展現", "difficulty (n.) 困難"]
+        },
+        { 
+            q: "11. [文法] No other runner in the world is _____ Louis.", options: ["faster as", "as faster as", "fast than", "as fast as"], ans: 3, hint: "世界上沒有其他跑者跟 Louis 【一樣快】。",
+            exp: "No other 搭配 as...as 句型時，中間一定要用「形容詞原級」，所以是 as fast as！絕對不能加 -er 喔！",
+            grammarTip: "as...as 中間只能夾「原級」！(as fast as / as tall as / as beautiful as)。",
+            vocab: ["runner (n.) 跑者", "fast (adj.) 快的", "in the world (phr.) 世界上"]
+        },
+        { 
+            q: "12. It is against the law to listen in on other people's private _____s.", options: ["controls", "copies", "conversations", "contracts"], ans: 2, hint: "竊聽別人的私人【對話 / 交談】是違法的。",
+            exp: "兩個人或多人之間的交談、對話是 conversation。",
+            grammarTip: "listen in on... 意思是「偷聽、竊聽...」。",
+            vocab: ["conversation (n.) 對話/交談", "against the law (phr.) 違法", "private (adj.) 私人的"]
+        },
+        { 
+            q: "13. The driver suffered a sudden heart attack and lost _____ of the bus.", options: ["count", "cost", "correct", "control"], ans: 3, hint: "司機突然心臟病發，失去了對公車的【控制】。",
+            exp: "能夠操縱或管理事物的能力是 control；lose control of... 意思是「失去對...的控制」。",
+            grammarTip: "control 也可以當動詞，過去式要重複字尾 l 加上 ed ➔ controlled。",
+            vocab: ["control (n./v.) 控制", "suffer (v.) 遭受", "heart attack (n.) 心臟病發"]
+        },
+        { 
+            q: "14. Please check your test paper for spelling mistakes and _____ them.", options: ["correct", "count", "cost", "copy"], ans: 0, hint: "請檢查你的考卷是否有拼字錯誤，並【改正】它們。",
+            exp: "correct 當形容詞是「正確的」，當動詞是「批改、改正(錯誤)」。",
+            grammarTip: "correct answer (正確答案)；correct the mistakes (改正錯誤)。",
+            vocab: ["correct (v./adj.) 改正/正確的", "check (v.) 檢查", "mistake (n.) 錯誤"]
+        },
+        { 
+            q: "15. Tom dropped off to sleep on the _____, leaving the TV on.", options: ["coach", "couch", "corn", "cookie"], ans: 1, hint: "湯姆在【長沙發】上睡著了，電視機還開著。",
+            exp: "可以讓好幾個人坐或躺的「長沙發」是 couch (sofa 也可以)。",
+            grammarTip: "couch potato 是一個有趣的俚語，指「整天坐在沙發上看電視的人」。",
+            vocab: ["couch (n.) 長沙發", "drop off to sleep (phr.) 睡著", "leave (v.) 讓...保持某狀態"]
+        },
+        { 
+            q: "16. Jimmy likes to have a bowl of hot _____ soup for breakfast.", options: ["corn", "cotton", "coin", "cold"], ans: 0, hint: "吉米早餐喜歡喝一碗熱【玉米】湯。",
+            exp: "黃色的一粒粒穀物「玉米」是 corn。",
             grammarTip: "",
-            vocab: ["carrot (n.) 紅蘿蔔", "rabbit (n.) 兔子", "sweet (adj.) 甜的"]
+            vocab: ["corn (n.) 玉米", "soup (n.) 湯", "breakfast (n.) 早餐"]
         },
         { 
-            q: "2. I have to go now so that I can _____ the 2:00 train to Taipei.", options: ["carry", "cause", "catch", "camp"], ans: 2, hint: "我現在必須走了，這樣我才能【趕上】兩點往台北的火車。",
-            exp: "catch 除了「抓住」，也很常當作「趕上 (公車、火車)」。",
-            grammarTip: "catch 的過去式和過去分詞都是 caught，讀作 /kɔt/，要特別記住拼法喔！",
-            vocab: ["catch (v.) 趕上/抓住", "train (n.) 火車", "go now (phr.) 現在離開"]
+            q: "17. [動詞三態陷阱] The car repair _____ me a lot of money yesterday.", options: ["costed", "cost", "costs", "is costing"], ans: 1, hint: "昨天的汽車修理【花了】我很多錢。",
+            exp: "因為有 yesterday (昨天)，所以要用過去式。但 cost 的過去式還是 cost！絕對沒有 costed 這個字！",
+            grammarTip: "超愛考的動詞三態：cost (現在) ➔ cost (過去) ➔ cost (過去分詞)。三態同行！",
+            vocab: ["cost (v.) 花費", "repair (n.) 修理", "yesterday (adv.) 昨天"]
         },
         { 
-            q: "3. We always _____ the Dragon Boat Festival by eating rice dumplings.", options: ["celebrate", "cancel", "call", "change"], ans: 0, hint: "我們總是藉由吃粽子來【慶祝】端午節。",
-            exp: "遇到節日或生日時，「慶祝」的動詞是 celebrate。",
-            grammarTip: "celebrate + 節慶/生日。例如：celebrate my birthday (慶祝我的生日)。",
-            vocab: ["celebrate (v.) 慶祝", "Dragon Boat Festival (n.) 端午節", "rice dumpling (n.) 粽子"]
+            q: "18. I _____ed the chickens in the yard and found out that one was missing.", options: ["coughed", "copied", "cooked", "counted"], ans: 3, hint: "我【數了數】院子裡的雞，發現少了一隻。",
+            exp: "計算數量、「數數」的動詞是 count。",
+            grammarTip: "count to three and then jump 意思是「數到三然後跳」。",
+            vocab: ["count (v.) 計算/數數", "yard (n.) 院子", "missing (adj.) 遺失的"]
         },
         { 
-            q: "4. [文法] The red dress is more _____ than the blue one.", options: ["beautifuler", "beautiful", "more beautiful", "very beautiful"], ans: 1, hint: "紅色洋裝比藍色洋裝【更美麗】。",
-            exp: "這題是 Unit 1 Review 第 2 題的大陷阱！句子裡【已經有 more 了】，所以後面只需要放長形容詞的「原級」beautiful，不能再寫 more beautiful 變成雙重比較級喔！",
-            grammarTip: "陷阱口訣：看到 more 就別再加 more！(more beautiful ✓ / more more beautiful ❌)",
-            vocab: ["beautiful (adj.) 美麗的", "dress (n.) 洋裝", "than (prep.) 比"]
+            q: "19. It is very _____ to use a microwave oven to heat up food.", options: ["convenient", "correct", "comfortable", "common"], ans: 0, hint: "用微波爐加熱食物非常【方便的】。",
+            exp: "省時省力的「方便的、便利的」是 convenient。",
+            grammarTip: "convenience store 就是我們常去的「便利商店」。",
+            vocab: ["convenient (adj.) 方便的", "microwave oven (n.) 微波爐", "heat up (phr.) 加熱"]
         },
         { 
-            q: "5. We stand a good _____ of winning the basketball game today!", options: ["change", "chapter", "center", "chance"], ans: 3, hint: "我們今天很有【機會 / 勝算】贏得這場籃球賽！",
-            exp: "stand a good chance 是固定片語，意思是「很有機會、勝算很大」。chance 是機會。",
-            grammarTip: "",
-            vocab: ["chance (n.) 機會", "win (v.) 贏", "basketball game (n.) 籃球比賽"]
-        },
-        { 
-            q: "6. There was a sudden _____ in the weather, and it started to rain heavily.", options: ["change", "chance", "chalk", "chair"], ans: 0, hint: "天氣突然發生了【改變 / 變化】，然後開始下起大雨。",
-            exp: "change 當動詞是改變，當名詞是「變化」或「零錢」。這裡是指天氣的突然變化。",
-            grammarTip: "change for a $100 bill 意思是「換一百元的零錢」。",
-            vocab: ["change (n./v.) 變化/改變", "sudden (adj.) 突然的", "heavily (adv.) 猛烈地"]
-        },
-        { 
-            q: "7. [文法] Chin-chin's new bicycle is _____ faster than her old one.", options: ["very", "much", "too", "many"], ans: 1, hint: "芩芩的新腳踏車比舊的快【得多】。",
-            exp: "faster 是比較級，比較級前面只能用 much, a lot, even, far, a little 來修飾，絕對不能用 very 喔！",
-            grammarTip: "very 只能配原級 (very fast)；much 才能配比較級 (much faster)！",
-            vocab: ["fast (adj.) 快的", "faster (adj.) 更快的", "bicycle (n.) 腳踏車"]
-        },
-        { 
-            q: "8. I usually eat a bowl of _____ with cold milk in the morning.", options: ["cell", "cent", "cereal", "century"], ans: 2, hint: "我早上通常吃一碗加冷牛奶的【麥片 / 穀物】。",
-            exp: "加牛奶吃的早餐「麥片、穀物」是 cereal。",
-            grammarTip: "cereal 發音類似 /ˋsɪrɪəl/，不要跟 serial (連續的) 搞混囉！",
-            vocab: ["cereal (n.) 麥片", "bowl (n.) 碗", "milk (n.) 牛奶"]
-        },
-        { 
-            q: "9. This famous university was built at the turn of the _____.", options: ["center", "cell", "cereal", "century"], ans: 3, hint: "這所著名的大學建於【世紀】之交 (約一百年前)。",
-            exp: "一百年的時間稱為「一世紀 (century)」。",
-            grammarTip: "century 的複數要去 y 加 ies ➔ centuries。",
-            vocab: ["century (n.) 世紀", "famous (adj.) 著名的", "university (n.) 大學"]
-        },
-        { 
-            q: "10. Children love to watch _____s like Mickey Mouse on TV after school.", options: ["cartoon", "castle", "cash", "case"], ans: 0, hint: "小孩子放學後喜歡在電視上看像米老鼠之類的【卡通】。",
-            exp: "動畫片、卡通影片是 cartoon。",
-            grammarTip: "Mickey Mouse 是他們最愛的 cartoon characters (卡通人物)。",
-            vocab: ["cartoon (n.) 卡通", "watch (v.) 觀看", "after school (phr.) 放學後"]
-        },
-        { 
-            q: "11. [文法] Chin-chin's English is better than _____.", options: ["Kevin", "Kevin is", "Kevin's", "the Kevin"], ans: 2, hint: "芩芩的英文比【Kevin的(英文)】更好。",
-            exp: "同類才能做比較！「芩芩的英文」不能跟「Kevin (人)」比，必須跟「Kevin的 (Kevin's)」比。",
-            grammarTip: "Kevin's 後面其實省略了 English (Kevin's English)，這是為了避免重複的漂亮寫法！",
-            vocab: ["English (n.) 英文", "better (adj.) 更好的", "than (prep.) 比"]
-        },
-        { 
-            q: "12. I am quite _____ that I will pass the math test tomorrow.", options: ["central", "certain", "careful", "calm"], ans: 1, hint: "我相當【確定 / 肯定】我明天會通過數學考試。",
-            exp: "對某件事情有把握、「確定的、肯定的」是 certain。",
-            grammarTip: "certainly (adv.) 意思是「必定地、當然」，常在對話中用來答應別人 (Certainly!)。",
-            vocab: ["certain (adj.) 確定的", "quite (adv.) 相當地", "pass (v.) 通過"]
-        },
-        { 
-            q: "13. Look! There is a beautiful lamp hanging from the _____.", options: ["cell", "ceiling", "center", "castle"], ans: 1, hint: "看！【天花板】上懸掛著一盞美麗的燈。",
-            exp: "房間頂部的「天花板」是 ceiling。",
-            grammarTip: "hang from the ceiling 意思是「懸掛在天花板上」。",
-            vocab: ["ceiling (n.) 天花板", "lamp (n.) 燈", "hang (v.) 懸掛"]
-        },
-        { 
-            q: "14. We'll knock 20% off the price if you pay in _____ instead of a credit card.", options: ["cash", "card", "case", "catch"], ans: 0, hint: "如果你用【現金】而不是信用卡付款，我們會打八折。",
-            exp: "紙鈔和硬幣等「現金」是 cash；pay in cash 就是「付現」。",
-            grammarTip: "信用卡是 credit card。knock 20% off 是指打八折 (減掉 20%)。",
-            vocab: ["cash (n.) 現金", "pay (v.) 付款", "credit card (n.) 信用卡"]
-        },
-        { 
-            q: "15. The baby was crying, so Amy _____ her one-year-old daughter in her arms.", options: ["caught", "caused", "carried", "cared"], ans: 2, hint: "小嬰兒在哭，所以 Amy 把她一歲的女兒【抱】在懷裡。",
-            exp: "carry 除了「攜帶、搬運」，也常指「抱著 (小孩)」。",
-            grammarTip: "carry 的過去式要去 y 加 ied ➔ carried。",
-            vocab: ["carry (v.) 攜帶/抱著", "daughter (n.) 女兒", "in her arms (phr.) 在懷裡"]
-        },
-        { 
-            q: "16. Our guide took us to an old _____ where ghosts were reported to appear.", options: ["cartoon", "castle", "camp", "campus"], ans: 1, hint: "我們的導遊帶我們去了一座據說有鬼魂出現的古老【城堡】。",
-            exp: "古代國王或貴族居住的「城堡」是 castle。",
-            grammarTip: "castle 的 t 不發音喔！讀作 /ˈkæsəl/。",
-            vocab: ["castle (n.) 城堡", "guide (n.) 導遊", "ghost (n.) 鬼魂"]
-        },
-        { 
-            q: "17. I called her on her _____ phone, but it went straight to voice mail.", options: ["cereal", "cent", "center", "cell"], ans: 3, hint: "我打她的【手機】，但直接進入了語音信箱。",
-            exp: "cell 除了指細胞 (cancer cells) 或牢房，最常指「手機 (cell phone)」。",
-            grammarTip: "",
-            vocab: ["cell phone (n.) 手機", "straight (adv.) 直接地", "voice mail (n.) 語音信箱"]
-        },
-        { 
-            q: "18. [文法] This comic book is more _____ than that one.", options: ["interesting", "more interesting", "interestinger", "very interesting"], ans: 0, hint: "這本漫畫書比那一本【更有趣】。",
-            exp: "這跟第 4 題一樣是雙重比較級大陷阱！句子前面【已經有 more】了，所以我們只要選原級的 interesting 就好，絕對不能選 more interesting！",
-            grammarTip: "陷阱口訣再複習：看到 more 就別再加 more！",
-            vocab: ["interesting (adj.) 有趣的", "comic book (n.) 漫畫書", "than (prep.) 比"]
-        },
-        { 
-            q: "19. The doctor said that smoking may _____ lung cancer.", options: ["catch", "carry", "cause", "cancel"], ans: 2, hint: "醫生說抽菸可能【導致 / 引起】肺癌。",
-            exp: "引起某事發生的「導致、造成」是 cause。",
-            grammarTip: "cause 也可以當名詞，意思是「原因 (the cause of...)」。",
-            vocab: ["cause (v.) 導致/引起", "smoking (n.) 抽菸", "cancer (n.) 癌症"]
-        },
-        { 
-            q: "20. The third _____ of this book discusses the history of Taiwan.", options: ["chance", "change", "chair", "chapter"], ans: 3, hint: "這本書的第三【章 / 章節】討論了台灣的歷史。",
-            exp: "書本裡的「章節」是 chapter。",
-            grammarTip: "",
-            vocab: ["chapter (n.) 章節", "discuss (v.) 討論", "history (n.) 歷史"]
+            q: "20. I made forty _____ of the English article and gave one to each student.", options: ["cookies", "countries", "copies", "couches"], ans: 2, hint: "我印了四十【份 / 影本】這篇英文文章，發給每位學生一人一份。",
+            exp: "名詞 copy 指的是「複製品、影本」。因為是四十份，所以去 y 加 ies 變成 copies。",
+            grammarTip: "copy 也可以當動詞，意思是「抄寫、複製」(copying important documents)。",
+            vocab: ["copy (n./v.) 影本/複製", "article (n.) 文章", "each (adj.) 每一"]
         }
     ];
 
@@ -406,11 +406,11 @@
             var html = '<div class="score-title">🎉 測驗完成！<br>你的總分：' + score + ' / ' + quizData.length + '<br><span style="font-size: 0.8em; color: #6c757d;">(使用了 ' + hintsUsed + ' 次提示)</span></div>';
             
             if (wrongQuestions.length === 0) {
-                html += '<div style="text-align: center; background: #e8f5e9; color: #1e4620; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 15px;">🌟 太神啦！全部答對！C 開頭單字跟「雙重比較級陷阱」完全被你破解了！💯</div>';
+                html += '<div style="text-align: center; background: #e8f5e9; color: #1e4620; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 15px;">🌟 太神啦！全部答對！No other 句型跟 cost 陷阱完全被你破解了！C 開頭單字正式過關！💯</div>';
             } else {
                 html += '<div class="review-section">';
                 html += '<div class="review-title">📕 你的專屬錯題與文法複習 (' + wrongQuestions.length + ' 題)</div>';
-                html += '<div style="font-size:0.85em; color:#666; text-align:center; margin-bottom:12px;">把錯題小卡複習一下，下次看到 more 後面一定不會再上當囉！</div>';
+                html += '<div style="font-size:0.85em; color:#666; text-align:center; margin-bottom:12px;">把錯題小卡複習一下，下次遇到 No other 絕對能秒殺它！</div>';
                 
                 for (var w = 0; w < wrongQuestions.length; w++) {
                     var item = wrongQuestions[w];
