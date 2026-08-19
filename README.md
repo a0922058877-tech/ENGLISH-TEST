@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>英文單字+文法挑戰 (course~customer & 情態副詞)</title>
+    <title>英文單字+文法挑戰 (cut~deal & How問句特訓)</title>
     <style>
         * { box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f0f3f6;
-            color: #2c3e50;
+            background-color: #f4f5f0;
+            color: #333333;
             margin: 0;
             padding: 10px;
             display: flex;
@@ -21,7 +21,7 @@
             background: #ffffff;
             padding: 20px 16px;
             border-radius: 18px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
             margin: 0 auto;
         }
         h1 {
@@ -40,7 +40,7 @@
             margin-bottom: 12px;
         }
         .reload-btn {
-            background: #78909c;
+            background: #8d6e63; /* 暖棕色取代原本的藍灰色 */
             color: white;
             padding: 6px 10px;
             border: none;
@@ -49,7 +49,7 @@
             cursor: pointer;
         }
         #q-counter {
-            color: #7f8c8d;
+            color: #795548;
             font-size: 0.85em;
             font-weight: bold;
         }
@@ -58,12 +58,12 @@
             font-weight: bold;
             margin-bottom: 16px;
             min-height: 54px;
-            color: #1a252f;
+            color: #222222;
             line-height: 1.5;
         }
         .hint-btn {
             background: #ffb703;
-            color: #2c3e50;
+            color: #333333;
             padding: 10px;
             border: none;
             border-radius: 10px;
@@ -76,7 +76,7 @@
         }
         .hint-text {
             display: none;
-            color: #4f5f6f;
+            color: #444444;
             font-size: 0.9em;
             background: #fefae0;
             padding: 12px;
@@ -99,7 +99,7 @@
             cursor: pointer;
             font-size: 0.98em;
             text-align: left;
-            color: #2c3e50;
+            color: #333333;
             transition: background 0.15s, transform 0.1s;
             -webkit-tap-highlight-color: transparent;
         }
@@ -144,7 +144,7 @@
         .vocab-list {
             margin: 8px 0 0 0;
             padding-left: 18px;
-            color: #34495e;
+            color: #444444;
         }
         .next-btn {
             display: none;
@@ -202,7 +202,7 @@
             margin-bottom: 6px;
         }
         .wrong-card-exp {
-            color: #495057;
+            color: #444444;
             margin-bottom: 8px;
             font-size: 0.95em;
         }
@@ -211,7 +211,7 @@
             border-radius: 6px;
             padding: 8px 8px 8px 24px;
             margin: 0;
-            color: #34495e;
+            color: #444444;
             border: 1px solid #ffe3e3;
         }
         .restart-btn {
@@ -231,7 +231,7 @@
 <body>
 
 <div class="container">
-    <h1>🌱 單字+情態副詞挑戰</h1>
+    <h1>🌱 單字+How問句特訓挑戰</h1>
     <div id="quiz-container">
         <div class="top-bar">
             <button class="reload-btn" onclick="loadQuestion()">🔄 重整</button>
@@ -265,124 +265,124 @@
 <script>
     var quizData = [
         { 
-            q: "1. [文法] The boy is coloring the picture _____ with his new crayons.", options: ["happy", "happily", "happyly", "happilily"], ans: 1, hint: "小男孩正【快樂地】用他的新蠟筆幫圖畫上色。",
-            exp: "修飾動詞「著色 (coloring)」必須使用情態副詞。happy 字尾是 y，要「去 y 加 ily」變成 happily。",
-            grammarTip: "情態副詞用來修飾「動詞」。happy ➔ happily；angry ➔ angrily。妳在課本第 22 頁寫得完全正確喔！",
-            vocab: ["color (v.) 著色", "happily (adv.) 快樂地", "crayon (n.) 蠟筆"]
-        },
-        { 
-            q: "2. We often have four-_____ meals for our family dinner at the restaurant.", options: ["court", "cover", "course", "crowd"], ans: 2, hint: "我們在餐廳吃家庭晚餐時，通常會吃四【道菜】的餐點。",
-            exp: "course 除了當「課程」，也可以當「一道菜」。four-course meals 就是指四道菜的餐點。",
-            grammarTip: "take a course in cooking 意思是「上烹飪課」；main course 指的是「主菜」。",
-            vocab: ["course (n.) 課程/一道菜", "meal (n.) 餐點", "dinner (n.) 晚餐"]
-        },
-        { 
-            q: "3. My uncle's sons are my _____s. We always play together on Chinese New Year.", options: ["customs", "cousins", "customers", "crimes"], ans: 1, hint: "我叔叔的兒子們是我的【堂表兄弟】。我們總是在過年時一起玩。",
-            exp: "叔伯阿姨的小孩、「堂兄弟姊妹、表兄弟姊妹」統稱 cousin。",
+            q: "1. The little boy looked so _____ when a broad smile spread over his face.", options: ["cute", "cut", "cruel", "curious"], ans: 0, hint: "那個小男孩滿臉微笑時看起來好【可愛】。",
+            exp: "惹人喜愛的、「可愛的」形容詞是 cute。",
             grammarTip: "",
-            vocab: ["cousin (n.) 堂/表兄弟姊妹", "uncle (n.) 叔叔/舅舅", "Chinese New Year (n.) 農曆新年"]
+            vocab: ["cute (adj.) 可愛的", "smile (n.) 微笑", "spread (v.) 散開/展開"]
         },
         { 
-            q: "4. [文法陷阱] The 10-year-old Shiba Inu runs very _____ to catch the ball.", options: ["fast", "fastly", "fasts", "faster"], ans: 0, hint: "這隻十歲的柴犬跑得非常【快】去接球。",
-            exp: "這題是超級陷阱！fast 的形容詞和副詞是「同一個字」，絕對沒有 fastly 這個字！",
-            grammarTip: "妳在課本第 22 頁完全沒被騙！fast 的副詞還是 fast；high 的副詞還是 high！",
-            vocab: ["fast (adv.) 快速地", "Shiba Inu (n.) 柴犬", "catch (v.) 抓住/接住"]
+            q: "2. [文法大魔王] Tom dances very well. ➔ _____ Tom _____?", options: ["How is / dances", "How does / dance", "How is / dance", "How does / dances"], ans: 1, hint: "湯姆跳舞跳得很好。 ➔ 湯姆跳舞跳得【如何】？",
+            exp: "這題是課本第 25 頁妳訂正過的題目喔！問「一般動作(dance)」的狀況，一定要請助動詞 does 來幫忙，而且後面的動詞要打回原形 dance！",
+            grammarTip: "陷阱口訣：有動作(dance)就不能用 is！用 does 幫忙後，動詞記得不加 s 喔！",
+            vocab: ["dance (v.) 跳舞", "well (adv.) 很好地"]
         },
         { 
-            q: "5. You shouldn't judge a book by its _____. The inside is what matters.", options: ["course", "cover", "cross", "culture"], ans: 1, hint: "你不應該以【封面】來評斷一本書。內在才是重要的。",
-            exp: "書本的「封面」或物品的「蓋子」是 cover。",
-            grammarTip: "Don't judge a book by its cover. 是一句有名的英文諺語，意思是「勿以貌取人」。",
-            vocab: ["cover (n./v.) 封面/覆蓋", "judge (v.) 評斷", "matter (v.) 要緊/重要"]
+            q: "3. The old man is _____ in his left ear. You should speak louder.", options: ["dead", "dark", "deaf", "dangerous"], ans: 2, hint: "那位老先生左耳【耳聾 / 聽不見】了。你應該說大聲一點。",
+            exp: "聽力受損、「耳聾的」形容詞是 deaf。",
+            grammarTip: "speak louder 意思是「說大聲一點」。",
+            vocab: ["deaf (adj.) 耳聾的", "speak (v.) 說話", "louder (adv.) 更大聲地"]
         },
         { 
-            q: "6. Robbing banks and hurting people are very serious _____s.", options: ["crimes", "crabs", "cups", "cures"], ans: 0, hint: "搶劫銀行和傷害別人是非常嚴重的【犯罪】。",
-            exp: "違反法律的「罪、犯罪行為」是 crime。",
-            grammarTip: "turn to crime 意思是「走向犯罪之路、誤入歧途」。",
-            vocab: ["crime (n.) 犯罪", "rob (v.) 搶劫", "serious (adj.) 嚴重的"]
+            q: "4. Amy accidentally had a deep _____ on her chin when she fell down.", options: ["cute", "cut", "cup", "curve"], ans: 1, hint: "Amy 跌倒時，下巴不小心有了一道很深的【割傷】。",
+            exp: "cut 當動詞是切或割，當名詞就是指「割傷、傷口」。",
+            grammarTip: "cut 的動詞三態是同行：cut (現在) ➔ cut (過去) ➔ cut (過去分詞)。",
+            vocab: ["cut (n./v.) 割傷 / 切割", "deep (adj.) 深的", "chin (n.) 下巴"]
         },
         { 
-            q: "7. [文法] The man waited for a long time and shouted _____ at the clerk.", options: ["angry", "angrily", "angryly", "more angry"], ans: 1, hint: "那個男人等了很久，然後對著店員【生氣地】大叫。",
-            exp: "修飾動詞「大叫 (shouted)」要用副詞。angry 必須去 y 加 ily 變成 angrily。",
-            grammarTip: "又是一個 y 結尾的字！angry ➔ angrily。副詞就像小跟班，用來修飾動詞的動作狀態。",
-            vocab: ["shout (v.) 大叫", "angrily (adv.) 生氣地", "clerk (n.) 店員"]
+            q: "5. [文法大魔王] She teaches English happily. ➔ _____ she _____ English?", options: ["How is / teaches", "How do / teach", "How does / teach", "How is / teach"], ans: 2, hint: "她快樂地教英文。 ➔ 她【如何】教英文？",
+            exp: "這題也是課本第 25 頁的重點！教書 (teaches) 是一般動詞，主詞是 She，所以要請 does 幫忙，然後把 teaches 打回原形 teach！",
+            grammarTip: "絕對不能寫 How is she teaches 喔！記得是 How does she teach！",
+            vocab: ["teach (v.) 教導", "happily (adv.) 快樂地"]
         },
         { 
-            q: "8. The MRT trains are usually very _____ with people during rush hours.", options: ["cruel", "crowded", "curious", "current"], ans: 1, hint: "捷運列車在尖峰時間通常擠滿了人，非常【擁擠的】。",
-            exp: "充滿人的、「擁擠的」是 crowded。名詞 crowd 是指「群眾」。",
-            grammarTip: "be crowded with... 意思是「擠滿了...」。",
-            vocab: ["crowded (adj.) 擁擠的", "MRT (n.) 捷運", "rush hour (n.) 尖峰時間"]
+            q: "6. She cried over her lost dog all night until _____ broke.", options: ["day", "date", "dawn", "dark"], ans: 2, hint: "她為走失的狗哭了一整晚，直到【破曉 / 黎明】。",
+            exp: "清晨太陽剛出來的時候、「破曉、黎明」是 dawn。",
+            grammarTip: "dawn broke 是一個很美的文學用法，意思是「破曉了、天亮了」。",
+            vocab: ["dawn (n.) 破曉/黎明", "cry (v.) 哭泣", "until (prep.) 直到"]
         },
         { 
-            q: "9. It was _____ of you to leave the poor little dog waiting outside in the cold rain.", options: ["crazy", "curious", "crowded", "cruel"], ans: 3, hint: "你把可憐的小狗留在外面淋冷雨，真是太【殘忍的】了。",
-            exp: "沒有同情心、會傷害別人的「殘忍的、殘酷的」是 cruel。",
-            grammarTip: "It is cruel to + V... 意思是「做某件事是殘忍的」。",
-            vocab: ["cruel (adj.) 殘忍的", "poor (adj.) 可憐的/貧窮的", "outside (adv.) 在外面"]
+            q: "7. Some young people don't seem to care about the _____s of drug use.", options: ["dances", "dangers", "dates", "daughters"], ans: 1, hint: "有些年輕人似乎不在乎吸毒的【危險】。",
+            exp: "可能會造成傷害的事物或「危險」名詞是 danger；dangerous 則是形容詞。",
+            grammarTip: "in danger 意思是「處於危險之中」。",
+            vocab: ["danger (n.) 危險", "care about (phr.) 在乎/關心", "drug use (n.) 吸毒"]
         },
         { 
-            q: "10. [文法陷阱] She works very _____ every day to make money for her family.", options: ["hardly", "hard", "harder", "hards"], ans: 1, hint: "她每天【努力地】工作，為家人賺錢。",
-            exp: "這是國中會考必考題！「努力地」副詞就是 hard；hardly 意思是「幾乎不」，意思完全不一樣喔！",
-            grammarTip: "妳在筆記寫對了！hard = 努力地/困難地；hardly = 幾乎不。千萬不要選錯喔！",
-            vocab: ["hard (adv.) 努力地", "hardly (adv.) 幾乎不", "make money (phr.) 賺錢"]
+            q: "8. [文法大魔王] The singer sang English songs well. ➔ _____ the singer _____ English songs?", options: ["How did / sing", "How is / sang", "How does / sing", "How did / sang"], ans: 0, hint: "歌手英文歌唱得很好。 ➔ 歌手【如何】唱英文歌？",
+            exp: "這題是課本第 25 頁第 3 題的超級陷阱！因為 sang 是「過去式」，所以要請助動詞 did 來幫忙，而且後面的動詞要打回原形 sing！",
+            grammarTip: "看到過去式 (sang) ➔ 請 did 幫忙 ➔ 動詞變回原形 (sing)！千萬不能寫 How is the singer sang 喔！",
+            vocab: ["sing (v.) 唱歌", "sang (v.) sing的過去式", "well (adv.) 很好地"]
         },
         { 
-            q: "11. The scientist is trying to _____ a new way to clean the polluted river.", options: ["cross", "create", "cry", "cure"], ans: 1, hint: "科學家正試圖【創造 / 發明】一種清理受污染河流的新方法。",
-            exp: "無中生有、發明或「創造」的動詞是 create。",
+            q: "9. Sam hates the life he is living: _____ in, _____ out, driving around town looking for passengers.", options: ["dawn", "date", "dark", "day"], ans: 0, hint: "Sam 討厭他現在的生活：【日】復一【日】，開車在城裡繞來繞去尋找乘客。",
+            exp: "day in, day out 是一個固定片語，意思是「日復一日、天天如此」。",
+            grammarTip: "day by day 意思是「一天天地」；day in, day out 強調枯燥重複的「日復一日」。",
+            vocab: ["day in, day out (phr.) 日復一日", "drive around (phr.) 四處開車", "passenger (n.) 乘客"]
+        },
+        { 
+            q: "10. Sticking your head out of the car window is very _____.", options: ["dangerous", "dead", "deaf", "dark"], ans: 0, hint: "把頭伸出車窗外是非常【危險的】。",
+            exp: "會造成危險的、「危險的」形容詞是 dangerous。",
             grammarTip: "",
-            vocab: ["create (v.) 創造", "scientist (n.) 科學家", "polluted (adj.) 受污染的"]
+            vocab: ["dangerous (adj.) 危險的", "stick (v.) 伸出", "window (n.) 窗戶"]
         },
         { 
-            q: "12. Doctors are still working hard to find a _____ for the terrible disease.", options: ["cup", "cure", "curve", "crisis"], ans: 1, hint: "醫生們仍在努力尋找治療這種可怕疾病的【解藥 / 療法】。",
-            exp: "cure 當動詞是治療，當名詞是「療法、解藥」(a cure for cancer)。",
-            grammarTip: "",
-            vocab: ["cure (n./v.) 療法/治療", "disease (n.) 疾病", "terrible (adj.) 可怕的"]
+            q: "11. [文法] How are Kitty and Lily talking to each other? ➔ They are talking to each other _____.", options: ["happyly", "happy", "happily", "happyily"], ans: 2, hint: "Kitty 和 Lily 聊得如何？ ➔ 她們【快樂地】聊天。",
+            exp: "這題是課本第 25 頁 Practice E 第 2 題的拼字陷阱！happy 的副詞必須「去 y 加 ily」，變成 happily。",
+            grammarTip: "記得是 happily！絕對不能多留一個 y 寫成 happyily 喔！",
+            vocab: ["talk (v.) 說話/聊天", "happily (adv.) 快樂地", "each other (pron.) 彼此"]
         },
         { 
-            q: "13. [文法] He went to bed very _____ last night, so he is tired now.", options: ["late", "lately", "later", "lates"], ans: 0, hint: "他昨晚很【晚】睡，所以他現在很累。",
-            exp: "跟 hard 的陷阱一樣！「晚地」副詞就是 late；lately 意思是「最近」。",
-            grammarTip: "筆記神救援！late = 晚的/晚地；lately = 最近。所以「很晚睡」只能選 late！",
-            vocab: ["late (adv.) 晚地", "lately (adv.) 最近", "go to bed (phr.) 睡覺"]
+            q: "12. Mr. Lee married his only _____ off to a rich man last month.", options: ["daughter", "date", "dance", "danger"], ans: 0, hint: "李先生上個月把他唯一的【女兒】嫁給了一個有錢人。",
+            exp: "父母所生的女孩、「女兒」是 daughter。",
+            grammarTip: "marry someone off 意思是「把...嫁出去」。",
+            vocab: ["daughter (n.) 女兒", "marry (v.) 結婚/嫁娶", "rich (adj.) 富有的"]
         },
         { 
-            q: "14. A successful business always puts its _____s first to provide good service.", options: ["customs", "cousins", "customers", "courses"], ans: 2, hint: "一家成功的企業總是把【顧客】放在第一位，以提供良好的服務。",
-            exp: "來買東西的「顧客、消費者」是 customer。",
-            grammarTip: "custom 是「習俗 / 海關」，加上 er 變 customer 就是「顧客」。",
-            vocab: ["customer (n.) 顧客", "successful (adj.) 成功的", "provide (v.) 提供"]
+            q: "13. There are many difficulties and problem students to be _____ with in this school.", options: ["deaf", "dead", "dealt", "dawned"], ans: 2, hint: "這所學校裡有許多困難和問題學生需要被【處理 / 應付】。",
+            exp: "deal with 意思是「處理、應付」。被動語態要用過去分詞 dealt (讀作 /dɛlt/)。",
+            grammarTip: "動詞三態：deal (現在) ➔ dealt (過去) ➔ dealt (過去分詞)。",
+            vocab: ["deal with (phr.) 處理/應付", "difficulty (n.) 困難", "student (n.) 學生"]
         },
         { 
-            q: "15. We follow the _____ of giving red envelopes to children on Chinese New Year.", options: ["custom", "culture", "customer", "crisis"], ans: 0, hint: "我們遵循在農曆新年發紅包給小孩的【習俗】。",
-            exp: "社會群體長期以來的「習俗、慣例」是 custom。",
-            grammarTip: "red envelope 就是過年拿的「紅包」。",
-            vocab: ["custom (n.) 習俗", "red envelope (n.) 紅包", "follow (v.) 遵循/跟隨"]
+            q: "14. [文法] How is Emily doing at school? ➔ She is doing _____ at school.", options: ["good", "well", "goodly", "better"], ans: 1, hint: "Emily 在學校表現如何？ ➔ 她在學校表現得【很好】。",
+            exp: "修飾動詞 doing (表現) 必須用副詞！good 是形容詞，它的副詞是不規則變化的 well。",
+            grammarTip: "這是妳在課本第 25 頁訂正過的題目！不能說 doing good，要說 doing well 喔！",
+            vocab: ["do well (phr.) 表現良好", "school (n.) 學校"]
         },
         { 
-            q: "16. [文法] My father speaks English very _____, but I can only speak a little.", options: ["good", "goodly", "well", "better"], ans: 2, hint: "我爸爸英文說得非常【好】，但我只會說一點點。",
-            exp: "修飾動詞 (speaks) 必須用副詞。good 是形容詞，它的不規則副詞是 well！",
-            grammarTip: "妳在課本第 22 頁寫得超漂亮！good 的副詞是不規則變化的 well，絕對不能說 speak English good！",
-            vocab: ["well (adv.) 很好地", "speak (v.) 說/講", "a little (phr.) 一點點"]
+            q: "15. The _____ collected from the samples are considered very useful for the report.", options: ["dates", "daughters", "data", "deals"], ans: 2, hint: "從樣本中收集到的【資料 / 數據】被認為對報告非常有用。",
+            exp: "電腦資訊或實驗的「資料、數據」是 data。",
+            grammarTip: "data 本身通常當作「複數名詞」使用，所以後面的 be 動詞是 are considered (被認為)。",
+            vocab: ["data (n.) 資料/數據", "collect (v.) 收集", "useful (adj.) 有用的"]
         },
         { 
-            q: "17. The little boy was very _____ about the big box and wanted to open it.", options: ["cruel", "curious", "crowded", "current"], ans: 1, hint: "小男孩對那個大箱子感到非常【好奇】，想要打開它。",
-            exp: "對未知的東西想了解、「好奇的」是 curious；be curious about... 意思是「對...感到好奇」。",
-            grammarTip: "",
-            vocab: ["curious (adj.) 好奇的", "open (v.) 打開", "box (n.) 箱子/盒子"]
+            q: "16. My sister is afraid of the _____, so she always leaves a small lamp on when she sleeps.", options: ["dance", "dawn", "day", "dark"], ans: 3, hint: "我妹妹怕【黑 / 黑暗】，所以她睡覺時總是留著一盞小燈。",
+            exp: "沒有光線的「黑暗」是 dark；也可以當形容詞「黑暗的、深色的」。",
+            grammarTip: "be afraid of the dark 意思是「怕黑」。",
+            vocab: ["dark (n./adj.) 黑暗/深色的", "afraid (adj.) 害怕的", "lamp (n.) 燈"]
         },
         { 
-            q: "18. [文法] The dog was sleeping _____ on the sofa when I came home.", options: ["comfortable", "comfortably", "comfort", "comfortabily"], ans: 1, hint: "我回家時，那隻狗正【舒服地】在沙發上睡覺。",
-            exp: "修飾 sleeping (睡覺) 要用副詞。字尾是 le 的形容詞 (comfortable)，要去 e 加 y 變成 comfortably。",
-            grammarTip: "字尾是 le 的形容詞，副詞要把 e 改成 y！(comfortable ➔ comfortably / terrible ➔ terribly)。",
-            vocab: ["comfortably (adv.) 舒服地", "sleep (v.) 睡覺", "sofa (n.) 沙發"]
+            q: "17. [文法] I study hard. Kitty studies hard. ➔ I study _____ Kitty.", options: ["as hard as", "so hard as", "as hardly as", "hard as"], ans: 0, hint: "我用功讀書。Kitty 也用功讀書。 ➔ 我讀得【跟】Kitty【一樣用功】。",
+            exp: "表示兩者程度一樣，要用 as + 副詞原形 + as 句型。",
+            grammarTip: "副詞 hard (努力地) 本身就是原形，不需要改變。所以是 as hard as。不能寫 hardly 喔，hardly 是「幾乎不」的意思！",
+            vocab: ["study (v.) 讀書/學習", "hard (adv.) 努力地/用功地"]
         },
         { 
-            q: "19. The mother opened the _____s to let the morning sunlight come into the room.", options: ["curves", "cups", "curtains", "courses"], ans: 2, hint: "媽媽拉開【窗簾】，讓早晨的陽光照進房間。",
-            exp: "掛在窗戶上遮光的「窗簾」是 curtain (通常會用複數 curtains)。",
-            grammarTip: "draw/pull the curtains 意思是「拉上/拉開窗簾」。",
-            vocab: ["curtain (n.) 窗簾", "sunlight (n.) 陽光", "let (v.) 讓"]
+            q: "18. The poor man was shot _____ at close range by the bad guy.", options: ["deaf", "dead", "dark", "dangerous"], ans: 1, hint: "那個可憐的男人在近距離被壞人開槍打【死】了。",
+            exp: "失去生命、「死亡的」形容詞是 dead。",
+            grammarTip: "die 是動詞 (死亡)；dead 是形容詞 (死亡的)；death 是名詞 (死亡)。",
+            vocab: ["dead (adj.) 死亡的", "shoot (v.) 開槍(被動式was shot)", "close range (n.) 近距離"]
         },
         { 
-            q: "20. The path _____ed down the hill, making it difficult to drive fast.", options: ["cried", "crossed", "curved", "covered"], ans: 2, hint: "這條小路沿著山丘【彎曲】而下，使得開快車變得很困難。",
-            exp: "curve 當名詞是曲線，當動詞是「彎曲、轉彎」。",
-            grammarTip: "curve 跟前面學過的 coast (海岸) 很像，driving on a curved coast road (開在彎曲的海岸公路上)。",
-            vocab: ["curve (v./n.) 彎曲/曲線", "path (n.) 小路", "hill (n.) 山丘"]
+            q: "19. They had only _____ed for three months before they got married.", options: ["danced", "dawned", "dated", "dealt"], ans: 2, hint: "他們在結婚前只【約會】了三個月。",
+            exp: "date 當名詞是日期或約會，當動詞時就是「約會、交往」。",
+            grammarTip: "have a date with... 是跟某人有個約會。",
+            vocab: ["date (v./n.) 約會 / 日期", "get married (phr.) 結婚", "month (n.) 月"]
+        },
+        { 
+            q: "20. [文法] He can run fast. I can run fast. ➔ He can run _____.", options: ["as fast as I", "as fast as me", "as fast as my", "fast as I"], ans: 0, hint: "他跑得快。我跑得快。 ➔ 他跑得【跟我一樣快】。",
+            exp: "這題是妳在課本第 23 頁寫對的題目！as fast as 後面要接主格代名詞 I (因為其實是省略了 as I can)。",
+            grammarTip: "在正式文法中，as fast as 後面接主詞 I (He can run as fast as I) 才是最標準的寫法喔！",
+            vocab: ["run (v.) 跑步", "fast (adv.) 快速地"]
         }
     ];
 
@@ -403,14 +403,14 @@
             var resultDiv = document.getElementById("result");
             resultDiv.style.display = "block";
             
-            var html = '<div class="score-title">🎉 測驗完成！<br>你的總分：' + score + ' / ' + quizData.length + '<br><span style="font-size: 0.8em; color: #6c757d;">(使用了 ' + hintsUsed + ' 次提示)</span></div>';
+            var html = '<div class="score-title">🎉 測驗完成！<br>你的總分：' + score + ' / ' + quizData.length + '<br><span style="font-size: 0.8em; color: #795548;">(使用了 ' + hintsUsed + ' 次提示)</span></div>';
             
             if (wrongQuestions.length === 0) {
-                html += '<div style="text-align: center; background: #e8f5e9; color: #1e4620; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 15px;">🌟 太神啦！全部答對！C 開頭所有單字跟「情態副詞」的變形陷阱全被你破解了！💯</div>';
+                html += '<div style="text-align: center; background: #e8f5e9; color: #1e4620; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 15px;">🌟 太神啦！全部答對！How 問句的大魔王陷阱完全被你破解了！💯</div>';
             } else {
                 html += '<div class="review-section">';
                 html += '<div class="review-title">📕 你的專屬錯題與文法複習 (' + wrongQuestions.length + ' 題)</div>';
-                html += '<div style="font-size:0.85em; color:#666; text-align:center; margin-bottom:12px;">把錯題小卡複習一下，下次遇到 fast 和 hard 絕對能秒殺它們！</div>';
+                html += '<div style="font-size:0.85em; color:#666; text-align:center; margin-bottom:12px;">把錯題小卡複習一下，下次遇到 How 問句一定會記得找 do/does/did 幫忙！</div>';
                 
                 for (var w = 0; w < wrongQuestions.length; w++) {
                     var item = wrongQuestions[w];
@@ -482,7 +482,7 @@
             feedback.className = "feedback correct";
             score++;
         } else {
-            btn.style.background = "#e63946";
+            btn.style.background = "#c62828";
             btn.style.color = "white";
             if (options[correctIndex]) {
                 options[correctIndex].style.background = "#2e7d32";
