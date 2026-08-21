@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>英文單字+文法挑戰 (cut~deal & How問句特訓)</title>
+    <title>英文單字+文法挑戰 (desert~direct & 副詞比較級)</title>
     <style>
         * { box-sizing: border-box; }
         body {
@@ -40,7 +40,7 @@
             margin-bottom: 12px;
         }
         .reload-btn {
-            background: #8d6e63; /* 暖棕色取代原本的藍灰色 */
+            background: #8d6e63;
             color: white;
             padding: 6px 10px;
             border: none;
@@ -231,7 +231,7 @@
 <body>
 
 <div class="container">
-    <h1>🌱 單字+How問句特訓挑戰</h1>
+    <h1>🌱 單字+副詞比較級特訓</h1>
     <div id="quiz-container">
         <div class="top-bar">
             <button class="reload-btn" onclick="loadQuestion()">🔄 重整</button>
@@ -265,124 +265,124 @@
 <script>
     var quizData = [
         { 
-            q: "1. The little boy looked so _____ when a broad smile spread over his face.", options: ["cute", "cut", "cruel", "curious"], ans: 0, hint: "那個小男孩滿臉微笑時看起來好【可愛】。",
-            exp: "惹人喜愛的、「可愛的」形容詞是 cute。",
+            q: "1. [單字陷阱] I usually have a piece of sweet cake for _____ after dinner.", options: ["desert", "design", "dessert", "diary"], ans: 2, hint: "我通常在晚飯後吃一塊甜蛋糕當作【甜點】。",
+            exp: "這是一個拼字大陷阱！甜點因為太好吃想多吃一點，所以有兩個 s (dessert)。只有一個 s 的是沙漠 (desert)。",
+            grammarTip: "記憶口訣：Dessert (甜點) 有兩個 s；Desert (沙漠) 很乾旱，所以只有一個 s！",
+            vocab: ["dessert (n.) 甜點", "desert (n.) 沙漠", "dinner (n.) 晚餐"]
+        },
+        { 
+            q: "2. [文法大魔王] I have very little money. The poor man has _____ money than I do.", options: ["littler", "less", "more little", "least"], ans: 1, hint: "我只有很少的錢。那個可憐的男人擁有的錢【比】我【更少】。",
+            exp: "這題是妳在課本第 20 頁訂正過的大魔王！little (少) 的比較級是不規則變化，要變成 less。",
+            grammarTip: "千萬不要加 -er 變成 littler！little 的比較級是大變身的 less，最高級是 least 喔！",
+            vocab: ["little (adj./adv.) 少的", "less (adj./adv.) 更少的", "poor (adj.) 貧窮的/可憐的"]
+        },
+        { 
+            q: "3. Amy's boyfriend asked her to marry him and gave her a beautiful _____ ring.", options: ["diamond", "dinner", "diplomat", "diary"], ans: 0, hint: "艾美的男友向她求婚，並給了她一枚美麗的【鑽石】戒指。",
+            exp: "最堅硬的寶石「鑽石」是 diamond。",
             grammarTip: "",
-            vocab: ["cute (adj.) 可愛的", "smile (n.) 微笑", "spread (v.) 散開/展開"]
+            vocab: ["diamond (n.) 鑽石", "ring (n.) 戒指", "marry (v.) 結婚"]
         },
         { 
-            q: "2. [文法大魔王] Tom dances very well. ➔ _____ Tom _____?", options: ["How is / dances", "How does / dance", "How is / dance", "How does / dances"], ans: 1, hint: "湯姆跳舞跳得很好。 ➔ 湯姆跳舞跳得【如何】？",
-            exp: "這題是課本第 25 頁妳訂正過的題目喔！問「一般動作(dance)」的狀況，一定要請助動詞 does 來幫忙，而且後面的動詞要打回原形 dance！",
-            grammarTip: "陷阱口訣：有動作(dance)就不能用 is！用 does 幫忙後，動詞記得不加 s 喔！",
-            vocab: ["dance (v.) 跳舞", "well (adv.) 很好地"]
+            q: "4. [文法] The eagle is flying _____ in the sky. (越飛越高)", options: ["higher and higher", "high and high", "more high and more high", "higher and highest"], ans: 0, hint: "老鷹在天空中飛得【越來越高】。",
+            exp: "「越來越...」的句型是「比較級 + and + 比較級」。high 的比較級是 higher。",
+            grammarTip: "這是妳在課本第 21 頁 Practice H 的句型喔！比較級 + and + 比較級 ＝ 越來越... (higher and higher)。",
+            vocab: ["high (adv./adj.) 高高地", "eagle (n.) 老鷹", "sky (n.) 天空"]
         },
         { 
-            q: "3. The old man is _____ in his left ear. You should speak louder.", options: ["dead", "dark", "deaf", "dangerous"], ans: 2, hint: "那位老先生左耳【耳聾 / 聽不見】了。你應該說大聲一點。",
-            exp: "聽力受損、「耳聾的」形容詞是 deaf。",
-            grammarTip: "speak louder 意思是「說大聲一點」。",
-            vocab: ["deaf (adj.) 耳聾的", "speak (v.) 說話", "louder (adv.) 更大聲地"]
-        },
-        { 
-            q: "4. Amy accidentally had a deep _____ on her chin when she fell down.", options: ["cute", "cut", "cup", "curve"], ans: 1, hint: "Amy 跌倒時，下巴不小心有了一道很深的【割傷】。",
-            exp: "cut 當動詞是切或割，當名詞就是指「割傷、傷口」。",
-            grammarTip: "cut 的動詞三態是同行：cut (現在) ➔ cut (過去) ➔ cut (過去分詞)。",
-            vocab: ["cut (n./v.) 割傷 / 切割", "deep (adj.) 深的", "chin (n.) 下巴"]
-        },
-        { 
-            q: "5. [文法大魔王] She teaches English happily. ➔ _____ she _____ English?", options: ["How is / teaches", "How do / teach", "How does / teach", "How is / teach"], ans: 2, hint: "她快樂地教英文。 ➔ 她【如何】教英文？",
-            exp: "這題也是課本第 25 頁的重點！教書 (teaches) 是一般動詞，主詞是 She，所以要請 does 幫忙，然後把 teaches 打回原形 teach！",
-            grammarTip: "絕對不能寫 How is she teaches 喔！記得是 How does she teach！",
-            vocab: ["teach (v.) 教導", "happily (adv.) 快樂地"]
-        },
-        { 
-            q: "6. She cried over her lost dog all night until _____ broke.", options: ["day", "date", "dawn", "dark"], ans: 2, hint: "她為走失的狗哭了一整晚，直到【破曉 / 黎明】。",
-            exp: "清晨太陽剛出來的時候、「破曉、黎明」是 dawn。",
-            grammarTip: "dawn broke 是一個很美的文學用法，意思是「破曉了、天亮了」。",
-            vocab: ["dawn (n.) 破曉/黎明", "cry (v.) 哭泣", "until (prep.) 直到"]
-        },
-        { 
-            q: "7. Some young people don't seem to care about the _____s of drug use.", options: ["dances", "dangers", "dates", "daughters"], ans: 1, hint: "有些年輕人似乎不在乎吸毒的【危險】。",
-            exp: "可能會造成傷害的事物或「危險」名詞是 danger；dangerous 則是形容詞。",
-            grammarTip: "in danger 意思是「處於危險之中」。",
-            vocab: ["danger (n.) 危險", "care about (phr.) 在乎/關心", "drug use (n.) 吸毒"]
-        },
-        { 
-            q: "8. [文法大魔王] The singer sang English songs well. ➔ _____ the singer _____ English songs?", options: ["How did / sing", "How is / sang", "How does / sing", "How did / sang"], ans: 0, hint: "歌手英文歌唱得很好。 ➔ 歌手【如何】唱英文歌？",
-            exp: "這題是課本第 25 頁第 3 題的超級陷阱！因為 sang 是「過去式」，所以要請助動詞 did 來幫忙，而且後面的動詞要打回原形 sing！",
-            grammarTip: "看到過去式 (sang) ➔ 請 did 幫忙 ➔ 動詞變回原形 (sing)！千萬不能寫 How is the singer sang 喔！",
-            vocab: ["sing (v.) 唱歌", "sang (v.) sing的過去式", "well (adv.) 很好地"]
-        },
-        { 
-            q: "9. Sam hates the life he is living: _____ in, _____ out, driving around town looking for passengers.", options: ["dawn", "date", "dark", "day"], ans: 0, hint: "Sam 討厭他現在的生活：【日】復一【日】，開車在城裡繞來繞去尋找乘客。",
-            exp: "day in, day out 是一個固定片語，意思是「日復一日、天天如此」。",
-            grammarTip: "day by day 意思是「一天天地」；day in, day out 強調枯燥重複的「日復一日」。",
-            vocab: ["day in, day out (phr.) 日復一日", "drive around (phr.) 四處開車", "passenger (n.) 乘客"]
-        },
-        { 
-            q: "10. Sticking your head out of the car window is very _____.", options: ["dangerous", "dead", "deaf", "dark"], ans: 0, hint: "把頭伸出車窗外是非常【危險的】。",
-            exp: "會造成危險的、「危險的」形容詞是 dangerous。",
+            q: "5. He is a really _____ student. He studies English for three hours every night.", options: ["difficult", "different", "diligent", "direct"], ans: 2, hint: "他是個非常【勤奮的】學生。他每晚讀英文三個小時。",
+            exp: "形容人做事認真、努力不懈的「勤奮的」是 diligent。",
             grammarTip: "",
-            vocab: ["dangerous (adj.) 危險的", "stick (v.) 伸出", "window (n.) 窗戶"]
+            vocab: ["diligent (adj.) 勤奮的", "student (n.) 學生", "every night (phr.) 每晚"]
         },
         { 
-            q: "11. [文法] How are Kitty and Lily talking to each other? ➔ They are talking to each other _____.", options: ["happyly", "happy", "happily", "happyily"], ans: 2, hint: "Kitty 和 Lily 聊得如何？ ➔ 她們【快樂地】聊天。",
-            exp: "這題是課本第 25 頁 Practice E 第 2 題的拼字陷阱！happy 的副詞必須「去 y 加 ily」，變成 happily。",
-            grammarTip: "記得是 happily！絕對不能多留一個 y 寫成 happyily 喔！",
-            vocab: ["talk (v.) 說話/聊天", "happily (adv.) 快樂地", "each other (pron.) 彼此"]
+            q: "6. [文法] Mark studied _____ than before to pass the difficult exam.", options: ["more hard", "harder", "hardly", "more hardly"], ans: 1, hint: "馬克為了通過困難的考試，讀得【比】以前【更努力】。",
+            exp: "hard 當副詞意思是「努力地」，它的比較級是直接加 -er 變成 harder。",
+            grammarTip: "永遠記住：hardly 是「幾乎不」的意思，不是 hard 的副詞！努力的比較級是 harder！",
+            vocab: ["hard (adv.) 努力地", "harder (adv.) 更努力地", "pass (v.) 通過"]
         },
         { 
-            q: "12. Mr. Lee married his only _____ off to a rich man last month.", options: ["daughter", "date", "dance", "danger"], ans: 0, hint: "李先生上個月把他唯一的【女兒】嫁給了一個有錢人。",
-            exp: "父母所生的女孩、「女兒」是 daughter。",
-            grammarTip: "marry someone off 意思是「把...嫁出去」。",
-            vocab: ["daughter (n.) 女兒", "marry (v.) 結婚/嫁娶", "rich (adj.) 富有的"]
+            q: "7. Long ago, huge _____s like the T-Rex ruled the earth.", options: ["diplomats", "deserts", "dinosaurs", "differences"], ans: 2, hint: "很久以前，像暴龍這樣的巨大【恐龍】統治著地球。",
+            exp: "史前爬行動物「恐龍」是 dinosaur。",
+            grammarTip: "dinosaur 唸作 /ˈdaɪnəˌsɔr/，是小學生最喜歡的單字之一喔！",
+            vocab: ["dinosaur (n.) 恐龍", "huge (adj.) 巨大的", "earth (n.) 地球"]
         },
         { 
-            q: "13. There are many difficulties and problem students to be _____ with in this school.", options: ["deaf", "dead", "dealt", "dawned"], ans: 2, hint: "這所學校裡有許多困難和問題學生需要被【處理 / 應付】。",
-            exp: "deal with 意思是「處理、應付」。被動語態要用過去分詞 dealt (讀作 /dɛlt/)。",
-            grammarTip: "動詞三態：deal (現在) ➔ dealt (過去) ➔ dealt (過去分詞)。",
-            vocab: ["deal with (phr.) 處理/應付", "difficulty (n.) 困難", "student (n.) 學生"]
+            q: "8. I don't know the meaning of this new word. I need to look it up in the _____.", options: ["diary", "dictionary", "dial", "design"], ans: 1, hint: "我不知道這個新單字的意思。我需要在【字典】裡查一下。",
+            exp: "用來查單字意思的「字典」是 dictionary。",
+            grammarTip: "look it up 是很常用的片語，意思是「(在書或電腦中) 查閱」。",
+            vocab: ["dictionary (n.) 字典", "meaning (n.) 意思", "look up (phr.) 查閱"]
         },
         { 
-            q: "14. [文法] How is Emily doing at school? ➔ She is doing _____ at school.", options: ["good", "well", "goodly", "better"], ans: 1, hint: "Emily 在學校表現如何？ ➔ 她在學校表現得【很好】。",
-            exp: "修飾動詞 doing (表現) 必須用副詞！good 是形容詞，它的副詞是不規則變化的 well。",
-            grammarTip: "這是妳在課本第 25 頁訂正過的題目！不能說 doing good，要說 doing well 喔！",
-            vocab: ["do well (phr.) 表現良好", "school (n.) 學校"]
+            q: "9. [文法] Sue writes _____ than Lisa. (Lisa 寫字寫得很小心，但 Sue 寫得更小心)", options: ["more carefully", "carefullyer", "carefullier", "much careful"], ans: 0, hint: "Sue 寫字寫得【比】Lisa【更小心】。",
+            exp: "carefully 是由形容詞加 -ly 變來的副詞。這類副詞的比較級，必須在前面加 more (more carefully)。",
+            grammarTip: "妳在課本第 20 頁寫得很棒喔！字尾是 -ly 的長副詞，比較級都是在前面加 more！",
+            vocab: ["carefully (adv.) 小心地", "write (v.) 寫字"]
         },
         { 
-            q: "15. The _____ collected from the samples are considered very useful for the report.", options: ["dates", "daughters", "data", "deals"], ans: 2, hint: "從樣本中收集到的【資料 / 數據】被認為對報告非常有用。",
-            exp: "電腦資訊或實驗的「資料、數據」是 data。",
-            grammarTip: "data 本身通常當作「複數名詞」使用，所以後面的 be 動詞是 are considered (被認為)。",
-            vocab: ["data (n.) 資料/數據", "collect (v.) 收集", "useful (adj.) 有用的"]
+            q: "10. Because of the terrible drought, most parts of the land became a dry _____.", options: ["dessert", "desert", "diet", "dinner"], ans: 1, hint: "因為可怕的乾旱，大部分的土地變成了乾燥的【沙漠】。",
+            exp: "這題再考一次陷阱！乾燥、有很多沙子的地方是 desert (只有一個 s)。",
+            grammarTip: "desert 當名詞是「沙漠」，當動詞是「拋棄 (deserted her)」。",
+            vocab: ["desert (n.) 沙漠", "drought (n.) 乾旱", "dry (adj.) 乾燥的"]
         },
         { 
-            q: "16. My sister is afraid of the _____, so she always leaves a small lamp on when she sleeps.", options: ["dance", "dawn", "day", "dark"], ans: 3, hint: "我妹妹怕【黑 / 黑暗】，所以她睡覺時總是留著一盞小燈。",
-            exp: "沒有光線的「黑暗」是 dark；也可以當形容詞「黑暗的、深色的」。",
-            grammarTip: "be afraid of the dark 意思是「怕黑」。",
-            vocab: ["dark (n./adj.) 黑暗/深色的", "afraid (adj.) 害怕的", "lamp (n.) 燈"]
+            q: "11. We use a pencil to _____ a picture, and use a computer to _____ a website.", options: ["develop", "determine", "design", "die"], ans: 2, hint: "我們用鉛筆畫圖，並用電腦來【設計】網站。",
+            exp: "規劃並畫出事物外觀或運作方式的「設計」，動詞是 design。",
+            grammarTip: "design 的 g 是不發音的喔！讀作 /dɪˈzaɪn/。",
+            vocab: ["design (v./n.) 設計", "website (n.) 網站", "picture (n.) 圖片"]
         },
         { 
-            q: "17. [文法] I study hard. Kitty studies hard. ➔ I study _____ Kitty.", options: ["as hard as", "so hard as", "as hardly as", "hard as"], ans: 0, hint: "我用功讀書。Kitty 也用功讀書。 ➔ 我讀得【跟】Kitty【一樣用功】。",
-            exp: "表示兩者程度一樣，要用 as + 副詞原形 + as 句型。",
-            grammarTip: "副詞 hard (努力地) 本身就是原形，不需要改變。所以是 as hard as。不能寫 hardly 喔，hardly 是「幾乎不」的意思！",
-            vocab: ["study (v.) 讀書/學習", "hard (adv.) 努力地/用功地"]
+            q: "12. [文法] The little puppy is getting _____ and _____. (越來越大)", options: ["big / big", "bigger / bigger", "more big / more big", "biger / biger"], ans: 1, hint: "小狗變得【越來越大】了。",
+            exp: "「越來越...」是比較級 + and + 比較級。big 是短母音加子音，要重複字尾 g 再加 er (bigger)。",
+            grammarTip: "重複字尾再加 er！bigger and bigger (越來越大)。",
+            vocab: ["puppy (n.) 小狗", "get (v.) 變得", "bigger (adj.) 更大的"]
         },
         { 
-            q: "18. The poor man was shot _____ at close range by the bad guy.", options: ["deaf", "dead", "dark", "dangerous"], ans: 1, hint: "那個可憐的男人在近距離被壞人開槍打【死】了。",
-            exp: "失去生命、「死亡的」形容詞是 dead。",
-            grammarTip: "die 是動詞 (死亡)；dead 是形容詞 (死亡的)；death 是名詞 (死亡)。",
-            vocab: ["dead (adj.) 死亡的", "shoot (v.) 開槍(被動式was shot)", "close range (n.) 近距離"]
+            q: "13. There are many _____s between your car and my car. They look nothing alike.", options: ["difficulties", "diets", "diplomats", "differences"], ans: 3, hint: "你的車和我的車之間有許多【不同之處 / 差異】。它們看起來一點也不像。",
+            exp: "different (不同的) 的名詞是 difference (差異)。",
+            grammarTip: "tell the difference 意思是「分辨出差異」。",
+            vocab: ["difference (n.) 差異/不同之處", "between (prep.) 在...之間", "alike (adj.) 相像的"]
         },
         { 
-            q: "19. They had only _____ed for three months before they got married.", options: ["danced", "dawned", "dated", "dealt"], ans: 2, hint: "他們在結婚前只【約會】了三個月。",
-            exp: "date 當名詞是日期或約會，當動詞時就是「約會、交往」。",
-            grammarTip: "have a date with... 是跟某人有個約會。",
-            vocab: ["date (v./n.) 約會 / 日期", "get married (phr.) 結婚", "month (n.) 月"]
+            q: "14. A farmer _____ a dead body out of his field and reported it to the police.", options: ["dug", "digged", "directed", "developed"], ans: 0, hint: "一位農夫在他的田裡【挖出】了一具屍體並向警方報案。",
+            exp: "用鏟子或手把土翻開的「挖掘」是 dig。過去式是不規則變化的 dug。",
+            grammarTip: "動詞三態必背：dig (現在) ➔ dug (過去) ➔ dug (過去分詞)。",
+            vocab: ["dig (v.) 挖掘", "dug (v.) dig的過去式", "field (n.) 田地"]
         },
         { 
-            q: "20. [文法] He can run fast. I can run fast. ➔ He can run _____.", options: ["as fast as I", "as fast as me", "as fast as my", "fast as I"], ans: 0, hint: "他跑得快。我跑得快。 ➔ 他跑得【跟我一樣快】。",
-            exp: "這題是妳在課本第 23 頁寫對的題目！as fast as 後面要接主格代名詞 I (因為其實是省略了 as I can)。",
-            grammarTip: "在正式文法中，as fast as 後面接主詞 I (He can run as fast as I) 才是最標準的寫法喔！",
-            vocab: ["run (v.) 跑步", "fast (adv.) 快速地"]
+            q: "15. [文法] A rabbit runs _____ than a turtle.", options: ["more fast", "fastly", "faster", "fast"], ans: 2, hint: "兔子跑得比烏龜【更快】。",
+            exp: "fast 的副詞還是 fast (沒有 fastly)；它的比較級直接加 -er 變成 faster。",
+            grammarTip: "fast 的形容詞和副詞同行，比較級直接加 -er (faster)。",
+            vocab: ["fast (adv.) 快速地", "faster (adv.) 更快速地", "turtle (n.) 烏龜"]
+        },
+        { 
+            q: "16. Look at these two rings carefully. Can you spot the _____ between them?", options: ["difficulty", "difference", "diet", "dinner"], ans: 1, hint: "仔細看這兩枚戒指。你能看出它們之間的【差異】嗎？",
+            exp: "找出不相同的地方，就是找 difference (差異)。",
+            grammarTip: "spot the difference 是一個常見的用法，意思是「發現/看出差異 (也就是大家愛玩的大家來找碴)」。",
+            vocab: ["difference (n.) 差異", "carefully (adv.) 仔細地", "spot (v.) 發現/看出"]
+        },
+        { 
+            q: "17. A _____ deals with foreign affairs on the international stage.", options: ["dinosaur", "diplomat", "diet", "diamond"], ans: 1, hint: "【外交官】在國際舞台上處理外國事務。",
+            exp: "代表國家與其他國家打交道的官員是 diplomat (外交官)。",
+            grammarTip: "",
+            vocab: ["diplomat (n.) 外交官", "foreign (adj.) 外國的", "affair (n.) 事務"]
+        },
+        { 
+            q: "18. [文法] He is writing his homework _____ and _____ carefully. (越來越小心)", options: ["more / more", "much / much", "careful / careful", "carefully / carefully"], ans: 0, hint: "他寫作業寫得【越來越】小心了。",
+            exp: "長副詞 (carefully) 的「越來越...」句型是「more and more + 副詞」(more and more carefully)。",
+            grammarTip: "如果是長單字，不用寫兩次 carefully，只要寫 more and more carefully 就可以了！",
+            vocab: ["carefully (adv.) 小心地", "more and more (phr.) 越來越", "homework (n.) 作業"]
+        },
+        { 
+            q: "19. Don't _____ the bright light at my eyes. It hurts!", options: ["die", "direct", "develop", "determine"], ans: 1, hint: "不要把那道強光【導向 / 直射】我的眼睛。很痛！",
+            exp: "direct 當形容詞是直接的，當動詞是「導向、指引、導演」。",
+            grammarTip: "direct a movie 意思是「導演一部電影」；director 就是「導演」。",
+            vocab: ["direct (v./adj.) 導向/直接的", "bright light (n.) 強光", "hurt (v.) 疼痛/傷害"]
+        },
+        { 
+            q: "20. The poor cat _____d of hunger in the cold winter. It was very sad.", options: ["dug", "developed", "died", "dialed"], ans: 2, hint: "那隻可憐的貓在寒冬中因飢餓而【死】了。那非常令人難過。",
+            exp: "失去生命、「死亡」的動詞是 die；過去式是 died。",
+            grammarTip: "die of... 意思是「死於... (如疾病、飢餓)」。(dead 是形容詞，die 是動詞喔！)",
+            vocab: ["die (v.) 死亡", "died (v.) die的過去式", "hunger (n.) 飢餓"]
         }
     ];
 
@@ -406,11 +406,11 @@
             var html = '<div class="score-title">🎉 測驗完成！<br>你的總分：' + score + ' / ' + quizData.length + '<br><span style="font-size: 0.8em; color: #795548;">(使用了 ' + hintsUsed + ' 次提示)</span></div>';
             
             if (wrongQuestions.length === 0) {
-                html += '<div style="text-align: center; background: #e8f5e9; color: #1e4620; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 15px;">🌟 太神啦！全部答對！How 問句的大魔王陷阱完全被你破解了！💯</div>';
+                html += '<div style="text-align: center; background: #e8f5e9; color: #1e4620; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 15px;">🌟 太厲害了！全部答對！desert 陷阱跟 less 不規則變化完全考不倒妳！💯</div>';
             } else {
                 html += '<div class="review-section">';
                 html += '<div class="review-title">📕 你的專屬錯題與文法複習 (' + wrongQuestions.length + ' 題)</div>';
-                html += '<div style="font-size:0.85em; color:#666; text-align:center; margin-bottom:12px;">把錯題小卡複習一下，下次遇到 How 問句一定會記得找 do/does/did 幫忙！</div>';
+                html += '<div style="font-size:0.85em; color:#666; text-align:center; margin-bottom:12px;">把錯題小卡複習一下，下次遇到 little 變 less 就能秒殺它！</div>';
                 
                 for (var w = 0; w < wrongQuestions.length; w++) {
                     var item = wrongQuestions[w];
