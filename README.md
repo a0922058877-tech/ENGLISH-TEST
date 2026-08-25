@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>英文單字+文法挑戰 (desert~direct & 副詞比較級)</title>
+    <title>英文單字+文法挑戰 (柔萱生日派對版 🎂)</title>
     <style>
         * { box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f4f5f0;
+            background-color: #fff0f5; /* 派對粉色背景 */
             color: #333333;
             margin: 0;
             padding: 10px;
@@ -20,15 +20,16 @@
             max-width: 400px;
             background: #ffffff;
             padding: 20px 16px;
-            border-radius: 18px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            border-radius: 24px;
+            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.15);
             margin: 0 auto;
+            border: 2px solid #fce4ec;
         }
         h1 {
             text-align: center;
-            color: #2e7d32;
+            color: #c2185b;
             font-size: 1.15em;
-            border-bottom: 2px dashed #c8e6c9;
+            border-bottom: 2px dashed #f8bbd0;
             padding-bottom: 12px;
             margin-top: 5px;
             margin-bottom: 15px;
@@ -40,16 +41,17 @@
             margin-bottom: 12px;
         }
         .reload-btn {
-            background: #8d6e63;
+            background: #f06292;
             color: white;
-            padding: 6px 10px;
+            padding: 6px 12px;
             border: none;
-            border-radius: 6px;
-            font-size: 0.8em;
+            border-radius: 8px;
+            font-size: 0.85em;
             cursor: pointer;
+            font-weight: bold;
         }
         #q-counter {
-            color: #795548;
+            color: #ad1457;
             font-size: 0.85em;
             font-weight: bold;
         }
@@ -73,16 +75,17 @@
             font-weight: bold;
             width: 100%;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         .hint-text {
             display: none;
             color: #444444;
             font-size: 0.9em;
-            background: #fefae0;
+            background: #fff8e1;
             padding: 12px;
             border-radius: 8px;
             margin-bottom: 15px;
-            border-left: 4px solid #fb8500;
+            border-left: 4px solid #ffc107;
             line-height: 1.5;
         }
         .options {
@@ -93,18 +96,19 @@
         }
         .option {
             padding: 14px 16px;
-            background: #e8f5e9;
+            background: #fce4ec;
             border: 2px solid transparent;
             border-radius: 12px;
             cursor: pointer;
             font-size: 0.98em;
             text-align: left;
             color: #333333;
-            transition: background 0.15s, transform 0.1s;
+            transition: all 0.2s;
             -webkit-tap-highlight-color: transparent;
         }
         .option:active {
             transform: scale(0.98);
+            background: #f8bbd0;
         }
         .feedback {
             font-weight: bold;
@@ -119,8 +123,8 @@
         
         .explanation-box {
             display: none;
-            background-color: #f0fdf4;
-            border-left: 4px solid #2e7d32;
+            background-color: #fcf3f6;
+            border-left: 4px solid #d81b60;
             padding: 14px;
             margin-bottom: 18px;
             border-radius: 8px;
@@ -129,7 +133,7 @@
         }
         .explanation-box h4 {
             margin: 0 0 8px 0;
-            color: #2b9348;
+            color: #ad1457;
             font-size: 1.02em;
         }
         .grammar-tip {
@@ -148,7 +152,7 @@
         }
         .next-btn {
             display: none;
-            background: #2e7d32;
+            background: #d81b60;
             color: white;
             padding: 14px;
             border: none;
@@ -157,7 +161,7 @@
             font-size: 1.05em;
             width: 100%;
             font-weight: bold;
-            box-shadow: 0 3px 10px rgba(46, 125, 50, 0.3);
+            box-shadow: 0 3px 10px rgba(216, 27, 96, 0.3);
         }
         #result {
             display: none;
@@ -166,20 +170,20 @@
         }
         .score-title {
             text-align: center;
-            font-size: 1.3em;
+            font-size: 1.4em;
             font-weight: bold;
-            color: #2e7d32;
+            color: #d81b60;
             margin-bottom: 15px;
         }
         .review-section {
             margin-top: 20px;
-            border-top: 2px dashed #c8e6c9;
+            border-top: 2px dashed #f8bbd0;
             padding-top: 15px;
         }
         .review-title {
             font-size: 1.1em;
             font-weight: bold;
-            color: #e63946;
+            color: #d32f2f;
             margin-bottom: 12px;
             text-align: center;
         }
@@ -215,7 +219,7 @@
             border: 1px solid #ffe3e3;
         }
         .restart-btn {
-            background: #2e7d32;
+            background: #d81b60;
             color: white;
             padding: 12px;
             border: none;
@@ -231,7 +235,7 @@
 <body>
 
 <div class="container">
-    <h1>🌱 單字+副詞比較級特訓</h1>
+    <h1>🎈 柔萱生日派對特訓版 🎂</h1>
     <div id="quiz-container">
         <div class="top-bar">
             <button class="reload-btn" onclick="loadQuestion()">🔄 重整</button>
@@ -265,124 +269,124 @@
 <script>
     var quizData = [
         { 
-            q: "1. [單字陷阱] I usually have a piece of sweet cake for _____ after dinner.", options: ["desert", "design", "dessert", "diary"], ans: 2, hint: "我通常在晚飯後吃一塊甜蛋糕當作【甜點】。",
-            exp: "這是一個拼字大陷阱！甜點因為太好吃想多吃一點，所以有兩個 s (dessert)。只有一個 s 的是沙漠 (desert)。",
-            grammarTip: "記憶口訣：Dessert (甜點) 有兩個 s；Desert (沙漠) 很乾旱，所以只有一個 s！",
-            vocab: ["dessert (n.) 甜點", "desert (n.) 沙漠", "dinner (n.) 晚餐"]
-        },
-        { 
-            q: "2. [文法大魔王] I have very little money. The poor man has _____ money than I do.", options: ["littler", "less", "more little", "least"], ans: 1, hint: "我只有很少的錢。那個可憐的男人擁有的錢【比】我【更少】。",
-            exp: "這題是妳在課本第 20 頁訂正過的大魔王！little (少) 的比較級是不規則變化，要變成 less。",
-            grammarTip: "千萬不要加 -er 變成 littler！little 的比較級是大變身的 less，最高級是 least 喔！",
-            vocab: ["little (adj./adv.) 少的", "less (adj./adv.) 更少的", "poor (adj.) 貧窮的/可憐的"]
-        },
-        { 
-            q: "3. Amy's boyfriend asked her to marry him and gave her a beautiful _____ ring.", options: ["diamond", "dinner", "diplomat", "diary"], ans: 0, hint: "艾美的男友向她求婚，並給了她一枚美麗的【鑽石】戒指。",
-            exp: "最堅硬的寶石「鑽石」是 diamond。",
+            q: "1. I sat on a bench, watching several ducks hanging around the _____ of the lake.", options: ["education", "edge", "effect", "effort"], ans: 1, hint: "我坐在長凳上，看著幾隻鴨子在湖的【邊緣】盪。",
+            exp: "物體的邊界或「邊緣」是 edge。",
             grammarTip: "",
-            vocab: ["diamond (n.) 鑽石", "ring (n.) 戒指", "marry (v.) 結婚"]
+            vocab: ["edge (n.) 邊緣", "bench (n.) 長凳", "lake (n.) 湖"]
         },
         { 
-            q: "4. [文法] The eagle is flying _____ in the sky. (越飛越高)", options: ["higher and higher", "high and high", "more high and more high", "higher and highest"], ans: 0, hint: "老鷹在天空中飛得【越來越高】。",
-            exp: "「越來越...」的句型是「比較級 + and + 比較級」。high 的比較級是 higher。",
-            grammarTip: "這是妳在課本第 21 頁 Practice H 的句型喔！比較級 + and + 比較級 ＝ 越來越... (higher and higher)。",
-            vocab: ["high (adv./adj.) 高高地", "eagle (n.) 老鷹", "sky (n.) 天空"]
+            q: "2. [文法] The girl was not careful when cutting the birthday cake, so she cut _____.", options: ["her", "she", "hers", "herself"], ans: 3, hint: "那個女孩切生日蛋糕時不小心，所以割傷了【她自己】。",
+            exp: "主詞是 The girl (她)，割傷的對象也是自己，所以受詞必須用反身代名詞 herself。",
+            grammarTip: "這題妳在課本第 36 頁完美寫對了喔！She cut herself. (她割傷了她自己)。",
+            vocab: ["herself (pron.) 她自己", "cut (v.) 割傷", "careful (adj.) 小心的"]
         },
         { 
-            q: "5. He is a really _____ student. He studies English for three hours every night.", options: ["difficult", "different", "diligent", "direct"], ans: 2, hint: "他是個非常【勤奮的】學生。他每晚讀英文三個小時。",
-            exp: "形容人做事認真、努力不懈的「勤奮的」是 diligent。",
+            q: "3. Many people work hard in an _____ to save enough money to own their own homes.", options: ["emotion", "effect", "effort", "enemy"], ans: 2, hint: "很多人辛勤工作【努力】存足夠的錢，好擁有自己的家。",
+            exp: "盡力去做某事的「努力」是 effort。in an effort to... 意思是「努力為了去...」。",
+            grammarTip: "spare no effort 意思是「不遺餘力」。",
+            vocab: ["effort (n.) 努力", "save money (phr.) 存錢", "own (v.) 擁有"]
+        },
+        { 
+            q: "4. [文法] The red apples are sour (酸的). I want to buy those green _____.", options: ["one", "ones", "apple", "ones'"], ans: 1, hint: "紅蘋果很酸。我想買那些綠色的【蘋果】。",
+            exp: "為了不重複說 apples (複數名詞)，我們可以用不定代名詞 ones 來代替。",
+            grammarTip: "單數名詞用 one 代替；複數名詞用 ones 代替。這裡指的是那些「綠色的蘋果們」，所以是 ones。",
+            vocab: ["ones (pron.) 那些(東西)", "sour (adj.) 酸的"]
+        },
+        { 
+            q: "5. He drank all the milk and handed the _____ glass to his mother.", options: ["electric", "empty", "effective", "elder"], ans: 1, hint: "他喝光了所有的牛奶，並把【空的】杯子遞給他的媽媽。",
+            exp: "裡面什麼都沒有的、「空的」是 empty；它也可以當動詞「倒空」。",
             grammarTip: "",
-            vocab: ["diligent (adj.) 勤奮的", "student (n.) 學生", "every night (phr.) 每晚"]
+            vocab: ["empty (adj./v.) 空的/倒空", "hand (v.) 遞給", "glass (n.) 玻璃杯"]
         },
         { 
-            q: "6. [文法] Mark studied _____ than before to pass the difficult exam.", options: ["more hard", "harder", "hardly", "more hardly"], ans: 1, hint: "馬克為了通過困難的考試，讀得【比】以前【更努力】。",
-            exp: "hard 當副詞意思是「努力地」，它的比較級是直接加 -er 變成 harder。",
-            grammarTip: "永遠記住：hardly 是「幾乎不」的意思，不是 hard 的副詞！努力的比較級是 harder！",
-            vocab: ["hard (adv.) 努力地", "harder (adv.) 更努力地", "pass (v.) 通過"]
+            q: "6. [文法] The old man's family lived far away, so he lived in the house all by _____.", options: ["him", "his", "himself", "he"], ans: 2, hint: "老先生的家人住得很遠，所以他【自己一個人】住在那棟房子裡。",
+            exp: "by oneself 是一個非常重要的片語，意思是「獨自、自己一個人」。主詞是 he，所以搭配 by himself。",
+            grammarTip: "課本第 36 頁的必考重點：by + 反身代名詞 = 獨自、靠自己。He lives by himself.",
+            vocab: ["by himself (phr.) 他自己一個人", "far away (adv.) 遙遠地"]
         },
         { 
-            q: "7. Long ago, huge _____s like the T-Rex ruled the earth.", options: ["diplomats", "deserts", "dinosaurs", "differences"], ans: 2, hint: "很久以前，像暴龍這樣的巨大【恐龍】統治著地球。",
-            exp: "史前爬行動物「恐龍」是 dinosaur。",
-            grammarTip: "dinosaur 唸作 /ˈdaɪnəˌsɔr/，是小學生最喜歡的單字之一喔！",
-            vocab: ["dinosaur (n.) 恐龍", "huge (adj.) 巨大的", "earth (n.) 地球"]
+            q: "7. When I am feeling down, my best friend often _____s me to keep going.", options: ["employs", "elects", "ends", "encourages"], ans: 3, hint: "當我情緒低落時，我最好的朋友經常【鼓勵】我繼續前進。",
+            exp: "給予別人勇氣或希望、「鼓勵」的動詞是 encourage。",
+            grammarTip: "encourage someone to V... 意思是「鼓勵某人去做某事」。",
+            vocab: ["encourage (v.) 鼓勵", "feel down (phr.) 情緒低落", "keep going (phr.) 繼續前進"]
         },
         { 
-            q: "8. I don't know the meaning of this new word. I need to look it up in the _____.", options: ["diary", "dictionary", "dial", "design"], ans: 1, hint: "我不知道這個新單字的意思。我需要在【字典】裡查一下。",
-            exp: "用來查單字意思的「字典」是 dictionary。",
-            grammarTip: "look it up 是很常用的片語，意思是「(在書或電腦中) 查閱」。",
-            vocab: ["dictionary (n.) 字典", "meaning (n.) 意思", "look up (phr.) 查閱"]
+            q: "8. [文法] This dictionary is too heavy to carry. I need a lighter _____.", options: ["ones", "one", "dictionarys", "one's"], ans: 1, hint: "這本字典太重了帶不動。我需要一本比較輕的【字典】。",
+            exp: "dictionary (字典) 這裡指的是「單數」的一本字典，所以用不定代名詞 one 來代替。",
+            grammarTip: "單數用 one；複數用 ones。a lighter one ＝ 一本比較輕的字典。",
+            vocab: ["one (pron.) 一個(東西)", "heavy (adj.) 重的", "lighter (adj.) 較輕的"]
         },
         { 
-            q: "9. [文法] Sue writes _____ than Lisa. (Lisa 寫字寫得很小心，但 Sue 寫得更小心)", options: ["more carefully", "carefullyer", "carefullier", "much careful"], ans: 0, hint: "Sue 寫字寫得【比】Lisa【更小心】。",
-            exp: "carefully 是由形容詞加 -ly 變來的副詞。這類副詞的比較級，必須在前面加 more (more carefully)。",
-            grammarTip: "妳在課本第 20 頁寫得很棒喔！字尾是 -ly 的長副詞，比較級都是在前面加 more！",
-            vocab: ["carefully (adv.) 小心地", "write (v.) 寫字"]
+            q: "9. I don't like to drink black coffee, and my little sister doesn't like it, _____.", options: ["too", "either", "also", "neither"], ans: 1, hint: "我不喜歡喝黑咖啡，我妹妹【也(不)】喜歡。",
+            exp: "這題是必考陷阱！在肯定句中，我們用 too 表示「也」；但在【否定句 (doesn't)】中，我們必須用 either 表示「也不」。",
+            grammarTip: "肯定句的也 = too (I like it, too.)；否定句的也不 = either (I don't like it, either.)。",
+            vocab: ["either (adv.) 也不", "black coffee (n.) 黑咖啡"]
         },
         { 
-            q: "10. Because of the terrible drought, most parts of the land became a dry _____.", options: ["dessert", "desert", "diet", "dinner"], ans: 1, hint: "因為可怕的乾旱，大部分的土地變成了乾燥的【沙漠】。",
-            exp: "這題再考一次陷阱！乾燥、有很多沙子的地方是 desert (只有一個 s)。",
-            grammarTip: "desert 當名詞是「沙漠」，當動詞是「拋棄 (deserted her)」。",
-            vocab: ["desert (n.) 沙漠", "drought (n.) 乾旱", "dry (adj.) 乾燥的"]
+            q: "10. [文法] We sang songs, ate a lot of cake, and really enjoyed _____ at Rou-xuan's birthday party.", options: ["our", "us", "ourselves", "ours"], ans: 2, hint: "我們在柔萱的生日派對上唱歌、吃了很多蛋糕，真的【玩得很開心】。",
+            exp: "enjoy oneself 是固定片語，意思是「玩得很開心」。主詞是 We，所以要配 ourselves。",
+            grammarTip: "enjoy oneself = have a good time。We enjoyed ourselves ＝ 我們玩得很開心！",
+            vocab: ["enjoy ourselves (phr.) 我們玩得很開心", "birthday party (n.) 生日派對"]
         },
         { 
-            q: "11. We use a pencil to _____ a picture, and use a computer to _____ a website.", options: ["develop", "determine", "design", "die"], ans: 2, hint: "我們用鉛筆畫圖，並用電腦來【設計】網站。",
-            exp: "規劃並畫出事物外觀或運作方式的「設計」，動詞是 design。",
-            grammarTip: "design 的 g 是不發音的喔！讀作 /dɪˈzaɪn/。",
-            vocab: ["design (v./n.) 設計", "website (n.) 網站", "picture (n.) 圖片"]
+            q: "11. Children are full of _____. They can run and play all day long without feeling tired.", options: ["emotion", "energy", "education", "effect"], ans: 1, hint: "孩子們充滿【精力】。他們可以跑來跑去玩一整天都不會覺得累。",
+            exp: "活力、活動力或是物理上的「能量、精力」，英文是 energy。",
+            grammarTip: "be full of energy 意思是「充滿活力 / 精力充沛」。",
+            vocab: ["energy (n.) 精力/能量", "all day long (phr.) 一整天", "tired (adj.) 疲累的"]
         },
         { 
-            q: "12. [文法] The little puppy is getting _____ and _____. (越來越大)", options: ["big / big", "bigger / bigger", "more big / more big", "biger / biger"], ans: 1, hint: "小狗變得【越來越大】了。",
-            exp: "「越來越...」是比較級 + and + 比較級。big 是短母音加子音，要重複字尾 g 再加 er (bigger)。",
-            grammarTip: "重複字尾再加 er！bigger and bigger (越來越大)。",
-            vocab: ["puppy (n.) 小狗", "get (v.) 變得", "bigger (adj.) 更大的"]
+            q: "12. [文法] Mom asked the two boys, \"Did you clean the messy room all by _____? Good job!\"", options: ["yourself", "you", "yours", "yourselves"], ans: 3, hint: "媽媽問那兩個男孩：「你們是【靠你們自己】打掃這間亂七八糟的房間的嗎？做得好！」",
+            exp: "句子的對象是 the two boys (兩個男孩)，所以這裡的 you 是「你們 (複數)」，反身代名詞必須用複數的 yourselves！",
+            grammarTip: "妳在課本第 36 頁寫得超棒：you (單數) ➔ yourself；you (複數) ➔ yourselves。",
+            vocab: ["yourselves (pron.) 你們自己", "messy (adj.) 凌亂的", "all by yourselves (phr.) 全靠你們自己"]
         },
         { 
-            q: "13. There are many _____s between your car and my car. They look nothing alike.", options: ["difficulties", "diets", "diplomats", "differences"], ans: 3, hint: "你的車和我的車之間有許多【不同之處 / 差異】。它們看起來一點也不像。",
-            exp: "different (不同的) 的名詞是 difference (差異)。",
-            grammarTip: "tell the difference 意思是「分辨出差異」。",
-            vocab: ["difference (n.) 差異/不同之處", "between (prep.) 在...之間", "alike (adj.) 相像的"]
+            q: "13. She really _____ed me by shouting at me in front of all my classmates.", options: ["employed", "encouraged", "emphasized", "embarrassed"], ans: 3, hint: "她在所有同學面前對我大吼大叫，真的讓我感到很【尷尬 / 難堪】。",
+            exp: "讓別人在大庭廣眾下下不了台、「使尷尬」的動詞是 embarrass。",
+            grammarTip: "in public 是「在公開場合、在大庭廣眾之下」。",
+            vocab: ["embarrass (v.) 使尷尬", "shout at (phr.) 對...大吼", "in front of (phr.) 在...面前"]
         },
         { 
-            q: "14. A farmer _____ a dead body out of his field and reported it to the police.", options: ["dug", "digged", "directed", "developed"], ans: 0, hint: "一位農夫在他的田裡【挖出】了一具屍體並向警方報案。",
-            exp: "用鏟子或手把土翻開的「挖掘」是 dig。過去式是不規則變化的 dug。",
-            grammarTip: "動詞三態必背：dig (現在) ➔ dug (過去) ➔ dug (過去分詞)。",
-            vocab: ["dig (v.) 挖掘", "dug (v.) dig的過去式", "field (n.) 田地"]
+            q: "14. [文法] I don't like these long novels. How about those short _____?", options: ["one", "ones", "novel", "one's"], ans: 1, hint: "我不喜歡這些長篇小說。那些短的【小說】如何？",
+            exp: "前面提到的是 long novels (複數)，為了避免重複，後面要用不定代名詞的複數 ones。",
+            grammarTip: "這題是妳在課本第 37 頁寫對的題目！long novels ➔ short ones。",
+            vocab: ["ones (pron.) 那些(東西)", "novel (n.) 小說", "How about...? (phr.) ...如何？"]
         },
         { 
-            q: "15. [文法] A rabbit runs _____ than a turtle.", options: ["more fast", "fastly", "faster", "fast"], ans: 2, hint: "兔子跑得比烏龜【更快】。",
-            exp: "fast 的副詞還是 fast (沒有 fastly)；它的比較級直接加 -er 變成 faster。",
-            grammarTip: "fast 的形容詞和副詞同行，比較級直接加 -er (faster)。",
-            vocab: ["fast (adv.) 快速地", "faster (adv.) 更快速地", "turtle (n.) 烏龜"]
+            q: "15. When he heard the sad news, he had trouble hiding his _____s and started to cry.", options: ["effects", "emotions", "enemies", "elections"], ans: 1, hint: "當他聽到那個壞消息時，他難以隱藏他的【情感 / 情緒】，開始哭了起來。",
+            exp: "內心的感受、「情感、情緒」是 emotion。",
+            grammarTip: "have trouble + V-ing 意思是「做某事有困難 / 難以...」。",
+            vocab: ["emotion (n.) 情感/情緒", "hide (v.) 隱藏", "sad news (n.) 壞消息"]
         },
         { 
-            q: "16. Look at these two rings carefully. Can you spot the _____ between them?", options: ["difficulty", "difference", "diet", "dinner"], ans: 1, hint: "仔細看這兩枚戒指。你能看出它們之間的【差異】嗎？",
-            exp: "找出不相同的地方，就是找 difference (差異)。",
-            grammarTip: "spot the difference 是一個常見的用法，意思是「發現/看出差異 (也就是大家愛玩的大家來找碴)」。",
-            vocab: ["difference (n.) 差異", "carefully (adv.) 仔細地", "spot (v.) 發現/看出"]
+            q: "16. [文法] The cat is washing _____ after eating the delicious fish.", options: ["it", "its", "itself", "it's"], ans: 2, hint: "貓咪在吃完美味的魚後正在清洗【牠自己】。",
+            exp: "主詞是 The cat (動物用 it)，清洗的對象也是自己，所以受詞要用反身代名詞 itself。",
+            grammarTip: "it 的反身代名詞是 itself (牠自己 / 它自己)。",
+            vocab: ["itself (pron.) 牠自己", "wash (v.) 清洗", "delicious (adj.) 美味的"]
         },
         { 
-            q: "17. A _____ deals with foreign affairs on the international stage.", options: ["dinosaur", "diplomat", "diet", "diamond"], ans: 1, hint: "【外交官】在國際舞台上處理外國事務。",
-            exp: "代表國家與其他國家打交道的官員是 diplomat (外交官)。",
+            q: "17. The new supermarket will _____ twenty people to work as cashiers and clerks.", options: ["employ", "elect", "eat", "end"], ans: 0, hint: "這家新超市將【僱用】二十人來擔任收銀員和店員。",
+            exp: "花錢請人來工作、「僱用」的動詞是 employ。員工是 employee，老闆是 employer。",
             grammarTip: "",
-            vocab: ["diplomat (n.) 外交官", "foreign (adj.) 外國的", "affair (n.) 事務"]
+            vocab: ["employ (v.) 僱用", "cashier (n.) 收銀員", "clerk (n.) 店員"]
         },
         { 
-            q: "18. [文法] He is writing his homework _____ and _____ carefully. (越來越小心)", options: ["more / more", "much / much", "careful / careful", "carefully / carefully"], ans: 0, hint: "他寫作業寫得【越來越】小心了。",
-            exp: "長副詞 (carefully) 的「越來越...」句型是「more and more + 副詞」(more and more carefully)。",
-            grammarTip: "如果是長單字，不用寫兩次 carefully，只要寫 more and more carefully 就可以了！",
-            vocab: ["carefully (adv.) 小心地", "more and more (phr.) 越來越", "homework (n.) 作業"]
+            q: "18. Climate change is sure to produce direct _____s on our environment.", options: ["efforts", "edges", "educations", "effects"], ans: 3, hint: "氣候變遷肯定會對我們的環境產生直接的【影響 / 效果】。",
+            exp: "產生出來的結果或「影響」是 effect (名詞)；形容詞是 effective (有效的)。",
+            grammarTip: "produce effects on... 意思是「對...產生影響」。",
+            vocab: ["effect (n.) 影響/效果", "climate change (n.) 氣候變遷", "environment (n.) 環境"]
         },
         { 
-            q: "19. Don't _____ the bright light at my eyes. It hurts!", options: ["die", "direct", "develop", "determine"], ans: 1, hint: "不要把那道強光【導向 / 直射】我的眼睛。很痛！",
-            exp: "direct 當形容詞是直接的，當動詞是「導向、指引、導演」。",
-            grammarTip: "direct a movie 意思是「導演一部電影」；director 就是「導演」。",
-            vocab: ["direct (v./adj.) 導向/直接的", "bright light (n.) 強光", "hurt (v.) 疼痛/傷害"]
+            q: "19. Everything is funny as long as it is happening to somebody _____.", options: ["else", "either", "elder", "empty"], ans: 0, hint: "只要是發生在【其他人】身上，每件事情都是可笑的。",
+            exp: "表示「其他的、另外的」副詞是 else，通常放在 somebody/nobody/who/what 等字詞的後面。",
+            grammarTip: "somebody else 意思是「其他人」；what else 意思是「還有什麼其他的」。",
+            vocab: ["else (adv.) 其他的/另外的", "funny (adj.) 好笑的", "happen to (phr.) 發生在...身上"]
         },
         { 
-            q: "20. The poor cat _____d of hunger in the cold winter. It was very sad.", options: ["dug", "developed", "died", "dialed"], ans: 2, hint: "那隻可憐的貓在寒冬中因飢餓而【死】了。那非常令人難過。",
-            exp: "失去生命、「死亡」的動詞是 die；過去式是 died。",
-            grammarTip: "die of... 意思是「死於... (如疾病、飢餓)」。(dead 是形容詞，die 是動詞喔！)",
-            vocab: ["die (v.) 死亡", "died (v.) die的過去式", "hunger (n.) 飢餓"]
+            q: "20. Most parents work hard to make money because they want their children to get a good _____.", options: ["election", "emotion", "education", "element"], ans: 2, hint: "多數父母努力賺錢，因為他們希望他們的小孩能接受良好的【教育】。",
+            exp: "在學校學習知識的過程、「教育」是 education。",
+            grammarTip: "receive/get a good education 意思是「接受良好的教育」。",
+            vocab: ["education (n.) 教育", "parent (n.) 父母", "make money (phr.) 賺錢"]
         }
     ];
 
@@ -403,14 +407,14 @@
             var resultDiv = document.getElementById("result");
             resultDiv.style.display = "block";
             
-            var html = '<div class="score-title">🎉 測驗完成！<br>你的總分：' + score + ' / ' + quizData.length + '<br><span style="font-size: 0.8em; color: #795548;">(使用了 ' + hintsUsed + ' 次提示)</span></div>';
+            var html = '<div class="score-title">🎉 派對測驗完成！<br>你的總分：' + score + ' / ' + quizData.length + '<br><span style="font-size: 0.8em; color: #ad1457;">(使用了 ' + hintsUsed + ' 次提示)</span></div>';
             
             if (wrongQuestions.length === 0) {
-                html += '<div style="text-align: center; background: #e8f5e9; color: #1e4620; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 15px;">🌟 太厲害了！全部答對！desert 陷阱跟 less 不規則變化完全考不倒妳！💯</div>';
+                html += '<div style="text-align: center; background: #fce4ec; color: #ad1457; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 15px;">🌟 完美過關！反身代名詞跟 one/ones 完全難不倒你！祝柔萱生日快樂！🎂🎁💯</div>';
             } else {
                 html += '<div class="review-section">';
                 html += '<div class="review-title">📕 你的專屬錯題與文法複習 (' + wrongQuestions.length + ' 題)</div>';
-                html += '<div style="font-size:0.85em; color:#666; text-align:center; margin-bottom:12px;">把錯題小卡複習一下，下次遇到 little 變 less 就能秒殺它！</div>';
+                html += '<div style="font-size:0.85em; color:#666; text-align:center; margin-bottom:12px;">吃完蛋糕再來把錯題小卡複習一下，下次考試絕對滿分！</div>';
                 
                 for (var w = 0; w < wrongQuestions.length; w++) {
                     var item = wrongQuestions[w];
@@ -420,7 +424,7 @@
                     html += '<div class="wrong-card-ans">✅ 正確答案：' + correctOpt + '</div>';
                     html += '<div class="wrong-card-exp">💡 ' + item.exp + '</div>';
                     if (item.grammarTip) {
-                        html += '<div style="color:#856404; font-size:0.9em; margin-bottom:6px;"><strong>🧑‍🏫 文法小提醒：</strong>' + item.grammarTip + '</div>';
+                        html += '<div style="color:#c62828; font-size:0.9em; margin-bottom:6px;"><strong>🧑‍🏫 文法小提醒：</strong>' + item.grammarTip + '</div>';
                     }
                     html += '<ul class="wrong-card-vocab">';
                     for (var v = 0; v < item.vocab.length; v++) {
@@ -432,7 +436,7 @@
                 html += '</div>';
             }
             
-            html += '<button class="restart-btn" onclick="location.reload()">🔄 重新挑戰一次</button>';
+            html += '<button class="restart-btn" onclick="location.reload()">🔄 再挑戰一次</button>';
             resultDiv.innerHTML = html;
             return;
         }
@@ -476,16 +480,16 @@
         }
 
         if (selectedIndex === correctIndex) {
-            btn.style.background = "#2e7d32";
+            btn.style.background = "#d81b60";
             btn.style.color = "white";
-            feedback.innerHTML = "✅ 答對了！太讚了！";
+            feedback.innerHTML = "✅ 答對了！太讚了！🎉";
             feedback.className = "feedback correct";
             score++;
         } else {
-            btn.style.background = "#c62828";
+            btn.style.background = "#6c757d";
             btn.style.color = "white";
             if (options[correctIndex]) {
-                options[correctIndex].style.background = "#2e7d32";
+                options[correctIndex].style.background = "#d81b60";
                 options[correctIndex].style.color = "white";
             }
             feedback.innerHTML = "❌ 答錯囉！正確答案是 " + currentData.options[correctIndex] + "。";
