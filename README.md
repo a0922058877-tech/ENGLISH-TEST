@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>英文單字+文法挑戰 (柔萱生日派對版 🎂)</title>
+    <title>英文單字+文法挑戰 (edge~energy 升級突破版)</title>
     <style>
         * { box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #fff0f5; /* 派對粉色背景 */
+            background-color: #e8eaf6; /* 淺靛藍背景 */
             color: #333333;
             margin: 0;
             padding: 10px;
@@ -20,16 +20,15 @@
             max-width: 400px;
             background: #ffffff;
             padding: 20px 16px;
-            border-radius: 24px;
-            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.15);
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(63, 81, 181, 0.15);
             margin: 0 auto;
-            border: 2px solid #fce4ec;
         }
         h1 {
             text-align: center;
-            color: #c2185b;
-            font-size: 1.15em;
-            border-bottom: 2px dashed #f8bbd0;
+            color: #3f51b5; /* 星空靛藍 */
+            font-size: 1.2em;
+            border-bottom: 2px dashed #c5cae9;
             padding-bottom: 12px;
             margin-top: 5px;
             margin-bottom: 15px;
@@ -41,7 +40,7 @@
             margin-bottom: 12px;
         }
         .reload-btn {
-            background: #f06292;
+            background: #7986cb;
             color: white;
             padding: 6px 12px;
             border: none;
@@ -51,7 +50,7 @@
             font-weight: bold;
         }
         #q-counter {
-            color: #ad1457;
+            color: #5c6bc0;
             font-size: 0.85em;
             font-weight: bold;
         }
@@ -60,11 +59,11 @@
             font-weight: bold;
             margin-bottom: 16px;
             min-height: 54px;
-            color: #222222;
+            color: #1a237e;
             line-height: 1.5;
         }
         .hint-btn {
-            background: #ffb703;
+            background: #ffb300; /* 溫暖琥珀 */
             color: #333333;
             padding: 10px;
             border: none;
@@ -85,7 +84,7 @@
             padding: 12px;
             border-radius: 8px;
             margin-bottom: 15px;
-            border-left: 4px solid #ffc107;
+            border-left: 4px solid #ffb300;
             line-height: 1.5;
         }
         .options {
@@ -96,8 +95,8 @@
         }
         .option {
             padding: 14px 16px;
-            background: #fce4ec;
-            border: 2px solid transparent;
+            background: #f8f9fa;
+            border: 2px solid #e8eaf6;
             border-radius: 12px;
             cursor: pointer;
             font-size: 0.98em;
@@ -108,7 +107,7 @@
         }
         .option:active {
             transform: scale(0.98);
-            background: #f8bbd0;
+            background: #e8eaf6;
         }
         .feedback {
             font-weight: bold;
@@ -123,8 +122,8 @@
         
         .explanation-box {
             display: none;
-            background-color: #fcf3f6;
-            border-left: 4px solid #d81b60;
+            background-color: #e8eaf6;
+            border-left: 4px solid #3f51b5;
             padding: 14px;
             margin-bottom: 18px;
             border-radius: 8px;
@@ -133,16 +132,16 @@
         }
         .explanation-box h4 {
             margin: 0 0 8px 0;
-            color: #ad1457;
+            color: #283593;
             font-size: 1.02em;
         }
         .grammar-tip {
-            background-color: #fff3cd;
-            border-left: 4px solid #ffc107;
+            background-color: #e3f2fd;
+            border-left: 4px solid #1976d2;
             padding: 10px 12px;
             margin: 10px 0;
             border-radius: 6px;
-            color: #664d03;
+            color: #0d47a1;
             font-size: 0.9em;
         }
         .vocab-list {
@@ -152,7 +151,7 @@
         }
         .next-btn {
             display: none;
-            background: #d81b60;
+            background: #3f51b5;
             color: white;
             padding: 14px;
             border: none;
@@ -161,7 +160,7 @@
             font-size: 1.05em;
             width: 100%;
             font-weight: bold;
-            box-shadow: 0 3px 10px rgba(216, 27, 96, 0.3);
+            box-shadow: 0 3px 10px rgba(63, 81, 181, 0.3);
         }
         #result {
             display: none;
@@ -172,12 +171,12 @@
             text-align: center;
             font-size: 1.4em;
             font-weight: bold;
-            color: #d81b60;
+            color: #3f51b5;
             margin-bottom: 15px;
         }
         .review-section {
             margin-top: 20px;
-            border-top: 2px dashed #f8bbd0;
+            border-top: 2px dashed #c5cae9;
             padding-top: 15px;
         }
         .review-title {
@@ -219,7 +218,7 @@
             border: 1px solid #ffe3e3;
         }
         .restart-btn {
-            background: #d81b60;
+            background: #3f51b5;
             color: white;
             padding: 12px;
             border: none;
@@ -235,7 +234,7 @@
 <body>
 
 <div class="container">
-    <h1>🎈 柔萱生日派對特訓版 🎂</h1>
+    <h1>🚀 單字+文法 升級突破版</h1>
     <div id="quiz-container">
         <div class="top-bar">
             <button class="reload-btn" onclick="loadQuestion()">🔄 重整</button>
@@ -269,124 +268,124 @@
 <script>
     var quizData = [
         { 
-            q: "1. I sat on a bench, watching several ducks hanging around the _____ of the lake.", options: ["education", "edge", "effect", "effort"], ans: 1, hint: "我坐在長凳上，看著幾隻鴨子在湖的【邊緣】盪。",
-            exp: "物體的邊界或「邊緣」是 edge。",
+            q: "1. Chin-chin put a lot of _____ into crocheting the beautiful Pikmin hat.", options: ["emotion", "effort", "effect", "education"], ans: 1, hint: "芩芩投入了很多【努力】來鉤織那頂美麗的皮克敏帽子。",
+            exp: "盡力去做某事的「努力」是 effort。put effort into... 意思是「投入努力在...」。",
             grammarTip: "",
-            vocab: ["edge (n.) 邊緣", "bench (n.) 長凳", "lake (n.) 湖"]
+            vocab: ["effort (n.) 努力", "crochet (v.) 鉤織", "beautiful (adj.) 美麗的"]
         },
         { 
-            q: "2. [文法] The girl was not careful when cutting the birthday cake, so she cut _____.", options: ["her", "she", "hers", "herself"], ans: 3, hint: "那個女孩切生日蛋糕時不小心，所以割傷了【她自己】。",
-            exp: "主詞是 The girl (她)，割傷的對象也是自己，所以受詞必須用反身代名詞 herself。",
-            grammarTip: "這題妳在課本第 36 頁完美寫對了喔！She cut herself. (她割傷了她自己)。",
-            vocab: ["herself (pron.) 她自己", "cut (v.) 割傷", "careful (adj.) 小心的"]
+            q: "2. [文法] The 10-year-old Shiba Inu was looking at _____ in the mirror.", options: ["it", "its", "itself", "him"], ans: 2, hint: "那隻十歲的柴犬正看著鏡子裡的【牠自己】。",
+            exp: "主詞是 Shiba Inu (動物用 it)，看的對象也是自己，所以受詞必須用反身代名詞 itself。",
+            grammarTip: "反身代名詞就是「...自己」。it (牠) ➔ itself (牠自己)。",
+            vocab: ["itself (pron.) 牠自己/它自己", "mirror (n.) 鏡子"]
         },
         { 
-            q: "3. Many people work hard in an _____ to save enough money to own their own homes.", options: ["emotion", "effect", "effort", "enemy"], ans: 2, hint: "很多人辛勤工作【努力】存足夠的錢，好擁有自己的家。",
-            exp: "盡力去做某事的「努力」是 effort。in an effort to... 意思是「努力為了去...」。",
-            grammarTip: "spare no effort 意思是「不遺餘力」。",
-            vocab: ["effort (n.) 努力", "save money (phr.) 存錢", "own (v.) 擁有"]
-        },
-        { 
-            q: "4. [文法] The red apples are sour (酸的). I want to buy those green _____.", options: ["one", "ones", "apple", "ones'"], ans: 1, hint: "紅蘋果很酸。我想買那些綠色的【蘋果】。",
-            exp: "為了不重複說 apples (複數名詞)，我們可以用不定代名詞 ones 來代替。",
-            grammarTip: "單數名詞用 one 代替；複數名詞用 ones 代替。這裡指的是那些「綠色的蘋果們」，所以是 ones。",
-            vocab: ["ones (pron.) 那些(東西)", "sour (adj.) 酸的"]
-        },
-        { 
-            q: "5. He drank all the milk and handed the _____ glass to his mother.", options: ["electric", "empty", "effective", "elder"], ans: 1, hint: "他喝光了所有的牛奶，並把【空的】杯子遞給他的媽媽。",
+            q: "3. After finishing the delicious Korean hotteok, he left the _____ plate on the table.", options: ["electric", "effective", "empty", "elder"], ans: 2, hint: "吃完美味的韓式糖餅後，他把【空的】盤子留在桌上。",
             exp: "裡面什麼都沒有的、「空的」是 empty；它也可以當動詞「倒空」。",
             grammarTip: "",
-            vocab: ["empty (adj./v.) 空的/倒空", "hand (v.) 遞給", "glass (n.) 玻璃杯"]
+            vocab: ["empty (adj./v.) 空的/倒空", "plate (n.) 盤子", "delicious (adj.) 美味的"]
         },
         { 
-            q: "6. [文法] The old man's family lived far away, so he lived in the house all by _____.", options: ["him", "his", "himself", "he"], ans: 2, hint: "老先生的家人住得很遠，所以他【自己一個人】住在那棟房子裡。",
-            exp: "by oneself 是一個非常重要的片語，意思是「獨自、自己一個人」。主詞是 he，所以搭配 by himself。",
-            grammarTip: "課本第 36 頁的必考重點：by + 反身代名詞 = 獨自、靠自己。He lives by himself.",
-            vocab: ["by himself (phr.) 他自己一個人", "far away (adv.) 遙遠地"]
+            q: "4. [文法] I don't like the heavy dark sofas. I prefer those cream-colored _____.", options: ["one", "ones", "sofa", "ones'"], ans: 1, hint: "我不喜歡那些笨重的深色沙發。我比較喜歡那些奶油色的【沙發】。",
+            exp: "為了不重複說 sofas (複數名詞)，我們可以用不定代名詞 ones 來代替。",
+            grammarTip: "單數名詞用 one 代替；複數名詞用 ones 代替。這裡指的是那些「奶油色的沙發們」，所以是 ones。",
+            vocab: ["ones (pron.) 那些(東西)", "cream-colored (adj.) 奶油色的", "prefer (v.) 比較喜歡"]
         },
         { 
-            q: "7. When I am feeling down, my best friend often _____s me to keep going.", options: ["employs", "elects", "ends", "encourages"], ans: 3, hint: "當我情緒低落時，我最好的朋友經常【鼓勵】我繼續前進。",
-            exp: "給予別人勇氣或希望、「鼓勵」的動詞是 encourage。",
-            grammarTip: "encourage someone to V... 意思是「鼓勵某人去做某事」。",
-            vocab: ["encourage (v.) 鼓勵", "feel down (phr.) 情緒低落", "keep going (phr.) 繼續前進"]
+            q: "5. It really _____ed me when my dog bit the furniture in front of our guests.", options: ["employed", "encouraged", "embarrassed", "elected"], ans: 2, hint: "當我的狗在客人面前咬傢俱時，真的讓我感到很【尷尬 / 難堪】。",
+            exp: "讓別人在大庭廣眾下下不了台、「使尷尬」的動詞是 embarrass。",
+            grammarTip: "",
+            vocab: ["embarrass (v.) 使尷尬", "bite (v.) 咬(過去式bit)", "furniture (n.) 傢俱"]
         },
         { 
-            q: "8. [文法] This dictionary is too heavy to carry. I need a lighter _____.", options: ["ones", "one", "dictionarys", "one's"], ans: 1, hint: "這本字典太重了帶不動。我需要一本比較輕的【字典】。",
-            exp: "dictionary (字典) 這裡指的是「單數」的一本字典，所以用不定代名詞 one 來代替。",
-            grammarTip: "單數用 one；複數用 ones。a lighter one ＝ 一本比較輕的字典。",
-            vocab: ["one (pron.) 一個(東西)", "heavy (adj.) 重的", "lighter (adj.) 較輕的"]
-        },
-        { 
-            q: "9. I don't like to drink black coffee, and my little sister doesn't like it, _____.", options: ["too", "either", "also", "neither"], ans: 1, hint: "我不喜歡喝黑咖啡，我妹妹【也(不)】喜歡。",
+            q: "6. I don't like noisy environments, and my boyfriend doesn't like them, _____.", options: ["too", "either", "also", "neither"], ans: 1, hint: "我不喜歡吵鬧的環境，我男朋友【也(不)】喜歡。",
             exp: "這題是必考陷阱！在肯定句中，我們用 too 表示「也」；但在【否定句 (doesn't)】中，我們必須用 either 表示「也不」。",
             grammarTip: "肯定句的也 = too (I like it, too.)；否定句的也不 = either (I don't like it, either.)。",
-            vocab: ["either (adv.) 也不", "black coffee (n.) 黑咖啡"]
+            vocab: ["either (adv.) 也不", "noisy (adj.) 吵鬧的", "environment (n.) 環境"]
         },
         { 
-            q: "10. [文法] We sang songs, ate a lot of cake, and really enjoyed _____ at Rou-xuan's birthday party.", options: ["our", "us", "ourselves", "ours"], ans: 2, hint: "我們在柔萱的生日派對上唱歌、吃了很多蛋糕，真的【玩得很開心】。",
-            exp: "enjoy oneself 是固定片語，意思是「玩得很開心」。主詞是 We，所以要配 ourselves。",
-            grammarTip: "enjoy oneself = have a good time。We enjoyed ourselves ＝ 我們玩得很開心！",
-            vocab: ["enjoy ourselves (phr.) 我們玩得很開心", "birthday party (n.) 生日派對"]
+            q: "7. [文法] The students baked the sausages and bread all by _____.", options: ["them", "their", "themselves", "themself"], ans: 2, hint: "學生們【全靠他們自己】烤了香腸和麵包。",
+            exp: "by oneself 是一個非常重要的片語，意思是「獨自、自己一個人/靠自己」。主詞是 The students (他們)，所以搭配 themselves。",
+            grammarTip: "課本第 36 頁的必考重點：by + 反身代名詞 = 獨自、靠自己。they 的反身代名詞是 themselves！",
+            vocab: ["by themselves (phr.) 靠他們自己", "bake (v.) 烘烤", "sausage (n.) 香腸"]
         },
         { 
-            q: "11. Children are full of _____. They can run and play all day long without feeling tired.", options: ["emotion", "energy", "education", "effect"], ans: 1, hint: "孩子們充滿【精力】。他們可以跑來跑去玩一整天都不會覺得累。",
+            q: "8. When I was struggling with the difficult crochet pattern, my sister _____d me to keep trying.", options: ["employed", "elected", "ended", "encouraged"], ans: 3, hint: "當我在跟困難的鉤織圖解奮戰時，我妹妹【鼓勵】我繼續嘗試。",
+            exp: "給予別人勇氣或希望、「鼓勵」的動詞是 encourage。",
+            grammarTip: "encourage someone to V... 意思是「鼓勵某人去做某事」。",
+            vocab: ["encourage (v.) 鼓勵", "struggle with (phr.) 與...奮戰", "keep trying (phr.) 繼續嘗試"]
+        },
+        { 
+            q: "9. The new minimalist cream style will have a calming _____ on our new home.", options: ["effort", "edge", "education", "effect"], ans: 3, hint: "新的極簡奶油風格將對我們的新家產生平靜的【影響 / 效果】。",
+            exp: "產生出來的結果或「影響」是 effect (名詞)；形容詞是 effective (有效的)。",
+            grammarTip: "have an effect on... 意思是「對...產生影響」。",
+            vocab: ["effect (n.) 影響/效果", "minimalist (adj.) 極簡主義的", "calming (adj.) 令人平靜的"]
+        },
+        { 
+            q: "10. [文法] My old bathroom faucet is broken. I plan to buy a new TOTO _____ during our Tokyo trip in 2026.", options: ["ones", "one", "faucets", "one's"], ans: 1, hint: "我舊的浴室水龍頭壞了。我計畫在2026年的東京之旅買一個新的 TOTO【水龍頭】。",
+            exp: "faucet (水龍頭) 這裡指的是「單數」的一個水龍頭，所以用不定代名詞 one 來代替。",
+            grammarTip: "單數用 one；複數用 ones。a new TOTO one ＝ 一個新的 TOTO 水龍頭。",
+            vocab: ["one (pron.) 一個(東西)", "faucet (n.) 水龍頭", "broken (adj.) 壞掉的"]
+        },
+        { 
+            q: "11. The 10-year-old Shiba Inu is full of _____; he runs around the house all day.", options: ["emotion", "energy", "education", "elephant"], ans: 1, hint: "這隻十歲的柴犬充滿【精力】；他整天在房子裡跑來跑去。",
             exp: "活力、活動力或是物理上的「能量、精力」，英文是 energy。",
             grammarTip: "be full of energy 意思是「充滿活力 / 精力充沛」。",
-            vocab: ["energy (n.) 精力/能量", "all day long (phr.) 一整天", "tired (adj.) 疲累的"]
+            vocab: ["energy (n.) 精力/能量", "run around (phr.) 跑來跑去", "all day (phr.) 一整天"]
         },
         { 
-            q: "12. [文法] Mom asked the two boys, \"Did you clean the messy room all by _____? Good job!\"", options: ["yourself", "you", "yours", "yourselves"], ans: 3, hint: "媽媽問那兩個男孩：「你們是【靠你們自己】打掃這間亂七八糟的房間的嗎？做得好！」",
-            exp: "句子的對象是 the two boys (兩個男孩)，所以這裡的 you 是「你們 (複數)」，反身代名詞必須用複數的 yourselves！",
-            grammarTip: "妳在課本第 36 頁寫得超棒：you (單數) ➔ yourself；you (複數) ➔ yourselves。",
-            vocab: ["yourselves (pron.) 你們自己", "messy (adj.) 凌亂的", "all by yourselves (phr.) 全靠你們自己"]
+            q: "12. [文法] \"Help _____ to some homemade bread, guys!\" said the host.", options: ["yourself", "you", "yours", "yourselves"], ans: 3, hint: "主人說：「大夥們，請【你們自己】隨意吃些自製的麵包吧！」",
+            exp: "對象是 guys (大夥們/複數)，所以這裡的 you 是「你們 (複數)」，反身代名詞必須用複數的 yourselves！",
+            grammarTip: "Help yourself/yourselves to... 是招待客人的常見用語，意思是「請自行取用...」。單數客人用 yourself，多位客人用 yourselves。",
+            vocab: ["yourselves (pron.) 你們自己", "homemade (adj.) 自製的", "host (n.) 主人"]
         },
         { 
-            q: "13. She really _____ed me by shouting at me in front of all my classmates.", options: ["employed", "encouraged", "emphasized", "embarrassed"], ans: 3, hint: "她在所有同學面前對我大吼大叫，真的讓我感到很【尷尬 / 難堪】。",
-            exp: "讓別人在大庭廣眾下下不了台、「使尷尬」的動詞是 embarrass。",
-            grammarTip: "in public 是「在公開場合、在大庭廣眾之下」。",
-            vocab: ["embarrass (v.) 使尷尬", "shout at (phr.) 對...大吼", "in front of (phr.) 在...面前"]
+            q: "13. We should always respect our _____s and listen to their wise advice.", options: ["elephants", "electrons", "elders", "enemies"], ans: 2, hint: "我們應該永遠尊敬我們的【長輩】，並聽取他們明智的建議。",
+            exp: "年紀較長的人、「長輩」是 elder。",
+            grammarTip: "elder brother 是「哥哥」；elder sister 是「姊姊」。",
+            vocab: ["elder (n.) 長輩", "respect (v.) 尊敬", "advice (n.) 建議"]
         },
         { 
-            q: "14. [文法] I don't like these long novels. How about those short _____?", options: ["one", "ones", "novel", "one's"], ans: 1, hint: "我不喜歡這些長篇小說。那些短的【小說】如何？",
-            exp: "前面提到的是 long novels (複數)，為了避免重複，後面要用不定代名詞的複數 ones。",
-            grammarTip: "這題是妳在課本第 37 頁寫對的題目！long novels ➔ short ones。",
-            vocab: ["ones (pron.) 那些(東西)", "novel (n.) 小說", "How about...? (phr.) ...如何？"]
-        },
-        { 
-            q: "15. When he heard the sad news, he had trouble hiding his _____s and started to cry.", options: ["effects", "emotions", "enemies", "elections"], ans: 1, hint: "當他聽到那個壞消息時，他難以隱藏他的【情感 / 情緒】，開始哭了起來。",
+            q: "14. She couldn't hide her _____s when she received the Exemplary Piety award for her sister.", options: ["effects", "emotions", "enemies", "elections"], ans: 1, hint: "當她代替妹妹領取孝行楷模獎時，她無法隱藏她的【情感 / 情緒】。",
             exp: "內心的感受、「情感、情緒」是 emotion。",
-            grammarTip: "have trouble + V-ing 意思是「做某事有困難 / 難以...」。",
-            vocab: ["emotion (n.) 情感/情緒", "hide (v.) 隱藏", "sad news (n.) 壞消息"]
-        },
-        { 
-            q: "16. [文法] The cat is washing _____ after eating the delicious fish.", options: ["it", "its", "itself", "it's"], ans: 2, hint: "貓咪在吃完美味的魚後正在清洗【牠自己】。",
-            exp: "主詞是 The cat (動物用 it)，清洗的對象也是自己，所以受詞要用反身代名詞 itself。",
-            grammarTip: "it 的反身代名詞是 itself (牠自己 / 它自己)。",
-            vocab: ["itself (pron.) 牠自己", "wash (v.) 清洗", "delicious (adj.) 美味的"]
-        },
-        { 
-            q: "17. The new supermarket will _____ twenty people to work as cashiers and clerks.", options: ["employ", "elect", "eat", "end"], ans: 0, hint: "這家新超市將【僱用】二十人來擔任收銀員和店員。",
-            exp: "花錢請人來工作、「僱用」的動詞是 employ。員工是 employee，老闆是 employer。",
             grammarTip: "",
-            vocab: ["employ (v.) 僱用", "cashier (n.) 收銀員", "clerk (n.) 店員"]
+            vocab: ["emotion (n.) 情感/情緒", "hide (v.) 隱藏", "receive (v.) 領取/收到"]
         },
         { 
-            q: "18. Climate change is sure to produce direct _____s on our environment.", options: ["efforts", "edges", "educations", "effects"], ans: 3, hint: "氣候變遷肯定會對我們的環境產生直接的【影響 / 效果】。",
-            exp: "產生出來的結果或「影響」是 effect (名詞)；形容詞是 effective (有效的)。",
-            grammarTip: "produce effects on... 意思是「對...產生影響」。",
-            vocab: ["effect (n.) 影響/效果", "climate change (n.) 氣候變遷", "environment (n.) 環境"]
+            q: "15. [文法] I planned the 2026 Tokyo trip itinerary all by _____.", options: ["me", "my", "mine", "myself"], ans: 3, hint: "我【全靠我自己】規畫了2026年東京之旅的行程。",
+            exp: "主詞是 I (我)，表示「靠我自己」要用 by myself。",
+            grammarTip: "這題是妳在課本第 36 頁完美寫對的喔！I 的反身代名詞就是 myself。",
+            vocab: ["by myself (phr.) 靠我自己", "plan (v.) 計畫", "itinerary (n.) 行程"]
         },
         { 
-            q: "19. Everything is funny as long as it is happening to somebody _____.", options: ["else", "either", "elder", "empty"], ans: 0, hint: "只要是發生在【其他人】身上，每件事情都是可笑的。",
-            exp: "表示「其他的、另外的」副詞是 else，通常放在 somebody/nobody/who/what 等字詞的後面。",
-            grammarTip: "somebody else 意思是「其他人」；what else 意思是「還有什麼其他的」。",
-            vocab: ["else (adv.) 其他的/另外的", "funny (adj.) 好笑的", "happen to (phr.) 發生在...身上"]
+            q: "16. Please remember to turn off the _____ fan before leaving the cream-colored living room.", options: ["empty", "effective", "electric", "elder"], ans: 2, hint: "離開奶油色的客廳前，請記得關掉【電】風扇。",
+            exp: "需要用電才能運作的、「電的、電動的」是 electric。",
+            grammarTip: "electric fan (電風扇)；electric car (電動車)。",
+            vocab: ["electric (adj.) 電的/電動的", "turn off (phr.) 關閉", "fan (n.) 風扇"]
         },
         { 
-            q: "20. Most parents work hard to make money because they want their children to get a good _____.", options: ["election", "emotion", "education", "element"], ans: 2, hint: "多數父母努力賺錢，因為他們希望他們的小孩能接受良好的【教育】。",
-            exp: "在學校學習知識的過程、「教育」是 education。",
-            grammarTip: "receive/get a good education 意思是「接受良好的教育」。",
-            vocab: ["education (n.) 教育", "parent (n.) 父母", "make money (phr.) 賺錢"]
+            q: "17. The Chiayi City Government will _____ more workers for the new transportation project.", options: ["employ", "elect", "eat", "end"], ans: 0, hint: "嘉義市政府將為新的交通專案【僱用】更多工人。",
+            exp: "花錢請人來工作、「僱用」的動詞是 employ。員工是 employee。",
+            grammarTip: "",
+            vocab: ["employ (v.) 僱用", "government (n.) 政府", "transportation (n.) 交通/運輸"]
+        },
+        { 
+            q: "18. [文法] Those red yarn balls are nice, but I need the white _____ for this doll accessory.", options: ["one", "ones", "yarn", "one's"], ans: 1, hint: "那些紅色的毛線球很不錯，但我需要白色的【毛線球】來做這個娃娃配件。",
+            exp: "前面提到的是 yarn balls (複數)，為了避免重複，後面要用不定代名詞的複數 ones。",
+            grammarTip: "紅色的毛線球們 (red ones) ➔ 白色的毛線球們 (white ones)。",
+            vocab: ["ones (pron.) 那些(東西)", "yarn ball (n.) 毛線球", "accessory (n.) 配件"]
+        },
+        { 
+            q: "19. Be careful! Don't put the glass of water too close to the _____ of the dining table.", options: ["education", "edge", "effect", "effort"], ans: 1, hint: "小心！別把水杯放在太靠近餐桌【邊緣】的地方。",
+            exp: "物體的邊界或「邊緣」是 edge。",
+            grammarTip: "",
+            vocab: ["edge (n.) 邊緣", "close to (phr.) 靠近", "dining table (n.) 餐桌"]
+        },
+        { 
+            q: "20. [文法] Chin-chin learned how to make miniature charms all by _____.", options: ["her", "she", "hers", "herself"], ans: 3, hint: "芩芩【全靠她自己】學會了如何製作微型吊飾。",
+            exp: "主詞是 Chin-chin (她)，靠她自己要用 by herself。",
+            grammarTip: "she 的反身代名詞是 herself。all by herself = 完全靠她自己。",
+            vocab: ["by herself (phr.) 靠她自己", "learn (v.) 學習", "miniature charm (n.) 微型吊飾"]
         }
     ];
 
@@ -407,14 +406,14 @@
             var resultDiv = document.getElementById("result");
             resultDiv.style.display = "block";
             
-            var html = '<div class="score-title">🎉 派對測驗完成！<br>你的總分：' + score + ' / ' + quizData.length + '<br><span style="font-size: 0.8em; color: #ad1457;">(使用了 ' + hintsUsed + ' 次提示)</span></div>';
+            var html = '<div class="score-title">🎉 升級測驗完成！<br>你的總分：' + score + ' / ' + quizData.length + '<br><span style="font-size: 0.8em; color: #5c6bc0;">(使用了 ' + hintsUsed + ' 次提示)</span></div>';
             
             if (wrongQuestions.length === 0) {
-                html += '<div style="text-align: center; background: #fce4ec; color: #ad1457; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 15px;">🌟 完美過關！反身代名詞跟 one/ones 完全難不倒你！祝柔萱生日快樂！🎂🎁💯</div>';
+                html += '<div style="text-align: center; background: #e8f5e9; color: #1e4620; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 15px;">🌟 完美過關！反身代名詞跟 one/ones 完全難不倒你！恭喜解鎖新成就！🚀💯</div>';
             } else {
                 html += '<div class="review-section">';
                 html += '<div class="review-title">📕 你的專屬錯題與文法複習 (' + wrongQuestions.length + ' 題)</div>';
-                html += '<div style="font-size:0.85em; color:#666; text-align:center; margin-bottom:12px;">吃完蛋糕再來把錯題小卡複習一下，下次考試絕對滿分！</div>';
+                html += '<div style="font-size:0.85em; color:#666; text-align:center; margin-bottom:12px;">把錯題小卡複習一下，下次考試絕對滿分！</div>';
                 
                 for (var w = 0; w < wrongQuestions.length; w++) {
                     var item = wrongQuestions[w];
@@ -424,7 +423,7 @@
                     html += '<div class="wrong-card-ans">✅ 正確答案：' + correctOpt + '</div>';
                     html += '<div class="wrong-card-exp">💡 ' + item.exp + '</div>';
                     if (item.grammarTip) {
-                        html += '<div style="color:#c62828; font-size:0.9em; margin-bottom:6px;"><strong>🧑‍🏫 文法小提醒：</strong>' + item.grammarTip + '</div>';
+                        html += '<div style="color:#1976d2; font-size:0.9em; margin-bottom:6px;"><strong>🧑‍🏫 文法小提醒：</strong>' + item.grammarTip + '</div>';
                     }
                     html += '<ul class="wrong-card-vocab">';
                     for (var v = 0; v < item.vocab.length; v++) {
@@ -480,16 +479,16 @@
         }
 
         if (selectedIndex === correctIndex) {
-            btn.style.background = "#d81b60";
+            btn.style.background = "#3f51b5";
             btn.style.color = "white";
-            feedback.innerHTML = "✅ 答對了！太讚了！🎉";
+            feedback.innerHTML = "✅ 答對了！太讚了！🚀";
             feedback.className = "feedback correct";
             score++;
         } else {
-            btn.style.background = "#6c757d";
+            btn.style.background = "#9e9e9e";
             btn.style.color = "white";
             if (options[correctIndex]) {
-                options[correctIndex].style.background = "#d81b60";
+                options[correctIndex].style.background = "#3f51b5";
                 options[correctIndex].style.color = "white";
             }
             feedback.innerHTML = "❌ 答錯囉！正確答案是 " + currentData.options[correctIndex] + "。";
