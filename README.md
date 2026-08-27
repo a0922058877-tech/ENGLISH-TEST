@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>英文單字+文法挑戰 (edge~energy 升級突破版)</title>
+    <title>英文單字+文法挑戰 (engine~every & 雙重所有格)</title>
     <style>
         * { box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #e8eaf6; /* 淺靛藍背景 */
+            background-color: #f0f4f8;
             color: #333333;
             margin: 0;
             padding: 10px;
@@ -21,13 +21,13 @@
             background: #ffffff;
             padding: 20px 16px;
             border-radius: 20px;
-            box-shadow: 0 6px 20px rgba(63, 81, 181, 0.15);
+            box-shadow: 0 8px 24px rgba(40, 53, 147, 0.12);
             margin: 0 auto;
         }
         h1 {
             text-align: center;
-            color: #3f51b5; /* 星空靛藍 */
-            font-size: 1.2em;
+            color: #283593;
+            font-size: 1.18em;
             border-bottom: 2px dashed #c5cae9;
             padding-bottom: 12px;
             margin-top: 5px;
@@ -40,7 +40,7 @@
             margin-bottom: 12px;
         }
         .reload-btn {
-            background: #7986cb;
+            background: #5c6bc0;
             color: white;
             padding: 6px 12px;
             border: none;
@@ -50,7 +50,7 @@
             font-weight: bold;
         }
         #q-counter {
-            color: #5c6bc0;
+            color: #3f51b5;
             font-size: 0.85em;
             font-weight: bold;
         }
@@ -63,7 +63,7 @@
             line-height: 1.5;
         }
         .hint-btn {
-            background: #ffb300; /* 溫暖琥珀 */
+            background: #ffb300;
             color: #333333;
             padding: 10px;
             border: none;
@@ -95,19 +95,19 @@
         }
         .option {
             padding: 14px 16px;
-            background: #f8f9fa;
-            border: 2px solid #e8eaf6;
+            background: #e8eaf6;
+            border: 2px solid transparent;
             border-radius: 12px;
             cursor: pointer;
             font-size: 0.98em;
             text-align: left;
-            color: #333333;
+            color: #1a237e;
             transition: all 0.2s;
             -webkit-tap-highlight-color: transparent;
         }
         .option:active {
             transform: scale(0.98);
-            background: #e8eaf6;
+            background: #c5cae9;
         }
         .feedback {
             font-weight: bold;
@@ -122,8 +122,8 @@
         
         .explanation-box {
             display: none;
-            background-color: #e8eaf6;
-            border-left: 4px solid #3f51b5;
+            background-color: #f8f9fa;
+            border-left: 4px solid #283593;
             padding: 14px;
             margin-bottom: 18px;
             border-radius: 8px;
@@ -136,8 +136,8 @@
             font-size: 1.02em;
         }
         .grammar-tip {
-            background-color: #e3f2fd;
-            border-left: 4px solid #1976d2;
+            background-color: #ffe0b2;
+            border-left: 4px solid #1565c0;
             padding: 10px 12px;
             margin: 10px 0;
             border-radius: 6px;
@@ -151,7 +151,7 @@
         }
         .next-btn {
             display: none;
-            background: #3f51b5;
+            background: #283593;
             color: white;
             padding: 14px;
             border: none;
@@ -160,7 +160,7 @@
             font-size: 1.05em;
             width: 100%;
             font-weight: bold;
-            box-shadow: 0 3px 10px rgba(63, 81, 181, 0.3);
+            box-shadow: 0 3px 10px rgba(40, 53, 147, 0.3);
         }
         #result {
             display: none;
@@ -171,7 +171,7 @@
             text-align: center;
             font-size: 1.4em;
             font-weight: bold;
-            color: #3f51b5;
+            color: #283593;
             margin-bottom: 15px;
         }
         .review-section {
@@ -218,7 +218,7 @@
             border: 1px solid #ffe3e3;
         }
         .restart-btn {
-            background: #3f51b5;
+            background: #283593;
             color: white;
             padding: 12px;
             border: none;
@@ -234,7 +234,7 @@
 <body>
 
 <div class="container">
-    <h1>🚀 單字+文法 升級突破版</h1>
+    <h1>🚀 單字+文法 雙重所有格特訓</h1>
     <div id="quiz-container">
         <div class="top-bar">
             <button class="reload-btn" onclick="loadQuestion()">🔄 重整</button>
@@ -268,124 +268,124 @@
 <script>
     var quizData = [
         { 
-            q: "1. Chin-chin put a lot of _____ into crocheting the beautiful Pikmin hat.", options: ["emotion", "effort", "effect", "education"], ans: 1, hint: "芩芩投入了很多【努力】來鉤織那頂美麗的皮克敏帽子。",
-            exp: "盡力去做某事的「努力」是 effort。put effort into... 意思是「投入努力在...」。",
+            q: "1. [文法大魔王] Snoopy is one of his dogs. = Snoopy is _____.", options: ["a dogs of his", "a dog of him", "a dog of his", "dogs of his"], ans: 2, hint: "史努比是他其中一隻狗。 = 史努比是他的【一隻狗】。",
+            exp: "這題是針對課本第 38 頁 Practice G 第 3 題的超級陷阱！a/an 後面的名詞必須是「單數」！所以 a dogs 是錯的，一定要改成 a dog。",
+            grammarTip: "雙重所有格公式：a/an/one + 單數名詞 + of + 所有格代名詞 (mine/his/hers/theirs)。記得名詞不能加 s 喔！",
+            vocab: ["dog (n.) 狗", "his (pron.) 他的(東西)"]
+        },
+        { 
+            q: "2. My uncle is an _____. He knows a lot about how a car _____ works.", options: ["engine / engineer", "engineer / engine", "English / Englishman", "Englishman / English"], ans: 1, hint: "我叔叔是個【工程師】。他很了解汽車【引擎】是如何運作的。",
+            exp: "設計、修理機器的人是「工程師 (engineer)」，機器的動力來源是「引擎 (engine)」。",
+            grammarTip: "engine (引擎) 加上 -er 變成 engineer (工程師)。",
+            vocab: ["engineer (n.) 工程師", "engine (n.) 引擎", "work (v.) 運作"]
+        },
+        { 
+            q: "3. I put a ticket for the concert inside an _____ and sent it to my sister.", options: ["engine", "entrance", "eraser", "envelope"], ans: 3, hint: "我把演唱會門票裝進一個【信封】裡，然後寄給了我妹妹。",
+            exp: "用來裝信件的紙套是「信封 (envelope)」。",
             grammarTip: "",
-            vocab: ["effort (n.) 努力", "crochet (v.) 鉤織", "beautiful (adj.) 美麗的"]
+            vocab: ["envelope (n.) 信封", "ticket (n.) 門票", "send (v.) 寄送"]
         },
         { 
-            q: "2. [文法] The 10-year-old Shiba Inu was looking at _____ in the mirror.", options: ["it", "its", "itself", "him"], ans: 2, hint: "那隻十歲的柴犬正看著鏡子裡的【牠自己】。",
-            exp: "主詞是 Shiba Inu (動物用 it)，看的對象也是自己，所以受詞必須用反身代名詞 itself。",
-            grammarTip: "反身代名詞就是「...自己」。it (牠) ➔ itself (牠自己)。",
-            vocab: ["itself (pron.) 牠自己/它自己", "mirror (n.) 鏡子"]
+            q: "4. [文法大魔王] She is one of her great teachers. = She is _____.", options: ["a great teachers of her", "a great teacher of her", "a great teacher of hers", "great teachers of hers"], ans: 2, hint: "她是她的一位好老師。 = 她是她的【一位好老師】。",
+            exp: "課本第 38 頁 Practice G 第 2 題的陷阱！第一：a 後面的 teacher 不能加 s。第二：of 後面必須接「所有格代名詞 (hers)」，不能只寫 her (受格)。",
+            grammarTip: "雙殺陷阱！a 搭配單數名詞 (teacher)；of 後面接所有格代名詞 (hers)！",
+            vocab: ["great (adj.) 棒的/偉大的", "teacher (n.) 老師", "hers (pron.) 她的(人事物)"]
         },
         { 
-            q: "3. After finishing the delicious Korean hotteok, he left the _____ plate on the table.", options: ["electric", "effective", "empty", "elder"], ans: 2, hint: "吃完美味的韓式糖餅後，他把【空的】盤子留在桌上。",
-            exp: "裡面什麼都沒有的、「空的」是 empty；它也可以當動詞「倒空」。",
+            q: "5. We really _____ed traveling to Tokyo, Japan. It was so much fun!", options: ["entered", "envied", "enjoyed", "equaled"], ans: 2, hint: "我們真的非常【享受】去日本東京旅行。那實在太有趣了！",
+            exp: "喜愛、享受做某事的動詞是 enjoy。",
+            grammarTip: "enjoy 後面必須接動名詞 (V-ing)，所以是 enjoyed traveling。",
+            vocab: ["enjoy (v.) 享受", "travel (v.) 旅行", "fun (n.) 樂趣"]
+        },
+        { 
+            q: "6. Don't worry. We have _____ food and drinks to see us through the long holiday.", options: ["equal", "empty", "entire", "enough"], ans: 3, hint: "別擔心。我們有【足夠的】食物和飲料度過這個長假。",
+            exp: "數量或程度滿足需求的「足夠的」是 enough。",
+            grammarTip: "enough 可以當形容詞放在名詞前 (enough food)，也可以當副詞放在形容詞後 (rich enough)。",
+            vocab: ["enough (adj./adv.) 足夠的", "worry (v.) 擔心", "holiday (n.) 假日"]
+        },
+        { 
+            q: "7. To protect the natural _____ is to protect ourselves and our future.", options: ["entrance", "environment", "envelope", "emotion"], ans: 1, hint: "保護自然【環境】就是保護我們自己和我們的未來。",
+            exp: "周遭的自然生態或條件、「環境」是 environment。",
             grammarTip: "",
-            vocab: ["empty (adj./v.) 空的/倒空", "plate (n.) 盤子", "delicious (adj.) 美味的"]
+            vocab: ["environment (n.) 環境", "protect (v.) 保護", "natural (adj.) 自然的"]
         },
         { 
-            q: "4. [文法] I don't like the heavy dark sofas. I prefer those cream-colored _____.", options: ["one", "ones", "sofa", "ones'"], ans: 1, hint: "我不喜歡那些笨重的深色沙發。我比較喜歡那些奶油色的【沙發】。",
-            exp: "為了不重複說 sofas (複數名詞)，我們可以用不定代名詞 ones 來代替。",
-            grammarTip: "單數名詞用 one 代替；複數名詞用 ones 代替。這裡指的是那些「奶油色的沙發們」，所以是 ones。",
-            vocab: ["ones (pron.) 那些(東西)", "cream-colored (adj.) 奶油色的", "prefer (v.) 比較喜歡"]
+            q: "8. [文法大魔王] Harry Potter is one of their favorite books. = Harry Potter is _____.", options: ["a favorite books of them", "a favorite book of them", "favorite books of theirs", "a favorite book of theirs"], ans: 3, hint: "哈利波特是他們最喜歡的書之一。 = 哈利波特是他們的【一本愛書】。",
+            exp: "課本第 38 頁 Practice G 第 4 題的陷阱！第一：a 後面的 book 不能加 s。第二：of 後面必須接「所有格代名詞 (theirs)」，不能用 them (受格)。",
+            grammarTip: "完美訂正公式：a favorite book (單數) + of + theirs (所有格代名詞)！",
+            vocab: ["favorite (adj.) 最喜愛的", "book (n.) 書", "theirs (pron.) 他們的(東西)"]
         },
         { 
-            q: "5. It really _____ed me when my dog bit the furniture in front of our guests.", options: ["employed", "encouraged", "embarrassed", "elected"], ans: 2, hint: "當我的狗在客人面前咬傢俱時，真的讓我感到很【尷尬 / 難堪】。",
-            exp: "讓別人在大庭廣眾下下不了台、「使尷尬」的動詞是 embarrass。",
+            q: "9. Young people, _____ those who lack skills, have trouble finding jobs.", options: ["even", "ever", "exactly", "especially"], ans: 3, hint: "年輕人，【特別是 / 尤其是】那些缺乏技能的人，找工作有困難。",
+            exp: "特別強調某事物的副詞「尤其是、特別是」是 especially。",
+            grammarTip: "have trouble + V-ing 意思是「做某事有困難 (have trouble finding)」。",
+            vocab: ["especially (adv.) 尤其是", "young (adj.) 年輕的", "lack (v.) 缺乏"]
+        },
+        { 
+            q: "10. An artist has no home in _____ except in Paris.", options: ["Europe", "English", "England", "Eve"], ans: 0, hint: "一位藝術家在【歐洲】沒有家，除了在巴黎。",
+            exp: "位於亞洲西邊的大洲「歐洲」是 Europe。歐洲人/歐洲的是 European。",
             grammarTip: "",
-            vocab: ["embarrass (v.) 使尷尬", "bite (v.) 咬(過去式bit)", "furniture (n.) 傢俱"]
+            vocab: ["Europe (n.) 歐洲", "artist (n.) 藝術家", "except (prep.) 除了...之外"]
         },
         { 
-            q: "6. I don't like noisy environments, and my boyfriend doesn't like them, _____.", options: ["too", "either", "also", "neither"], ans: 1, hint: "我不喜歡吵鬧的環境，我男朋友【也(不)】喜歡。",
-            exp: "這題是必考陷阱！在肯定句中，我們用 too 表示「也」；但在【否定句 (doesn't)】中，我們必須用 either 表示「也不」。",
-            grammarTip: "肯定句的也 = too (I like it, too.)；否定句的也不 = either (I don't like it, either.)。",
-            vocab: ["either (adv.) 也不", "noisy (adj.) 吵鬧的", "environment (n.) 環境"]
+            q: "11. The 2026 trip will be a big _____ for our family. We are so excited!", options: ["error", "eraser", "event", "entrance"], ans: 2, hint: "2026年的旅行將是我們家的一件大【事件 / 活動】。我們好興奮！",
+            exp: "重要的事情或舉辦的活動、「事件、活動」是 event。",
+            grammarTip: "social events 指的是「社交活動」。",
+            vocab: ["event (n.) 事件/活動", "excited (adj.) 感到興奮的", "family (n.) 家庭"]
         },
         { 
-            q: "7. [文法] The students baked the sausages and bread all by _____.", options: ["them", "their", "themselves", "themself"], ans: 2, hint: "學生們【全靠他們自己】烤了香腸和麵包。",
-            exp: "by oneself 是一個非常重要的片語，意思是「獨自、自己一個人/靠自己」。主詞是 The students (他們)，所以搭配 themselves。",
-            grammarTip: "課本第 36 頁的必考重點：by + 反身代名詞 = 獨自、靠自己。they 的反身代名詞是 themselves！",
-            vocab: ["by themselves (phr.) 靠他們自己", "bake (v.) 烘烤", "sausage (n.) 香腸"]
+            q: "12. [文法] _____ of my best friends _____ a cute 10-year-old Shiba Inu.", options: ["One / have", "One / has", "Any / has", "All / has"], ans: 1, hint: "我最好的朋友【其中之一】【有】一隻可愛的十歲柴犬。",
+            exp: "這題是課本第 38 頁上方 4-4 的重點喔！One of + 複數名詞 (my best friends) 的主詞其實是前面的 One (一個人)！所以動詞要用「單數動詞 (has)」。",
+            grammarTip: "One of (其中之一) 真正的主詞是 One！所以動詞一定要配單數的 is 或 has！",
+            vocab: ["best friend (n.) 最好的朋友", "Shiba Inu (n.) 柴犬", "cute (adj.) 可愛"]
         },
         { 
-            q: "8. When I was struggling with the difficult crochet pattern, my sister _____d me to keep trying.", options: ["employed", "elected", "ended", "encouraged"], ans: 3, hint: "當我在跟困難的鉤織圖解奮戰時，我妹妹【鼓勵】我繼續嘗試。",
-            exp: "給予別人勇氣或希望、「鼓勵」的動詞是 encourage。",
-            grammarTip: "encourage someone to V... 意思是「鼓勵某人去做某事」。",
-            vocab: ["encourage (v.) 鼓勵", "struggle with (phr.) 與...奮戰", "keep trying (phr.) 繼續嘗試"]
+            q: "13. It was the happiest day of my _____ life. I won't forget it.", options: ["equal", "entire", "enough", "electric"], ans: 1, hint: "那是我【整個】人生中最快樂的一天。我不會忘記它。",
+            exp: "全部的、完整的、「整個的」形容詞是 entire (同義字是 whole)。",
+            grammarTip: "my entire life = my whole life (我的一生 / 我整個生命)。",
+            vocab: ["entire (adj.) 整個的/全部的", "happiest (adj.) 最快樂的", "forget (v.) 忘記"]
         },
         { 
-            q: "9. The new minimalist cream style will have a calming _____ on our new home.", options: ["effort", "edge", "education", "effect"], ans: 3, hint: "新的極簡奶油風格將對我們的新家產生平靜的【影響 / 效果】。",
-            exp: "產生出來的結果或「影響」是 effect (名詞)；形容詞是 effective (有效的)。",
-            grammarTip: "have an effect on... 意思是「對...產生影響」。",
-            vocab: ["effect (n.) 影響/效果", "minimalist (adj.) 極簡主義的", "calming (adj.) 令人平靜的"]
+            q: "14. Excuse me. Can you tell me where the _____ to the movie theater is?", options: ["entrance", "envelope", "engine", "environment"], ans: 0, hint: "不好意思。你能告訴我電影院的【入口】在哪裡嗎？",
+            exp: "進入建築物或地點的門口、「入口」是 entrance。",
+            grammarTip: "enter (進入) 的名詞就是 entrance (入口)。",
+            vocab: ["entrance (n.) 入口", "movie theater (n.) 電影院", "excuse me (phr.) 不好意思"]
         },
         { 
-            q: "10. [文法] My old bathroom faucet is broken. I plan to buy a new TOTO _____ during our Tokyo trip in 2026.", options: ["ones", "one", "faucets", "one's"], ans: 1, hint: "我舊的浴室水龍頭壞了。我計畫在2026年的東京之旅買一個新的 TOTO【水龍頭】。",
-            exp: "faucet (水龍頭) 這裡指的是「單數」的一個水龍頭，所以用不定代名詞 one 來代替。",
-            grammarTip: "單數用 one；複數用 ones。a new TOTO one ＝ 一個新的 TOTO 水龍頭。",
-            vocab: ["one (pron.) 一個(東西)", "faucet (n.) 水龍頭", "broken (adj.) 壞掉的"]
-        },
-        { 
-            q: "11. The 10-year-old Shiba Inu is full of _____; he runs around the house all day.", options: ["emotion", "energy", "education", "elephant"], ans: 1, hint: "這隻十歲的柴犬充滿【精力】；他整天在房子裡跑來跑去。",
-            exp: "活力、活動力或是物理上的「能量、精力」，英文是 energy。",
-            grammarTip: "be full of energy 意思是「充滿活力 / 精力充沛」。",
-            vocab: ["energy (n.) 精力/能量", "run around (phr.) 跑來跑去", "all day (phr.) 一整天"]
-        },
-        { 
-            q: "12. [文法] \"Help _____ to some homemade bread, guys!\" said the host.", options: ["yourself", "you", "yours", "yourselves"], ans: 3, hint: "主人說：「大夥們，請【你們自己】隨意吃些自製的麵包吧！」",
-            exp: "對象是 guys (大夥們/複數)，所以這裡的 you 是「你們 (複數)」，反身代名詞必須用複數的 yourselves！",
-            grammarTip: "Help yourself/yourselves to... 是招待客人的常見用語，意思是「請自行取用...」。單數客人用 yourself，多位客人用 yourselves。",
-            vocab: ["yourselves (pron.) 你們自己", "homemade (adj.) 自製的", "host (n.) 主人"]
-        },
-        { 
-            q: "13. We should always respect our _____s and listen to their wise advice.", options: ["elephants", "electrons", "elders", "enemies"], ans: 2, hint: "我們應該永遠尊敬我們的【長輩】，並聽取他們明智的建議。",
-            exp: "年紀較長的人、「長輩」是 elder。",
-            grammarTip: "elder brother 是「哥哥」；elder sister 是「姊姊」。",
-            vocab: ["elder (n.) 長輩", "respect (v.) 尊敬", "advice (n.) 建議"]
-        },
-        { 
-            q: "14. She couldn't hide her _____s when she received the Exemplary Piety award for her sister.", options: ["effects", "emotions", "enemies", "elections"], ans: 1, hint: "當她代替妹妹領取孝行楷模獎時，她無法隱藏她的【情感 / 情緒】。",
-            exp: "內心的感受、「情感、情緒」是 emotion。",
+            q: "15. There are several spelling _____s in your paper. You can use an _____ to correct them.", options: ["events / envelope", "errors / eraser", "envies / engine", "equals / entrance"], ans: 1, hint: "你的報告裡有幾個拼字【錯誤】。你可以用【橡皮擦】來改正它們。",
+            exp: "不正確的地方、「錯誤」是 error (同義字是 mistake)；擦掉筆跡的文具是 eraser。",
             grammarTip: "",
-            vocab: ["emotion (n.) 情感/情緒", "hide (v.) 隱藏", "receive (v.) 領取/收到"]
+            vocab: ["error (n.) 錯誤", "eraser (n.) 橡皮擦", "spelling (n.) 拼字"]
         },
         { 
-            q: "15. [文法] I planned the 2026 Tokyo trip itinerary all by _____.", options: ["me", "my", "mine", "myself"], ans: 3, hint: "我【全靠我自己】規畫了2026年東京之旅的行程。",
-            exp: "主詞是 I (我)，表示「靠我自己」要用 by myself。",
-            grammarTip: "這題是妳在課本第 36 頁完美寫對的喔！I 的反身代名詞就是 myself。",
-            vocab: ["by myself (phr.) 靠我自己", "plan (v.) 計畫", "itinerary (n.) 行程"]
+            q: "16. Her beautiful new crochet hat inspires _____ in her friends. They all want one!", options: ["envy", "entrance", "error", "event"], ans: 0, hint: "她那頂美麗的全新鉤織帽子引起了她朋友們的【羨慕 / 嫉妒】。他們都想要一頂！",
+            exp: "看到別人有好事而產生的「羨慕、嫉妒」，名詞和動詞都是 envy。",
+            grammarTip: "inspire envy 意思是「引起羨慕」。",
+            vocab: ["envy (n./v.) 羨慕/嫉妒", "crochet (v./n.) 鉤織", "inspire (v.) 激發/引起"]
         },
         { 
-            q: "16. Please remember to turn off the _____ fan before leaving the cream-colored living room.", options: ["empty", "effective", "electric", "elder"], ans: 2, hint: "離開奶油色的客廳前，請記得關掉【電】風扇。",
-            exp: "需要用電才能運作的、「電的、電動的」是 electric。",
-            grammarTip: "electric fan (電風扇)；electric car (電動車)。",
-            vocab: ["electric (adj.) 電的/電動的", "turn off (phr.) 關閉", "fan (n.) 風扇"]
+            q: "17. Three plus two _____s five. It's a very easy math problem.", options: ["enters", "enjoys", "equals", "envies"], ans: 2, hint: "三加二【等於】五。這是一個非常簡單的數學問題。",
+            exp: "數量上相同、「等於」的動詞是 equal (這裡加上 s 是因為主詞看作單數的算式)；也可以當形容詞「平等的」。",
+            grammarTip: "All animals are created equal. (所有動物生而平等)。",
+            vocab: ["equal (v./adj.) 等於/平等的", "plus (prep.) 加上", "math problem (n.) 數學問題"]
         },
         { 
-            q: "17. The Chiayi City Government will _____ more workers for the new transportation project.", options: ["employ", "elect", "eat", "end"], ans: 0, hint: "嘉義市政府將為新的交通專案【僱用】更多工人。",
-            exp: "花錢請人來工作、「僱用」的動詞是 employ。員工是 employee。",
-            grammarTip: "",
-            vocab: ["employ (v.) 僱用", "government (n.) 政府", "transportation (n.) 交通/運輸"]
+            q: "18. People might lose their money, their families, _____ their lives during a war.", options: ["ever", "even", "every", "else"], ans: 1, hint: "在戰爭期間，人們可能會失去金錢、家庭，【甚至】他們的生命。",
+            exp: "用來強調令人驚訝或極端情況的副詞「甚至」是 even。",
+            grammarTip: "even 也可以用來修飾比較級，even better = 甚至更好。",
+            vocab: ["even (adv.) 甚至", "lose (v.) 失去", "war (n.) 戰爭"]
         },
         { 
-            q: "18. [文法] Those red yarn balls are nice, but I need the white _____ for this doll accessory.", options: ["one", "ones", "yarn", "one's"], ans: 1, hint: "那些紅色的毛線球很不錯，但我需要白色的【毛線球】來做這個娃娃配件。",
-            exp: "前面提到的是 yarn balls (複數)，為了避免重複，後面要用不定代名詞的複數 ones。",
-            grammarTip: "紅色的毛線球們 (red ones) ➔ 白色的毛線球們 (white ones)。",
-            vocab: ["ones (pron.) 那些(東西)", "yarn ball (n.) 毛線球", "accessory (n.) 配件"]
+            q: "19. Please take off your shoes before you _____ the house.", options: ["enjoy", "enter", "envy", "empty"], ans: 1, hint: "在妳【進入】房子之前，請脫掉妳的鞋子。",
+            exp: "從外面進到裡面的動詞「進入」是 enter。",
+            grammarTip: "enter 是一個及物動詞，後面直接加地點 (enter the house)，不需要加 into 喔！",
+            vocab: ["enter (v.) 進入", "take off (phr.) 脫下", "shoe (n.) 鞋子"]
         },
         { 
-            q: "19. Be careful! Don't put the glass of water too close to the _____ of the dining table.", options: ["education", "edge", "effect", "effort"], ans: 1, hint: "小心！別把水杯放在太靠近餐桌【邊緣】的地方。",
-            exp: "物體的邊界或「邊緣」是 edge。",
-            grammarTip: "",
-            vocab: ["edge (n.) 邊緣", "close to (phr.) 靠近", "dining table (n.) 餐桌"]
-        },
-        { 
-            q: "20. [文法] Chin-chin learned how to make miniature charms all by _____.", options: ["her", "she", "hers", "herself"], ans: 3, hint: "芩芩【全靠她自己】學會了如何製作微型吊飾。",
-            exp: "主詞是 Chin-chin (她)，靠她自己要用 by herself。",
-            grammarTip: "she 的反身代名詞是 herself。all by herself = 完全靠她自己。",
-            vocab: ["by herself (phr.) 靠她自己", "learn (v.) 學習", "miniature charm (n.) 微型吊飾"]
+            q: "20. [文法] _____ the doctors is my father. He works very hard.", options: ["One", "One of", "A one of", "Any"], ans: 1, hint: "這些醫生【其中之一】是我的爸爸。他非常努力工作。",
+            exp: "要表達「群體中的其中一個」，必須使用 One of + 限定詞 (the/these/my) + 複數名詞 的句型。",
+            grammarTip: "這是課本第 38 頁 Practice F 的重點！One 必須搭配 of 才能接後面的群體 (the doctors)。",
+            vocab: ["One of (phr.) ...其中之一", "doctor (n.) 醫生", "hard (adv.) 努力地"]
         }
     ];
 
@@ -406,14 +406,14 @@
             var resultDiv = document.getElementById("result");
             resultDiv.style.display = "block";
             
-            var html = '<div class="score-title">🎉 升級測驗完成！<br>你的總分：' + score + ' / ' + quizData.length + '<br><span style="font-size: 0.8em; color: #5c6bc0;">(使用了 ' + hintsUsed + ' 次提示)</span></div>';
+            var html = '<div class="score-title">🎉 雙重所有格特訓完成！<br>你的總分：' + score + ' / ' + quizData.length + '<br><span style="font-size: 0.8em; color: #5c6bc0;">(使用了 ' + hintsUsed + ' 次提示)</span></div>';
             
             if (wrongQuestions.length === 0) {
-                html += '<div style="text-align: center; background: #e8f5e9; color: #1e4620; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 15px;">🌟 完美過關！反身代名詞跟 one/ones 完全難不倒你！恭喜解鎖新成就！🚀💯</div>';
+                html += '<div style="text-align: center; background: #e8f5e9; color: #1e4620; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 15px;">🌟 完美過關！a friend of mine 這種雙重所有格陷阱完全被你破解了！🚀💯</div>';
             } else {
                 html += '<div class="review-section">';
                 html += '<div class="review-title">📕 你的專屬錯題與文法複習 (' + wrongQuestions.length + ' 題)</div>';
-                html += '<div style="font-size:0.85em; color:#666; text-align:center; margin-bottom:12px;">把錯題小卡複習一下，下次考試絕對滿分！</div>';
+                html += '<div style="font-size:0.85em; color:#666; text-align:center; margin-bottom:12px;">把錯題小卡複習一下，下次遇到 a ... of mine 絕對能秒殺它！</div>';
                 
                 for (var w = 0; w < wrongQuestions.length; w++) {
                     var item = wrongQuestions[w];
@@ -423,7 +423,7 @@
                     html += '<div class="wrong-card-ans">✅ 正確答案：' + correctOpt + '</div>';
                     html += '<div class="wrong-card-exp">💡 ' + item.exp + '</div>';
                     if (item.grammarTip) {
-                        html += '<div style="color:#1976d2; font-size:0.9em; margin-bottom:6px;"><strong>🧑‍🏫 文法小提醒：</strong>' + item.grammarTip + '</div>';
+                        html += '<div style="color:#1565c0; font-size:0.9em; margin-bottom:6px;"><strong>🧑‍🏫 文法小提醒：</strong>' + item.grammarTip + '</div>';
                     }
                     html += '<ul class="wrong-card-vocab">';
                     for (var v = 0; v < item.vocab.length; v++) {
@@ -479,7 +479,7 @@
         }
 
         if (selectedIndex === correctIndex) {
-            btn.style.background = "#3f51b5";
+            btn.style.background = "#283593";
             btn.style.color = "white";
             feedback.innerHTML = "✅ 答對了！太讚了！🚀";
             feedback.className = "feedback correct";
@@ -488,7 +488,7 @@
             btn.style.background = "#9e9e9e";
             btn.style.color = "white";
             if (options[correctIndex]) {
-                options[correctIndex].style.background = "#3f51b5";
+                options[correctIndex].style.background = "#283593";
                 options[correctIndex].style.color = "white";
             }
             feedback.innerHTML = "❌ 答錯囉！正確答案是 " + currentData.options[correctIndex] + "。";
